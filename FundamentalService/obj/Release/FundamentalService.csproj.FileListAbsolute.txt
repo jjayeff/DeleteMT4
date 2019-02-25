@@ -1,0 +1,10 @@
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\bin\Release\FundamentalService.exe.config
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\bin\Release\FundamentalService.exe
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\bin\Release\FundamentalService.pdb
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Release\FundamentalService.ProjectInstaller.resources
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Release\FundamentalService.csproj.GenerateResource.cache
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Release\FundamentalService.csproj.CoreCompileInputs.cache
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Release\FundamentalService.exe
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Release\FundamentalService.pdb
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Release\FundamentalService.Service1.resources
+C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Release\FundamentalService.csproj.CopyComplete
