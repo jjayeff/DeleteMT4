@@ -13,6 +13,7 @@ namespace FundamentalService
 {
     public partial class Service1 : ServiceBase
     {
+        public static bool x = true;
         public Service1()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace FundamentalService
             System.IO.File.AppendAllLines(strPath, new[] { "Starting time : " + DateTime.Now.ToString() });
             this.timer1.Start();
             Timer.Elapsed += new ScheduledEventHandler(timer_Elapsed);
-            Timer.AddEvent(new ScheduledTime("Daily", "15:46"));
+            Timer.AddEvent(new ScheduledTime("Daily", "16:25"));
             Timer.Start();
         }
 
@@ -46,12 +47,24 @@ namespace FundamentalService
         {
             string strPath = AppDomain.CurrentDomain.BaseDirectory + "Log.log";
             System.IO.File.AppendAllLines(strPath, new[] { "..calling time : " + DateTime.Now.ToString() });
+
+            if (x)
+            {
+                var server = new ServerSocket();
+                server.StartListening();
+                x = false;
+                System.IO.File.AppendAllLines(strPath, new[] { "Server Run : " + DateTime.Now.ToString() });
+            }
+
         }
 
         private void timer_Elapsed(object sender, ScheduledEventArgs e)
         {
             string strPath = AppDomain.CurrentDomain.BaseDirectory + "Log.log";
             System.IO.File.AppendAllLines(strPath, new[] { "Schedule Time : " + DateTime.Now.ToString() });
+
+            var server = new ServerSocket();
+            server.StartListening();
         }
     }
 }

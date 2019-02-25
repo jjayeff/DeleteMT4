@@ -8,3 +8,15 @@ C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Debug\Fundamental
 C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Debug\FundamentalService.exe
 C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Debug\FundamentalService.pdb
 C:\Users\ekkaw\source\repos\Fundamental\FundamentalService\obj\Debug\FundamentalService.Service1.resources
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\bin\Debug\FundamentalService.exe.config
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\bin\Debug\FundamentalService.exe
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\bin\Debug\FundamentalService.pdb
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\bin\Debug\ScheduleTimer.dll
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.csprojAssemblyReference.cache
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.ProjectInstaller.resources
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.Service1.resources
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.csproj.GenerateResource.cache
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.csproj.CoreCompileInputs.cache
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.csproj.CopyComplete
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.exe
+C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Debug\FundamentalService.pdb
