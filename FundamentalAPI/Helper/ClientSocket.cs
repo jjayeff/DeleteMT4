@@ -12,10 +12,10 @@ namespace FundamentalAPI.Helper
     {
         const int PORT_NO = 11000;
         const string SERVER_IP = "127.0.0.1";
-        public string StartClient()
+        public string StartClient(string input)
         {
             // Data buffer for incoming data.  
-            byte[] bytes = new byte[1024];
+            byte[] bytes = new byte[1048576]; 
 
             // Connect to a remote device.  
             try
@@ -39,7 +39,7 @@ namespace FundamentalAPI.Helper
                         sender.RemoteEndPoint.ToString());
 
                     // Encode the data string into a byte array.  
-                    byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");
+                    byte[] msg = Encoding.ASCII.GetBytes(input);
 
                     // Send the data through the socket.  
                     int bytesSent = sender.Send(msg);

@@ -1,4 +1,5 @@
 ﻿using FundamentalAPI.Helper;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,20 @@ namespace FundamentalAPI.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public dynamic Get()
         {
             var client = new ClientSocket();
-            var tmp = client.StartClient();
+            var input = client.StartClient("api/values");
+            dynamic json = JsonConvert.DeserializeObject(input);
+            return json;
+        }
 
-            return new string[] { "value1", "value2", tmp };
+        // GET
+        [HttpGet]
+        [Route("api/garmin/data")]
+        public string GetGarminData()
+        {
+            return "value";
         }
 
         // GET api/values/5
