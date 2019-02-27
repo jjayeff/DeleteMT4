@@ -1,0 +1,134 @@
+02/27/2019 12:34 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 12:34 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:34 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 12:34 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+02/27/2019 12:34 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:34 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/PTT
+02/27/2019 12:34 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:34 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/PTT
+02/27/2019 12:34 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:35 PM [INFO]  [Service::OnStop] Service stop
+02/27/2019 12:35 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:35 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/PTT
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/PTT
+02/27/2019 12:35 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/PTT
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/CPALL
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/CPALL
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AVV
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV
+02/27/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:37 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV
+02/27/2019 12:37 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:37 PM [INFO]  [Service::OnStop] Service stop
+02/27/2019 12:39 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 12:39 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:39 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 12:39 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV
+02/27/2019 12:39 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:39 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_
+02/27/2019 12:39 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:40 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV
+02/27/2019 12:40 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:40 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV
+02/27/2019 12:40 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:51 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV/2015
+02/27/2019 12:51 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:51 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV/2015
+02/27/2019 12:51 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:51 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV/2015
+02/27/2019 12:51 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 12:52 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2015
+02/27/2019 12:52 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:40 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2015
+02/27/2019 01:40 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:40 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV/2015
+02/27/2019 01:40 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:41 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2015
+02/27/2019 01:41 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:47 PM [INFO]  [Service::OnStop] Service stop
+02/27/2019 01:48 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:48 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2015
+02/27/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2015
+02/27/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2015
+02/27/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:48 PM [INFO]  [Service::OnStop] Service stop
+02/27/2019 01:49 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:49 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2015
+02/27/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:51 PM [INFO]  [Service::OnStop] Service stop
+02/27/2019 01:51 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 01:51 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:51 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 01:51 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2015
+02/27/2019 01:51 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:55 PM [INFO]  [Service::OnStop] Service stop
+02/27/2019 01:57 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:57 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV
+02/27/2019 01:57 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:58 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV
+02/27/2019 01:58 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:59 PM [INFO]  [Service::OnStop] Service stop
+02/27/2019 01:59 PM [INFO]  [Service::OnStart] Service starting
+02/27/2019 01:59 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 01:59 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2018
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2019
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2015
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/2018
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV/2018
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV/2017
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV/2016
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV/2016
+02/27/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV/2016
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV/2018
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2018
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2019
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV
+02/27/2019 02:01 PM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/27/2019 02:01 PM [INFO]  [Service::OnStop] Service stop

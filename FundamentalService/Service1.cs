@@ -16,61 +16,72 @@ namespace FundamentalService
 {
     public partial class Service1 : ServiceBase
     {
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Config                                                          |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         string dateStart = ConfigurationManager.AppSettings["StartProgramGetData"];
+        private static string strPath = AppDomain.CurrentDomain.BaseDirectory + @"\logs";
+        private static Plog log = new Plog();
         public static bool run = true;
-        public static string nameFile = @"\Fundamental" + DateTime.Now.ToString("yyyyMMdd") + ".log";
-        public static string strPath = AppDomain.CurrentDomain.BaseDirectory + @"\logs";
-        public static string fullPath = strPath + nameFile;
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Constructor                                                     |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public Service1()
         {
             InitializeComponent();
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Helper Function                                                 |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public void OnDebug()
         {
             this.OnStart(null);
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | OnStart Function                                                |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         ScheduleTimer Timer = new ScheduleTimer();
         protected override void OnStart(string[] args)
         {
             if (!Directory.Exists(strPath))  // if it doesn't exist, create
                 Directory.CreateDirectory(strPath);
 
-            System.IO.File.AppendAllLines(fullPath, new[] { "[INFO] Starting time : " + DateTime.Now.ToString() });
+            log.LOGI("[Service::OnStart] Service starting");
             this.timer1.Start();
             Timer.Elapsed += new ScheduledEventHandler(SET2DataBase);
             Timer.AddEvent(new ScheduledTime("Daily", dateStart));
             Timer.Start();
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | OnStop Function                                                 |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         protected override void OnStop()
         {
-            System.IO.File.AppendAllLines(fullPath, new[] { "[INFO] Stop time : " + DateTime.Now.ToString() });
+            log.LOGI("[Service::OnStop] Service stop");
             this.timer1.Stop();
             Timer.Stop();
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Other Function                                                  |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             //System.IO.File.AppendAllLines(fullPath, new[] { "..calling time : " + DateTime.Now.ToString() });
-
             if (run)
             {
                 var server = new ServerSocket();
                 server.StartListening();
                 run = false;
-                System.IO.File.AppendAllLines(fullPath, new[] { "[INFO] Server Run : " + DateTime.Now.ToString() });
+                log.LOGI("[Service::timer1_Elapsed] Socket server Run");
             }
 
         }
-
         private void SET2DataBase(object sender, ScheduledEventArgs e)
         {
-            System.IO.File.AppendAllLines(fullPath, new[] { "[INFO] Schedule Time : " + DateTime.Now.ToString() });
+            log.LOGI("[Service::SET2DataBase] Task scheduler running");
             var getData = new FundamentalSET100();
             getData.Run();
-            System.IO.File.AppendAllLines(fullPath, new[] { "[INFO] UpdateDatabase : " + DateTime.Now.ToString() });
+            log.LOGI("[Service::SET2DataBase] Update database ");
 
         }
     }

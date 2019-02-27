@@ -11,11 +11,17 @@ namespace FundamentalService
 {
     class FundamentalSET100
     {
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Config                                                          |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         private static string DatabaseServer = ConfigurationManager.AppSettings["DatabaseServer"];
         private static string Database = ConfigurationManager.AppSettings["Database"];
         private static string Username = ConfigurationManager.AppSettings["Username"];
         private static string Password = ConfigurationManager.AppSettings["Password"];
-
+        private static Plog log = new Plog();
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Model                                                           |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public class FinanceInfo
         {
 
@@ -54,9 +60,12 @@ namespace FundamentalService
             public string BookValue_Share { get; set; }
             public string Dvd_Yield { get; set; }
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Main Function                                                   |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public void Run()
         {
+            log.LOGI("[FundamentalSET100::Run] Start update data SET100");
             var url1 = $"https://marketdata.set.or.th/mkt/sectorquotation.do?sector=SET100&language=th&country=TH";
             List<string> symbols = new List<string>();
             // Using HtmlAgilityPack
@@ -79,9 +88,11 @@ namespace FundamentalService
 
             for (var i = 0; i < symbols.Count; i++)
                 ScrapingWeb(symbols[i]);
-            Console.WriteLine("End time: " + DateTime.Now.ToString("HH:mm:ss tt"));
+            log.LOGI("[FundamentalSET100::Run] End update data SET100");
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | ScrapingWeb Function                                            |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public static void ScrapingWeb(string symbol)
         {
             var url = $"https://www.set.or.th/set/companyhighlight.do?symbol={symbol}&ssoPageId=5";
@@ -277,7 +288,10 @@ namespace FundamentalService
                         NetProfitMargin = net_profit_margin[i],
                     };
                     if (tmp.Quarter.IndexOf("ไตรมาส") >= 0)
+                    {
+                        tmp.Quarter = quarter[i].Substring(quarter[i].IndexOf("ไตรมาส") + 6 , 1);
                         finance_info_quarter.Add(tmp);
+                    }
                     else
                         finance_info_yearly.Add(tmp);
                 }
@@ -362,7 +376,7 @@ namespace FundamentalService
                     {
                         sql = $"UPDATE dbo.finance_info_quarter SET " +
                             $"Year='{ChangeYearFormat(value.Year)}'," +
-                            $"Quarter='{value.Quarter}'," +
+                            $"Quarter={value.Quarter}," +
                             $"Assets={CutStrignMoney(value.Asset)}," +
                             $"Liabilities={CutStrignMoney(value.Liabilities)}," +
                             $"Equity={CutStrignMoney(value.Equity)}," +
@@ -498,7 +512,9 @@ namespace FundamentalService
             GC.Collect();
 
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Database Function                                               |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public static void UpdateDatebase(string sql, SqlConnection cnn)
         {
             SqlCommand command;
@@ -512,7 +528,6 @@ namespace FundamentalService
 
             command.Dispose();
         }
-
         public static void InsertDatebase(string sql, SqlConnection cnn)
         {
             SqlCommand command;
@@ -526,7 +541,9 @@ namespace FundamentalService
 
             command.Dispose();
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Other    Function                                               |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public static string CutStrignMoney(string money)
         {
             if (money == "null")
@@ -534,7 +551,6 @@ namespace FundamentalService
             else
                 return money.Replace(",", "").Replace("*", "");
         }
-
         public static string ChangeDateFormat(string date)
         {
             if (date == "null")
@@ -548,7 +564,6 @@ namespace FundamentalService
 
             return $"'{yy}-{mm}-{dd}'";
         }
-
         public static string ChangeYearFormat(string year)
         {
             int yy = Convert.ToInt32(year) - 543;

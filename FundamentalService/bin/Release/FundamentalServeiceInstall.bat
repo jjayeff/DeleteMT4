@@ -1,1 +1,1 @@
-sc create "Fundamental Service" binPath= "C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\bin\Release\FundamentalService.exe"
+sc create "Fundamental Service" binPath= "D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\FundamentalService.exe"

@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="FundamentalSET100.cs" />
     <Compile Include="GetDatabase.cs" />
+    <Compile Include="Plog.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>

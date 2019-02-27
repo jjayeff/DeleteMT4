@@ -11,112 +11,173 @@ namespace FundamentalAPI.Controllers
 {
     public class FundamentalController : ApiController
     {
-        // GET
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | GET fundamental                                                 |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         [HttpGet]
-        [Route("api/fundamental")]
+        [Route("fundamental")]
         public dynamic GetFundamental()
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/Fundamental");
+            var input = client.StartClient("fundamental");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/{symbol}
         [HttpGet]
-        [Route("api/fundamental/{symbol}")]
-        public dynamic GetFundamentalBySymbol(string symbol)
+        [Route("fundamental/{symbol}")]
+        public dynamic GetFundamental(string symbol)
         {
             var client = new ClientSocket();
-            var input = client.StartClient($"api/fundamental/{symbol}");
+            var input = client.StartClient($"fundamental/{symbol}");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/{symbol}/{year}
         [HttpGet]
-        [Route("api/fundamental/finance_info_yearly")]
+        [Route("fundamental/{symbol}/{year}")]
+        public dynamic GetFundamental(string symbol, string year)
+        {
+            var client = new ClientSocket();
+            var input = client.StartClient($"fundamental/{symbol}/{year}");
+            dynamic json = JsonConvert.DeserializeObject(input);
+            return json;
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | GET fundamental/finance_info_yearly                             |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        [HttpGet]
+        [Route("fundamental/finance_info_yearly")]
         public dynamic GetFinanceInfoYearly()
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_info_yearly");
+            var input = client.StartClient("fundamental/finance_info_yearly");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/finance_info_yearly/{symbol}
         [HttpGet]
-        [Route("api/fundamental/finance_info_yearly/{symbol}")]
+        [Route("fundamental/finance_info_yearly/{symbol}")]
         public dynamic GetFinanceInfoYearly(string symbol)
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_info_yearly/{symbol}");
+            var input = client.StartClient($"fundamental/finance_info_yearly/{symbol}");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/finance_info_yearly/{symbol}/{year}
         [HttpGet]
-        [Route("api/fundamental/finance_info_quarter")]
+        [Route("fundamental/finance_info_yearly/{symbol}/{year}")]
+        public dynamic GetFinanceInfoYearly(string symbol, string year)
+        {
+            var client = new ClientSocket();
+            var input = client.StartClient($"fundamental/finance_info_yearly/{symbol}/{year}");
+            dynamic json = JsonConvert.DeserializeObject(input);
+            return json;
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | GET fundamental/finance_info_quarter                            |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        [HttpGet]
+        [Route("fundamental/finance_info_quarter")]
         public dynamic GetFinanceInfoQuarter()
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_info_quarter");
+            var input = client.StartClient("fundamental/finance_info_quarter");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/finance_info_quarter/{symbol}
         [HttpGet]
-        [Route("api/fundamental/finance_info_quarter/{symbol}")]
+        [Route("fundamental/finance_info_quarter/{symbol}")]
         public dynamic GetFinanceInfoQuarter(string symbol)
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_info_quarter/{symbol}");
+            var input = client.StartClient($"fundamental/finance_info_quarter/{symbol}");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/finance_info_quarter/{symbol}/{year}
         [HttpGet]
-        [Route("api/fundamental/finance_stat_yearly")]
+        [Route("fundamental/finance_info_quarter/{symbol}/{year}")]
+        public dynamic GetFinanceInfoQuarter(string symbol,string year)
+        {
+            var client = new ClientSocket();
+            var input = client.StartClient($"fundamental/finance_info_quarter/{symbol}/{year}");
+            dynamic json = JsonConvert.DeserializeObject(input);
+            return json;
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | GET fundamental/finance_stat_yearly                             |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        [HttpGet]
+        [Route("fundamental/finance_stat_yearly")]
         public dynamic GetFinancerStatYearly()
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_stat_yearly");
+            var input = client.StartClient("fundamental/finance_stat_yearly");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/finance_stat_yearly/{symbol}
         [HttpGet]
-        [Route("api/fundamental/finance_stat_yearly/{symbol}")]
+        [Route("fundamental/finance_stat_yearly/{symbol}")]
         public dynamic GetFinancerStatYearly(string symbol)
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_stat_yearly/{symbol}");
+            var input = client.StartClient($"fundamental/finance_stat_yearly/{symbol}");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/finance_stat_yearly/{symbol}/{year}
         [HttpGet]
-        [Route("api/fundamental/finance_stat_daily")]
+        [Route("fundamental/finance_stat_yearly/{symbol}/{year}")]
+        public dynamic GetFinancerStatYearly(string symbol,string year)
+        {
+            var client = new ClientSocket();
+            var input = client.StartClient($"fundamental/finance_stat_yearly/{symbol}/{year}");
+            dynamic json = JsonConvert.DeserializeObject(input);
+            return json;
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | GET fundamental/finance_stat_dail                               |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        [HttpGet]
+        [Route("fundamental/finance_stat_daily")]
         public dynamic GetFinancerStatDaily()
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_stat_daily");
+            var input = client.StartClient("fundamental/finance_stat_daily");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }
 
-        // GET
+        // GET fundamental/finance_stat_daily/{symbol}
         [HttpGet]
-        [Route("api/fundamental/finance_stat_daily/{symbol}")]
+        [Route("fundamental/finance_stat_daily/{symbol}")]
         public dynamic GetFinancerStatDaily(string symbol)
         {
             var client = new ClientSocket();
-            var input = client.StartClient("api/fundamental/finance_stat_daily/{symbol}");
+            var input = client.StartClient($"fundamental/finance_stat_daily/{symbol}");
+            dynamic json = JsonConvert.DeserializeObject(input);
+            return json;
+        }
+
+        // GET fundamental/finance_stat_daily/{symbol}/{year}
+        [HttpGet]
+        [Route("fundamental/finance_stat_daily/{symbol}/{year}")]
+        public dynamic GetFinancerStatDaily(string symbol, string year)
+        {
+            var client = new ClientSocket();
+            var input = client.StartClient($"fundamental/finance_stat_daily/{symbol}/{year}");
             dynamic json = JsonConvert.DeserializeObject(input);
             return json;
         }

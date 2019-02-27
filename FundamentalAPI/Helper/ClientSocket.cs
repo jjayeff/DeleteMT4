@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -10,8 +11,15 @@ namespace FundamentalAPI.Helper
 {
     public class ClientSocket
     {
-        const int PORT_NO = 11000;
-        const string SERVER_IP = "127.0.0.1";
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Config                                                          |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        private static string SocketAddress = ConfigurationManager.AppSettings["SocketAddress"];
+        private static string SocketPort = ConfigurationManager.AppSettings["SocketPort"];
+        int PORT_NO = Int32.Parse(SocketPort);
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Main Function                                                   |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public string StartClient(string input)
         {
             // Data buffer for incoming data.  
@@ -22,7 +30,7 @@ namespace FundamentalAPI.Helper
             {
                 // Establish the remote endpoint for the socket.  
                 // This example uses port 11000 on the local computer.  
-                IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostEntry(SERVER_IP).AddressList[0]);
+                IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostEntry(SocketAddress).AddressList[0]);
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, PORT_NO);
 

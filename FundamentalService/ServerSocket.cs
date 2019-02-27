@@ -13,6 +13,15 @@ namespace FundamentalService
 {
     class ServerSocket
     {
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Config                                                          |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        private static string SocketPort = ConfigurationManager.AppSettings["SocketPort"];
+        private static Plog log = new Plog();
+        public static string data = null;
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Model                                                           |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public class FinanceInfo
         {
 
@@ -51,14 +60,9 @@ namespace FundamentalService
             public string BookValue_Share { get; set; }
             public string Dvd_Yield { get; set; }
         }
-
-        private static string SocketPort = ConfigurationManager.AppSettings["SocketPort"];
-        public static string nameFile = @"\Fundamental" + DateTime.Now.ToString("yyyyMMdd") + ".log";
-        public static string strPath = AppDomain.CurrentDomain.BaseDirectory + @"\logs";
-        public static string fullPath = strPath + nameFile;
-        // Incoming data from the client.  
-        public static string data = null;
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Main Function                                                   |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public void StartListening()
         {
             int port = Int32.Parse(SocketPort);
@@ -86,7 +90,7 @@ namespace FundamentalService
                 // Start listening for connections.  
                 while (true)
                 {
-                    Console.WriteLine("Waiting for a connection...");
+                    log.LOGI("[ServerSocket::StartListening] Socket waiting for a connection");
                     // Program is suspended while waiting for an incoming connection.  
                     Socket handler = listener.Accept();
                     data = null;
@@ -95,11 +99,9 @@ namespace FundamentalService
 
 
                     // Show the data on the console.  
-                    File.AppendAllLines(fullPath, new[] { "[INFO] Text received : " + data });
-                    Console.WriteLine("Text received : {0}", data);
-                    var x = new GetDatabase();
-                    var y = x.GetFinanceInfoYearly();
-                    string output = JsonConvert.SerializeObject(y);
+                    log.LOGI("[ServerSocket::StartListening] Text received : " + data);
+                    var db = new GetDatabase();
+                    string output = JsonConvert.SerializeObject(db.GetDB(data));
 
 
                     // Echo the data back to the client.  
@@ -113,12 +115,8 @@ namespace FundamentalService
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                //log.LOGE(e.ToString());
             }
-
-            Console.WriteLine("\nPress ENTER to continue...");
-            Console.Read();
-
         }
     }
 }

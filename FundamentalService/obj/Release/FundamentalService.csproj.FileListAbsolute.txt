@@ -22,8 +22,13 @@ C:\Users\ekkaw\Desktop\Project\toptrader\fundamental\FundamentalService\obj\Rele
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\FundamentalService.exe.config
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\FundamentalService.exe
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\FundamentalService.pdb
+D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\HtmlAgilityPack.dll
+D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\Newtonsoft.Json.dll
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\ScheduleTimer.dll
-D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.csprojAssemblyReference.cache
+D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\HtmlAgilityPack.pdb
+D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\HtmlAgilityPack.xml
+D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\Newtonsoft.Json.pdb
+D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\Newtonsoft.Json.xml
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.ProjectInstaller.resources
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.Service1.resources
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.csproj.GenerateResource.cache
@@ -31,6 +36,4 @@ D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalServic
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.csproj.CopyComplete
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.exe
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.pdb
-D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\HtmlAgilityPack.dll
-D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\HtmlAgilityPack.pdb
-D:\ekkawitl\Project\fundamental\FundamentalService\bin\Release\HtmlAgilityPack.xml
+D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.csprojAssemblyReference.cache
