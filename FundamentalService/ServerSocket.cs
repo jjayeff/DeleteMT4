@@ -90,7 +90,6 @@ namespace FundamentalService
                 // Start listening for connections.  
                 while (true)
                 {
-                    log.LOGI("[ServerSocket::StartListening] Socket waiting for a connection");
                     // Program is suspended while waiting for an incoming connection.  
                     Socket handler = listener.Accept();
                     data = null;
@@ -101,8 +100,13 @@ namespace FundamentalService
                     // Show the data on the console.  
                     log.LOGI("[ServerSocket::StartListening] Text received : " + data);
                     var db = new GetDatabase();
-                    string output = JsonConvert.SerializeObject(db.GetDB(data));
-
+                    string output = "";
+                    if (data.IndexOf("AccessToken") > -1)
+                        output = db.AccessToken(data);
+                    else if(data.IndexOf("Username") > -1 && data.IndexOf("Password") > -1)
+                        output = db.Authorization(data);
+                    else
+                        output = JsonConvert.SerializeObject(db.GetDB(data));
 
                     // Echo the data back to the client.  
                     byte[] msg = Encoding.ASCII.GetBytes(output);

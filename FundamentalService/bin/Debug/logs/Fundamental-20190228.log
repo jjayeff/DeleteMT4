@@ -1,0 +1,136 @@
+02/28/2019 08:17 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:17 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:17 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:17 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:17 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:18 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:18 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:18 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:18 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:18 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:18 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:18 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:19 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:19 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:19 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:19 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:19 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:35 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:35 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:35 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:42 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:42 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:42 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:42 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:42 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:44 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:44 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:44 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:44 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:44 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:44 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:44 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:44 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:44 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:44 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:44 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:44 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:45 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:45 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:45 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:45 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:45 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:45 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:45 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:54 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:54 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:54 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:54 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:54 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:54 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:54 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:55 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:55 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:55 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:55 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:55 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:55 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:55 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:55 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21ad56qw0e5as3q68q6"}
+02/28/2019 08:55 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:58 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:58 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21ad56qw0e5as3q68q6"}
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21ad56qw0e5as3q68q6"}
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 08:58 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:03 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 09:03 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:03 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 09:03 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:03 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:03 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 09:03 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:04 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q5"}
+02/28/2019 09:04 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:04 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:04 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:04 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 09:04 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:07 AM [INFO]  [Service::OnStart] Service starting
+02/28/2019 09:07 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:07 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AVV
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_year
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AVV
+02/28/2019 09:08 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_year
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AVV
+02/28/2019 09:09 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6"}
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2018
+02/28/2019 09:10 AM [INFO]  [ServerSocket::StartListening] Socket waiting for a connection

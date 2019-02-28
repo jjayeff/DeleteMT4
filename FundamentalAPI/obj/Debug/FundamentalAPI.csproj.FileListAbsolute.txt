@@ -251,9 +251,9 @@ D:\ekkawitl\Project\fundamental\FundamentalAPI\bin\Antlr3.Runtime.pdb
 D:\ekkawitl\Project\fundamental\FundamentalAPI\bin\System.Diagnostics.DiagnosticSource.xml
 D:\ekkawitl\Project\fundamental\FundamentalAPI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 D:\ekkawitl\Project\fundamental\FundamentalAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Debug\FundamentalAPI.csprojAssemblyReference.cache
 D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Debug\FundamentalAPI.csproj.CoreCompileInputs.cache
 D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Debug\FundamentalAPI.csproj.CopyComplete
 D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Debug\FundamentalAPI.dll
 D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Debug\FundamentalAPI.pdb
 D:\ekkawitl\Project\fundamental\FundamentalAPI\bin\Newtonsoft.Json.pdb
+D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Debug\FundamentalAPI.csprojAssemblyReference.cache

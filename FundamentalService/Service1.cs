@@ -48,6 +48,8 @@ namespace FundamentalService
 
             log.LOGI("[Service::OnStart] Service starting");
             this.timer1.Start();
+            this.timer2.Start();
+            SetAccessToken();
             Timer.Elapsed += new ScheduledEventHandler(SET2DataBase);
             Timer.AddEvent(new ScheduledTime("Daily", dateStart));
             Timer.Start();
@@ -59,6 +61,7 @@ namespace FundamentalService
         {
             log.LOGI("[Service::OnStop] Service stop");
             this.timer1.Stop();
+            this.timer2.Stop();
             Timer.Stop();
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -83,6 +86,18 @@ namespace FundamentalService
             getData.Run();
             log.LOGI("[Service::SET2DataBase] Update database ");
 
+        }
+        private void ResetAccessToken(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            SetAccessToken();
+        }
+        private void SetAccessToken()
+        {
+            string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+            var process = new GetDatabase();
+            process.SetAccessToken(token);
+            process.GetAccessToken();
+            log.LOGI("[Service::ResetAccessToken] Reset Access Token");
         }
     }
 }

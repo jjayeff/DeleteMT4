@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -14,10 +15,13 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Config                                                          |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        private static string accessToken = "qewrasd5a1e8q4120as5d4qw0e21asd56qw0e5as3q68q6";
         private static string DatabaseServer = ConfigurationManager.AppSettings["DatabaseServer"];
         private static string Database = ConfigurationManager.AppSettings["Database"];
-        private static string Username = ConfigurationManager.AppSettings["Username"];
-        private static string Password = ConfigurationManager.AppSettings["Password"];
+        private static string Username = ConfigurationManager.AppSettings["DatabaseUsername"];
+        private static string Password = ConfigurationManager.AppSettings["DatabasePassword"];
+        private static string AuthUsername = ConfigurationManager.AppSettings["ServerUsername"];
+        private static string AuthPassword = ConfigurationManager.AppSettings["ServerPassword"];
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Model                                                           |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -73,7 +77,8 @@ namespace FundamentalService
         public class Message
         {
 
-            public Message() {
+            public Message()
+            {
                 message = "error !!";
             }
 
@@ -100,7 +105,7 @@ namespace FundamentalService
                     return GetFinanceStatDaily();
                 default:
                     {
-                        if(param[0] == "fundamental" && param.Length == 2)
+                        if (param[0] == "fundamental" && param.Length == 2)
                             return GetFundamental(param[1]);
                         else if (param[0] == "fundamental" && param[1] == "finance_info_yearly" && param.Length == 3)
                             return GetFinanceInfoYearly(param[2]);
@@ -127,6 +132,26 @@ namespace FundamentalService
 
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Access Token Function                                           |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        public string AccessToken(string input)
+        {
+            dynamic json = JsonConvert.DeserializeObject(input);
+            if (json.AccessToken == accessToken)
+                return "true";
+            else
+                return "false";
+        }
+        public string Authorization(string input)
+        {
+            dynamic json = JsonConvert.DeserializeObject(input);
+            var security = new EncryptionHelper();
+            if (json.Username == security.Encrypt(AuthUsername) && json.Password == security.Encrypt(AuthPassword))
+                return GetAccessToken();
+            else
+                return "false";
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Other Function                                                  |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public Fundamental GetFundamental(string symbol = null, string year = null)
@@ -145,7 +170,8 @@ namespace FundamentalService
                 tmp.finance_info_quarter = GetFinanceInfoQuarter(symbol);
                 tmp.finance_stat_yearly = GetFinanceStatYearly(symbol);
                 tmp.finance_stat_daily = GetFinanceStatDaily(symbol);
-            }else
+            }
+            else
             {
                 tmp.finance_info_yearly = GetFinanceInfoYearly(symbol, year);
                 tmp.finance_info_quarter = GetFinanceInfoQuarter(symbol, year);
@@ -165,7 +191,7 @@ namespace FundamentalService
             string sql = "";
             if (symbol == null)
                 sql = $"Select * from dbo.finance_info_yearly";
-            else if(year == null)
+            else if (year == null)
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}'";
             else
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Year = '{year}'";
@@ -322,7 +348,14 @@ namespace FundamentalService
             }
             return finance_stat_daily;
         }
-
+        public void SetAccessToken(string input)
+        {
+            accessToken = input;
+        }
+        public string GetAccessToken()
+        {
+            return accessToken;
+        }
     }
 }
 

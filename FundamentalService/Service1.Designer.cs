@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.timer1 = new System.Timers.Timer();
+            this.timer2 = new System.Timers.Timer();
             ((System.ComponentModel.ISupportInitialize)(this.timer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timer2)).BeginInit();
             // 
             // timer1
             // 
@@ -37,15 +39,23 @@
             this.timer1.Interval = 1000D;
             this.timer1.Elapsed += new System.Timers.ElapsedEventHandler(this.timer1_Elapsed);
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 3600000D;
+            this.timer2.Elapsed += new System.Timers.ElapsedEventHandler(this.ResetAccessToken);
+            // 
             // Service1
             // 
             this.ServiceName = "Service1";
             ((System.ComponentModel.ISupportInitialize)(this.timer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timer2)).EndInit();
 
         }
 
         #endregion
 
         private System.Timers.Timer timer1;
+        private System.Timers.Timer timer2;
     }
 }

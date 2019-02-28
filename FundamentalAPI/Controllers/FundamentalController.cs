@@ -12,175 +12,153 @@ namespace FundamentalAPI.Controllers
     public class FundamentalController : ApiController
     {
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | GET fundamental                                                 |
+        // | Model                                                           |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        [HttpGet]
+        public class Key
+        {
+            public string AccessToken { get; set; }
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | POST fundamental                                                |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        [HttpPost]
         [Route("fundamental")]
-        public dynamic GetFundamental()
+        public dynamic PostFundamental([FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient("fundamental");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process("fundamental", value);
         }
 
-        // GET fundamental/{symbol}
-        [HttpGet]
+        // POST fundamental/{symbol}
+        [HttpPost]
         [Route("fundamental/{symbol}")]
-        public dynamic GetFundamental(string symbol)
+        public dynamic PostFundamental(string symbol, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/{symbol}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/{symbol}", value);
         }
 
-        // GET fundamental/{symbol}/{year}
-        [HttpGet]
+        // POST fundamental/{symbol}/{year}
+        [HttpPost]
         [Route("fundamental/{symbol}/{year}")]
-        public dynamic GetFundamental(string symbol, string year)
+        public dynamic PostFundamental(string symbol, string year, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/{symbol}/{year}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/{symbol}/{year}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | GET fundamental/finance_info_yearly                             |
+        // | POST fundamental/finance_info_yearly                             |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        [HttpGet]
+        [HttpPost]
         [Route("fundamental/finance_info_yearly")]
-        public dynamic GetFinanceInfoYearly()
+        public dynamic PostFinanceInfoYearly([FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient("fundamental/finance_info_yearly");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process("fundamental/finance_info_yearly", value);
         }
 
-        // GET fundamental/finance_info_yearly/{symbol}
-        [HttpGet]
+        // POST fundamental/finance_info_yearly/{symbol}
+        [HttpPost]
         [Route("fundamental/finance_info_yearly/{symbol}")]
-        public dynamic GetFinanceInfoYearly(string symbol)
+        public dynamic PostFinanceInfoYearly(string symbol, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_info_yearly/{symbol}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_info_yearly/{symbol}", value);
         }
 
-        // GET fundamental/finance_info_yearly/{symbol}/{year}
-        [HttpGet]
+        // POST fundamental/finance_info_yearly/{symbol}/{year}
+        [HttpPost]
         [Route("fundamental/finance_info_yearly/{symbol}/{year}")]
-        public dynamic GetFinanceInfoYearly(string symbol, string year)
+        public dynamic PostFinanceInfoYearly(string symbol, string year, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_info_yearly/{symbol}/{year}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_info_yearly/{symbol}/{year}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | GET fundamental/finance_info_quarter                            |
+        // | POST fundamental/finance_info_quarter                           |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        [HttpGet]
+        [HttpPost]
         [Route("fundamental/finance_info_quarter")]
-        public dynamic GetFinanceInfoQuarter()
+        public dynamic PostFinanceInfoQuarter([FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient("fundamental/finance_info_quarter");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process("fundamental/finance_info_quarter", value);
         }
 
-        // GET fundamental/finance_info_quarter/{symbol}
-        [HttpGet]
+        // POST fundamental/finance_info_quarter/{symbol}
+        [HttpPost]
         [Route("fundamental/finance_info_quarter/{symbol}")]
-        public dynamic GetFinanceInfoQuarter(string symbol)
+        public dynamic PostFinanceInfoQuarter(string symbol, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_info_quarter/{symbol}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_info_quarter/{symbol}", value);
         }
 
-        // GET fundamental/finance_info_quarter/{symbol}/{year}
-        [HttpGet]
+        // POST fundamental/finance_info_quarter/{symbol}/{year}
+        [HttpPost]
         [Route("fundamental/finance_info_quarter/{symbol}/{year}")]
-        public dynamic GetFinanceInfoQuarter(string symbol,string year)
+        public dynamic PostFinanceInfoQuarter(string symbol, string year, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_info_quarter/{symbol}/{year}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_info_quarter/{symbol}/{year}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | GET fundamental/finance_stat_yearly                             |
+        // | POST fundamental/finance_stat_yearly                            |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        [HttpGet]
+        [HttpPost]
         [Route("fundamental/finance_stat_yearly")]
-        public dynamic GetFinancerStatYearly()
+        public dynamic PostFinancerStatYearly([FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient("fundamental/finance_stat_yearly");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process("fundamental/finance_stat_yearly", value);
         }
 
-        // GET fundamental/finance_stat_yearly/{symbol}
-        [HttpGet]
+        // POST fundamental/finance_stat_yearly/{symbol}
+        [HttpPost]
         [Route("fundamental/finance_stat_yearly/{symbol}")]
-        public dynamic GetFinancerStatYearly(string symbol)
+        public dynamic PostFinancerStatYearly(string symbol, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_stat_yearly/{symbol}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_stat_yearly/{symbol}", value);
         }
 
-        // GET fundamental/finance_stat_yearly/{symbol}/{year}
-        [HttpGet]
+        // POST fundamental/finance_stat_yearly/{symbol}/{year}
+        [HttpPost]
         [Route("fundamental/finance_stat_yearly/{symbol}/{year}")]
-        public dynamic GetFinancerStatYearly(string symbol,string year)
+        public dynamic PostFinancerStatYearly(string symbol, string year, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_stat_yearly/{symbol}/{year}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_stat_yearly/{symbol}/{year}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | GET fundamental/finance_stat_dail                               |
+        // | POST fundamental/finance_stat_dail                              |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        [HttpGet]
+        [HttpPost]
         [Route("fundamental/finance_stat_daily")]
-        public dynamic GetFinancerStatDaily()
+        public dynamic PostFinancerStatDaily([FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient("fundamental/finance_stat_daily");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process("fundamental/finance_stat_daily", value);
         }
 
-        // GET fundamental/finance_stat_daily/{symbol}
-        [HttpGet]
+        // POST fundamental/finance_stat_daily/{symbol}
+        [HttpPost]
         [Route("fundamental/finance_stat_daily/{symbol}")]
-        public dynamic GetFinancerStatDaily(string symbol)
+        public dynamic PostFinancerStatDaily(string symbol, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_stat_daily/{symbol}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_stat_daily/{symbol}", value);
         }
 
-        // GET fundamental/finance_stat_daily/{symbol}/{year}
-        [HttpGet]
+        // POST fundamental/finance_stat_daily/{symbol}/{year}
+        [HttpPost]
         [Route("fundamental/finance_stat_daily/{symbol}/{year}")]
-        public dynamic GetFinancerStatDaily(string symbol, string year)
+        public dynamic PostFinancerStatDaily(string symbol, string year, [FromBody]Key value)
         {
-            var client = new ClientSocket();
-            var input = client.StartClient($"fundamental/finance_stat_daily/{symbol}/{year}");
-            dynamic json = JsonConvert.DeserializeObject(input);
-            return json;
+            return Process($"fundamental/finance_stat_daily/{symbol}/{year}", value);
         }
-
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Other Function                                                  |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        public dynamic Process(string input, Key value)
+        {
+            if (value == null)
+                return Request.CreateErrorResponse(HttpStatusCode.Forbidden, "Please POST json data !!");
+            var client = new ClientSocket();
+            if (Convert.ToBoolean(client.StartClient(JsonConvert.SerializeObject(value))))
+            {
+                var process = client.StartClient(input);
+                dynamic json = JsonConvert.DeserializeObject(process);
+                return json;
+            }
+            else
+                return Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Wrong AccessToken !!");
+        }
     }
 }

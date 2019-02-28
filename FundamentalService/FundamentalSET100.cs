@@ -16,8 +16,8 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         private static string DatabaseServer = ConfigurationManager.AppSettings["DatabaseServer"];
         private static string Database = ConfigurationManager.AppSettings["Database"];
-        private static string Username = ConfigurationManager.AppSettings["Username"];
-        private static string Password = ConfigurationManager.AppSettings["Password"];
+        private static string Username = ConfigurationManager.AppSettings["DatabaseUsername"];
+        private static string Password = ConfigurationManager.AppSettings["DatabasePassword"];
         private static Plog log = new Plog();
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Model                                                           |

@@ -24,7 +24,6 @@ D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\FundamentalService.
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\FundamentalService.exe
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\FundamentalService.pdb
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\ScheduleTimer.dll
-D:\ekkawitl\Project\fundamental\FundamentalService\obj\Debug\FundamentalService.csprojAssemblyReference.cache
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Debug\FundamentalService.ProjectInstaller.resources
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Debug\FundamentalService.Service1.resources
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Debug\FundamentalService.csproj.GenerateResource.cache

@@ -20,7 +20,7 @@ namespace FundamentalAPI.Helper
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Main Function                                                   |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        public string StartClient(string input)
+        public string StartClient(string input, bool check = false)
         {
             // Data buffer for incoming data.  
             byte[] bytes = new byte[1048576]; 

@@ -36,4 +36,3 @@ D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalServic
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.csproj.CopyComplete
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.exe
 D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.pdb
-D:\ekkawitl\Project\fundamental\FundamentalService\obj\Release\FundamentalService.csprojAssemblyReference.cache
