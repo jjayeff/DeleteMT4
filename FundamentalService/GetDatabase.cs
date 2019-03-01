@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -74,6 +75,22 @@ namespace FundamentalService
             public List<FinanceStat> finance_stat_yearly { get; set; }
             public List<FinanceStat> finance_stat_daily { get; set; }
         }
+        public class KaohoonData
+        {
+            public KaohoonData() { }
+
+            // Properties.
+            public string Kaohoon_data_id { get; set; } = "null";
+            public string Symbol { get; set; } = "null";
+            public string Date { get; set; } = "null";
+            public string Year { get; set; } = "null";
+            public string Quarter { get; set; } = "null";
+            public string TargetPrice { get; set; } = "null";
+            public string Trends { get; set; } = "null";
+            public string Divide { get; set; } = "null";
+            public string Topic { get; set; } = "null";
+
+        }
         public class Message
         {
 
@@ -88,7 +105,7 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Main Function                                                   |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        public dynamic GetDB(string input)
+        public dynamic GetFundamentalDB(string input)
         {
             var param = input.Split('/');
             switch (input)
@@ -105,31 +122,61 @@ namespace FundamentalService
                     return GetFinanceStatDaily();
                 default:
                     {
-                        if (param[0] == "fundamental" && param.Length == 2)
-                            return GetFundamental(param[1]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_info_yearly" && param.Length == 3)
+                        if (param[1] == "finance_info_yearly" && param.Length == 3)
                             return GetFinanceInfoYearly(param[2]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_info_quarter" && param.Length == 3)
+                        else if (param[1] == "finance_info_yearly" && param[2] == "year" && param.Length == 4)
+                            return GetFinanceInfoYearly(null, param[3]);
+                        else if (param[1] == "finance_info_yearly" && param.Length == 4)
+                            return GetFinanceInfoYearly(param[2], param[3]);
+                        else if (param[1] == "finance_info_quarter" && param.Length == 3)
                             return GetFinanceInfoQuarter(param[2]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_stat_yearly" && param.Length == 3)
+                        else if (param[1] == "finance_info_quarter" && param[2] == "year" && param.Length == 4)
+                            return GetFinanceInfoQuarter(null, param[3]);
+                        else if (param[1] == "finance_info_quarter" && param.Length == 4)
+                            return GetFinanceInfoQuarter(param[2], param[3]);
+                        else if (param[1] == "finance_stat_yearly" && param.Length == 3)
                             return GetFinanceStatYearly(param[2]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_stat_daily" && param.Length == 3)
+                        else if (param[1] == "finance_stat_yearly" && param[2] == "year" && param.Length == 4)
+                            return GetFinanceStatYearly(null, param[3]);
+                        else if (param[1] == "finance_stat_yearly" && param.Length == 4)
+                            return GetFinanceStatYearly(param[2], param[3]);
+                        else if (param[1] == "finance_stat_daily" && param.Length == 3)
                             return GetFinanceStatDaily(param[2]);
+                        else if (param[1] == "finance_stat_daily" && param[2] == "year" && param.Length == 4)
+                            return GetFinanceStatDaily(null, param[3]);
+                        else if (param[1] == "finance_stat_daily" && param.Length == 4)
+                            return GetFinanceStatDaily(param[2], param[3]);
+                        else if (param[0] == "fundamental" && param[1] == "year" && param.Length == 3)
+                            return GetFundamental(null, param[2]);
+                        else if (param[0] == "fundamental" && param.Length == 2)
+                            return GetFundamental(param[1]);
                         else if (param[0] == "fundamental" && param.Length == 3)
                             return GetFundamental(param[1], param[2]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_info_yearly" && param.Length == 4)
-                            return GetFinanceInfoYearly(param[2], param[3]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_info_quarter" && param.Length == 4)
-                            return GetFinanceInfoQuarter(param[2], param[3]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_stat_yearly" && param.Length == 4)
-                            return GetFinanceStatYearly(param[2], param[3]);
-                        else if (param[0] == "fundamental" && param[1] == "finance_stat_daily" && param.Length == 4)
-                            return GetFinanceStatDaily(param[2], param[3]);
                         else
                             return new Message();
                     }
             }
 
+        }
+        public dynamic GetKaohoonDB(string input)
+        {
+            var param = input.Split('/');
+            switch (input)
+            {
+                case "kaohoon":
+                    return GetKaohoonData();
+                default:
+                    {
+                        if (param[0] == "kaohoon" && param[1] == "date" && param.Length == 3)
+                            return GetKaohoonData(null, param[2]);
+                        else if (param[0] == "kaohoon" && param.Length == 2)
+                            return GetKaohoonData(param[1]);
+                        else if (param[0] == "kaohoon" && param.Length == 3)
+                            return GetKaohoonData(param[1], param[2]);
+                        else
+                            return new Message();
+                    }
+            }
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Access Token Function                                           |
@@ -152,24 +199,31 @@ namespace FundamentalService
                 return "false";
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | Other Function                                                  |
+        // | Database fundamental Function                                   |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public Fundamental GetFundamental(string symbol = null, string year = null)
         {
             var tmp = new Fundamental();
-            if (symbol == null)
+            if (symbol == null && year == null)
             {
                 tmp.finance_info_yearly = GetFinanceInfoYearly();
                 tmp.finance_info_quarter = GetFinanceInfoQuarter();
                 tmp.finance_stat_yearly = GetFinanceStatYearly();
                 tmp.finance_stat_daily = GetFinanceStatDaily();
             }
-            else if (year == null)
+            else if (symbol != null && year == null)
             {
                 tmp.finance_info_yearly = GetFinanceInfoYearly(symbol);
                 tmp.finance_info_quarter = GetFinanceInfoQuarter(symbol);
                 tmp.finance_stat_yearly = GetFinanceStatYearly(symbol);
                 tmp.finance_stat_daily = GetFinanceStatDaily(symbol);
+            }
+            else if (symbol == null && year != null)
+            {
+                tmp.finance_info_yearly = GetFinanceInfoYearly(null, year);
+                tmp.finance_info_quarter = GetFinanceInfoQuarter(null, year);
+                tmp.finance_stat_yearly = GetFinanceStatYearly(null, year);
+                tmp.finance_stat_daily = GetFinanceStatDaily(null, year);
             }
             else
             {
@@ -189,10 +243,12 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null)
+            if (symbol == null && year == null)
                 sql = $"Select * from dbo.finance_info_yearly";
-            else if (year == null)
+            else if (symbol != null && year == null)
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}'";
+            else if (symbol == null && year != null)
+                sql = $"Select * from dbo.finance_info_yearly where Year = '{year}'";
             else
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Year = '{year}'";
 
@@ -233,12 +289,15 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null)
+            if (symbol == null && year == null)
                 sql = $"Select * from dbo.finance_info_quarter";
-            else if (year == null)
+            else if (symbol != null && year == null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}'";
+            else if (symbol == null && year != null)
+                sql = $"Select * from dbo.finance_info_quarter where Year = '{year}'";
             else
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Year = '{year}'";
+
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");
             using (SqlDataReader reader = command.ExecuteReader())
@@ -277,12 +336,15 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null)
+            if (symbol == null && year == null)
                 sql = $"Select * from dbo.finance_stat_yearly";
-            else if (year == null)
+            else if (symbol != null && year == null)
                 sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}'";
+            else if (symbol == null && year != null)
+                sql = $"Select * from dbo.finance_stat_yearly where Year = '{year}'";
             else
                 sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}' AND Year = '{year}'";
+
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");
             using (SqlDataReader reader = command.ExecuteReader())
@@ -317,12 +379,15 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null)
+            if (symbol == null && year == null)
                 sql = $"Select * from dbo.finance_stat_daily";
-            else if (year == null)
+            else if (symbol != null && year == null)
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}'";
+            else if (symbol == null && year != null)
+                sql = $"Select * from dbo.finance_stat_daily where Year = '{year}'";
             else
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Year = '{year}'";
+
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");
             using (SqlDataReader reader = command.ExecuteReader())
@@ -348,6 +413,53 @@ namespace FundamentalService
             }
             return finance_stat_daily;
         }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Database kaohoon Function                                       |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        public List<KaohoonData> GetKaohoonData(string symbol = null, string date = null)
+        {
+            List<KaohoonData> kaohoon_data = new List<KaohoonData>();
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = $@"Data Source={DatabaseServer};Initial Catalog={Database};User ID={Username};Password={Password}";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            string sql = "";
+            if (symbol == null && date == null)
+                sql = $"Select * from dbo.kaohoon_data";
+            else if (symbol != null && date == null)
+                sql = $"Select * from dbo.kaohoon_data where Symbol = '{symbol}'";
+            else if (symbol == null && date != null)
+                sql = $"Select * from dbo.kaohoon_data where Date = '{date}'";
+            else
+                sql = $"Select * from dbo.kaohoon_data where Symbol = '{symbol}' AND Date = '{date}'";
+
+            SqlCommand command = new SqlCommand(sql, cnn);
+            command.Parameters.AddWithValue("@zip", "india");
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var tmp = new KaohoonData
+                    {
+                        Kaohoon_data_id = String.Format("{0}", reader["Kaohoon_data_id"]),
+                        Symbol = String.Format("{0}", reader["Symbol"]),
+                        Date = String.Format("{0}", reader["Date"]),
+                        Year = String.Format("{0}", reader["Year"]),
+                        Quarter = String.Format("{0}", reader["Quarter"]),
+                        TargetPrice = String.Format("{0}", reader["TargetPrice"]),
+                        Trends = String.Format("{0}", reader["Trends"]),
+                        Divide = String.Format("{0}", reader["Divide"]),
+                        Topic = String.Format("{0}", reader["Topic"]),
+                    };
+                    kaohoon_data.Add(tmp);
+                }
+            }
+            return kaohoon_data;
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Other Function                                                  |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public void SetAccessToken(string input)
         {
             accessToken = input;

@@ -164,6 +164,7 @@
     <Compile Include="Controllers\AccessTokenController.cs" />
     <Compile Include="Controllers\FundamentalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KaohoonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -94,24 +94,19 @@ namespace FundamentalService
                     Socket handler = listener.Accept();
                     data = null;
                     int bytesRec = handler.Receive(bytes);
-                    data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    data += Encoding.UTF8.GetString(bytes, 0, bytesRec);
 
 
                     // Show the data on the console.  
                     log.LOGI("[ServerSocket::StartListening] Text received : " + data);
-                    var db = new GetDatabase();
-                    string output = "";
-                    if (data.IndexOf("AccessToken") > -1)
-                        output = db.AccessToken(data);
-                    else if(data.IndexOf("Username") > -1 && data.IndexOf("Password") > -1)
-                        output = db.Authorization(data);
-                    else
-                        output = JsonConvert.SerializeObject(db.GetDB(data));
+
+                    // Check case to process
+                    string output = CheckCase(data);
 
                     // Echo the data back to the client.  
-                    byte[] msg = Encoding.ASCII.GetBytes(output);
+                    byte[] msg = Encoding.UTF8.GetBytes(output);
 
-                    handler.Send(Encoding.ASCII.GetBytes(output));
+                    handler.Send(Encoding.UTF8.GetBytes(output));
                     handler.Shutdown(SocketShutdown.Both);
                     handler.Close();
                 }
@@ -121,6 +116,21 @@ namespace FundamentalService
             {
                 //log.LOGE(e.ToString());
             }
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Other Function                                                  |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        public dynamic CheckCase(string data)
+        {
+            var db = new GetDatabase();
+            if (data.IndexOf("AccessToken") > -1)
+                return db.AccessToken(data);
+            else if (data.IndexOf("Username") > -1 && data.IndexOf("Password") > -1)
+                return db.Authorization(data);
+            else if (data.IndexOf("fundamental") > -1)
+                return JsonConvert.SerializeObject(db.GetFundamentalDB(data));
+            else
+                return JsonConvert.SerializeObject(db.GetKaohoonDB(data));
         }
     }
 }

@@ -1,3 +1,39 @@
-03/01/2019 09:27 AM [INFO]  [Service::OnStart] Service starting
-03/01/2019 09:27 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
-03/01/2019 09:27 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/01/2019 11:46 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/01/2019 11:46 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/01/2019 11:46 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:46 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/year/2018
+03/01/2019 11:46 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:46 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/year/2019
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2019
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/year/2019
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AVV/2018
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV/2018
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/year/2015
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/year/2015
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV/2018
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV/2018
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/year/2018
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q1XWZXdAH0eJQn8MIuicxg=="}
+03/01/2019 11:48 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV
+03/01/2019 11:51 AM [INFO]  [Service::OnStop] Service stop
+03/01/2019 11:53 AM [INFO]  [Service::OnStart] Service starting
+03/01/2019 11:53 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/01/2019 11:53 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/01/2019 11:53 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
