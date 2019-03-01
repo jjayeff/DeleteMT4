@@ -30,8 +30,10 @@
         {
             this.timer1 = new System.Timers.Timer();
             this.timer2 = new System.Timers.Timer();
+            this.timer3 = new System.Timers.Timer();
             ((System.ComponentModel.ISupportInitialize)(this.timer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timer3)).BeginInit();
             // 
             // timer1
             // 
@@ -45,11 +47,18 @@
             this.timer2.Interval = 3600000D;
             this.timer2.Elapsed += new System.Timers.ElapsedEventHandler(this.ResetAccessToken);
             // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 600000D;
+            this.timer3.Elapsed += new System.Timers.ElapsedEventHandler(this.Kaohoon2Database);
+            // 
             // Service1
             // 
             this.ServiceName = "Service1";
             ((System.ComponentModel.ISupportInitialize)(this.timer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timer3)).EndInit();
 
         }
 
@@ -57,5 +66,6 @@
 
         private System.Timers.Timer timer1;
         private System.Timers.Timer timer2;
+        private System.Timers.Timer timer3;
     }
 }

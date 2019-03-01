@@ -34,3 +34,22 @@
 02/28/2019 11:23 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
 02/28/2019 11:23 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"udmCDejAewYazK3dKQhbBQ=="}
 02/28/2019 11:23 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+02/28/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+02/28/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"sCOmpLdNF0a9Sh4nNdewwg=="}
+02/28/2019 11:47 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/PTT
+02/28/2019 12:23 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+02/28/2019 12:23 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"sCOmpLdNF0a9Sh4nNdewwg=="}
+02/28/2019 12:24 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+02/28/2019 12:24 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"rvK4zGBDyUqLIPaHi+u2lA=="}
+02/28/2019 12:24 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/PTT
+02/28/2019 01:23 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+02/28/2019 02:23 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+02/28/2019 03:23 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+02/28/2019 04:23 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/01/2019 07:44 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/01/2019 08:44 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/01/2019 09:00 AM [INFO]  [Service::SET2DataBase] Task scheduler running
+03/01/2019 09:00 AM [INFO]  [FundamentalSET100::Run] Start update data SET100
+03/01/2019 09:00 AM [INFO]  [FundamentalSET100::Run] End update data SET100
+03/01/2019 09:00 AM [INFO]  [Service::SET2DataBase] Update database 
+03/01/2019 09:06 AM [INFO]  [Service::OnStop] Service stop

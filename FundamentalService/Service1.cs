@@ -47,8 +47,10 @@ namespace FundamentalService
                 Directory.CreateDirectory(strPath);
 
             log.LOGI("[Service::OnStart] Service starting");
+            // Set Timer
             this.timer1.Start();
             this.timer2.Start();
+            this.timer3.Start();
             SetAccessToken();
             Timer.Elapsed += new ScheduledEventHandler(SET2DataBase);
             Timer.AddEvent(new ScheduledTime("Daily", dateStart));
@@ -62,10 +64,11 @@ namespace FundamentalService
             log.LOGI("[Service::OnStop] Service stop");
             this.timer1.Stop();
             this.timer2.Stop();
+            this.timer3.Stop();
             Timer.Stop();
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | Other Function                                                  |
+        // | Timer Function                                                  |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
@@ -81,16 +84,21 @@ namespace FundamentalService
         }
         private void SET2DataBase(object sender, ScheduledEventArgs e)
         {
-            log.LOGI("[Service::SET2DataBase] Task scheduler running");
             var getData = new FundamentalSET100();
             getData.Run();
-            log.LOGI("[Service::SET2DataBase] Update database ");
-
+        }
+        private void Kaohoon2Database(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            var getData = new FundamentalKaohoon();
+            getData.Run();
         }
         private void ResetAccessToken(object sender, System.Timers.ElapsedEventArgs e)
         {
             SetAccessToken();
         }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Other Function                                                  |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         private void SetAccessToken()
         {
             string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());

@@ -87,13 +87,13 @@ namespace FundamentalService
             }
 
             for (var i = 0; i < symbols.Count; i++)
-                ScrapingWeb(symbols[i]);
+                CompanyHighlights(symbols[i]);
             log.LOGI("[FundamentalSET100::Run] End update data SET100");
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | ScrapingWeb Function                                            |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        public static void ScrapingWeb(string symbol)
+        public static void CompanyHighlights(string symbol)
         {
             var url = $"https://www.set.or.th/set/companyhighlight.do?symbol={symbol}&ssoPageId=5";
 
