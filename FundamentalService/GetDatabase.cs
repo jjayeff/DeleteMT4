@@ -23,6 +23,7 @@ namespace FundamentalService
         private static string Password = ConfigurationManager.AppSettings["DatabasePassword"];
         private static string AuthUsername = ConfigurationManager.AppSettings["ServerUsername"];
         private static string AuthPassword = ConfigurationManager.AppSettings["ServerPassword"];
+        private static Plog log = new Plog();
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Model                                                           |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -126,28 +127,48 @@ namespace FundamentalService
                             return GetFinanceInfoYearly(param[2]);
                         else if (param[1] == "finance_info_yearly" && param[2] == "year" && param.Length == 4)
                             return GetFinanceInfoYearly(null, param[3]);
+                        else if (param[1] == "finance_info_yearly" && param[2] == "date" && param.Length == 4)
+                            return GetFinanceInfoYearly(null, null, param[3]);
+                        else if (param[1] == "finance_info_yearly" && param[2] == "date" && param.Length == 5)
+                            return GetFinanceInfoYearly(param[3], null, param[4]);
                         else if (param[1] == "finance_info_yearly" && param.Length == 4)
                             return GetFinanceInfoYearly(param[2], param[3]);
                         else if (param[1] == "finance_info_quarter" && param.Length == 3)
                             return GetFinanceInfoQuarter(param[2]);
                         else if (param[1] == "finance_info_quarter" && param[2] == "year" && param.Length == 4)
                             return GetFinanceInfoQuarter(null, param[3]);
+                        else if (param[1] == "finance_info_quarter" && param[2] == "date" && param.Length == 4)
+                            return GetFinanceInfoQuarter(null, null, param[3]);
+                        else if (param[1] == "finance_info_quarter" && param[2] == "date" && param.Length == 5)
+                            return GetFinanceInfoQuarter(param[3], null, param[4]);
                         else if (param[1] == "finance_info_quarter" && param.Length == 4)
                             return GetFinanceInfoQuarter(param[2], param[3]);
                         else if (param[1] == "finance_stat_yearly" && param.Length == 3)
                             return GetFinanceStatYearly(param[2]);
                         else if (param[1] == "finance_stat_yearly" && param[2] == "year" && param.Length == 4)
                             return GetFinanceStatYearly(null, param[3]);
+                        else if (param[1] == "finance_stat_yearly" && param[2] == "date" && param.Length == 4)
+                            return GetFinanceStatYearly(null, null, param[3]);
+                        else if (param[1] == "finance_stat_yearly" && param[2] == "date" && param.Length == 5)
+                            return GetFinanceStatYearly(param[3], null, param[4]);
                         else if (param[1] == "finance_stat_yearly" && param.Length == 4)
                             return GetFinanceStatYearly(param[2], param[3]);
                         else if (param[1] == "finance_stat_daily" && param.Length == 3)
                             return GetFinanceStatDaily(param[2]);
                         else if (param[1] == "finance_stat_daily" && param[2] == "year" && param.Length == 4)
                             return GetFinanceStatDaily(null, param[3]);
+                        else if (param[1] == "finance_stat_daily" && param[2] == "date" && param.Length == 4)
+                            return GetFinanceStatDaily(null, null, param[3]);
+                        else if (param[1] == "finance_stat_daily" && param[2] == "date" && param.Length == 5)
+                            return GetFinanceStatDaily(param[3], null, param[4]);
                         else if (param[1] == "finance_stat_daily" && param.Length == 4)
                             return GetFinanceStatDaily(param[2], param[3]);
                         else if (param[0] == "fundamental" && param[1] == "year" && param.Length == 3)
                             return GetFundamental(null, param[2]);
+                        else if (param[0] == "fundamental" && param[1] == "date" && param.Length == 3)
+                            return GetFundamental(null, null, param[2]);
+                        else if (param[0] == "fundamental" && param[1] == "date" && param.Length == 4)
+                            return GetFundamental(param[2], null, param[3]);
                         else if (param[0] == "fundamental" && param.Length == 2)
                             return GetFundamental(param[1]);
                         else if (param[0] == "fundamental" && param.Length == 3)
@@ -201,40 +222,54 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Database fundamental Function                                   |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        public Fundamental GetFundamental(string symbol = null, string year = null)
+        public Fundamental GetFundamental(string symbol = null, string year = null, string date = null)
         {
             var tmp = new Fundamental();
-            if (symbol == null && year == null)
+            if (symbol == null && year == null && date == null)
             {
                 tmp.finance_info_yearly = GetFinanceInfoYearly();
                 tmp.finance_info_quarter = GetFinanceInfoQuarter();
                 tmp.finance_stat_yearly = GetFinanceStatYearly();
                 tmp.finance_stat_daily = GetFinanceStatDaily();
             }
-            else if (symbol != null && year == null)
+            else if (symbol != null && year == null && date == null)
             {
                 tmp.finance_info_yearly = GetFinanceInfoYearly(symbol);
                 tmp.finance_info_quarter = GetFinanceInfoQuarter(symbol);
                 tmp.finance_stat_yearly = GetFinanceStatYearly(symbol);
                 tmp.finance_stat_daily = GetFinanceStatDaily(symbol);
             }
-            else if (symbol == null && year != null)
+            else if (symbol == null && year != null && date == null)
             {
                 tmp.finance_info_yearly = GetFinanceInfoYearly(null, year);
                 tmp.finance_info_quarter = GetFinanceInfoQuarter(null, year);
                 tmp.finance_stat_yearly = GetFinanceStatYearly(null, year);
                 tmp.finance_stat_daily = GetFinanceStatDaily(null, year);
             }
-            else
+            else if (symbol == null && year == null && date != null)
+            {
+                tmp.finance_info_yearly = GetFinanceInfoYearly(null, null, date);
+                tmp.finance_info_quarter = GetFinanceInfoQuarter(null, null, date);
+                tmp.finance_stat_yearly = GetFinanceStatYearly(null, null, date);
+                tmp.finance_stat_daily = GetFinanceStatDaily(null, null, date);
+            }
+            else if (symbol != null && year != null && date == null)
             {
                 tmp.finance_info_yearly = GetFinanceInfoYearly(symbol, year);
                 tmp.finance_info_quarter = GetFinanceInfoQuarter(symbol, year);
                 tmp.finance_stat_yearly = GetFinanceStatYearly(symbol, year);
                 tmp.finance_stat_daily = GetFinanceStatDaily(symbol, year);
             }
+            else if (symbol != null && year == null && date != null)
+            {
+                tmp.finance_info_yearly = GetFinanceInfoYearly(symbol, null, date);
+                tmp.finance_info_quarter = GetFinanceInfoQuarter(symbol, null, date);
+                tmp.finance_stat_yearly = GetFinanceStatYearly(symbol, null, date);
+                tmp.finance_stat_daily = GetFinanceStatDaily(symbol, null, date);
+            }
             return tmp;
         }
-        public List<FinanceInfo> GetFinanceInfoYearly(string symbol = null, string year = null)
+        public List<FinanceInfo> GetFinanceInfoYearly(string symbol = null, string year = null, string date = null)
         {
             List<FinanceInfo> finance_info_yearly = new List<FinanceInfo>();
             string connetionString;
@@ -243,14 +278,18 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null && year == null)
+            if (symbol == null && year == null && date == null)
                 sql = $"Select * from dbo.finance_info_yearly";
-            else if (symbol != null && year == null)
+            else if (symbol != null && year == null && date == null)
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}'";
-            else if (symbol == null && year != null)
+            else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_yearly where Year = '{year}'";
-            else
+            else if (symbol == null && year == null && date != null)
+                sql = $"Select * from dbo.finance_info_yearly where Date = '{date}'";
+            else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Year = '{year}'";
+            else if (symbol != null && year == null && date != null)
+                sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Date = '{date}'";
 
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");
@@ -280,7 +319,7 @@ namespace FundamentalService
             }
             return finance_info_yearly;
         }
-        public List<FinanceInfo> GetFinanceInfoQuarter(string symbol = null, string year = null)
+        public List<FinanceInfo> GetFinanceInfoQuarter(string symbol = null, string year = null, string date = null)
         {
             List<FinanceInfo> finance_info_quarter = new List<FinanceInfo>();
             string connetionString;
@@ -289,15 +328,20 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null && year == null)
+            if (symbol == null && year == null && date == null)
                 sql = $"Select * from dbo.finance_info_quarter";
-            else if (symbol != null && year == null)
+            else if (symbol != null && year == null && date == null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}'";
-            else if (symbol == null && year != null)
+            else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_quarter where Year = '{year}'";
-            else
+            else if (symbol == null && year == null && date != null)
+                sql = $"Select * from dbo.finance_info_quarter where Date = '{date}'";
+            else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Year = '{year}'";
+            else if (symbol != null && year == null && date != null)
+                sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Date = '{date}'";
 
+            log.LOGI(sql);
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");
             using (SqlDataReader reader = command.ExecuteReader())
@@ -327,7 +371,7 @@ namespace FundamentalService
             }
             return finance_info_quarter;
         }
-        public List<FinanceStat> GetFinanceStatYearly(string symbol = null, string year = null)
+        public List<FinanceStat> GetFinanceStatYearly(string symbol = null, string year = null, string date = null)
         {
             List<FinanceStat> finance_stat_yearly = new List<FinanceStat>();
             string connetionString;
@@ -336,14 +380,18 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null && year == null)
+            if (symbol == null && year == null && date == null)
                 sql = $"Select * from dbo.finance_stat_yearly";
-            else if (symbol != null && year == null)
+            else if (symbol != null && year == null && date == null)
                 sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}'";
-            else if (symbol == null && year != null)
+            else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_yearly where Year = '{year}'";
-            else
+            else if (symbol == null && year == null && date != null)
+                sql = $"Select * from dbo.finance_stat_yearly where Date = '{date}'";
+            else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}' AND Year = '{year}'";
+            else if (symbol != null && year == null && date != null)
+                sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}' AND Date = '{date}'";
 
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");
@@ -370,7 +418,7 @@ namespace FundamentalService
             }
             return finance_stat_yearly;
         }
-        public List<FinanceStat> GetFinanceStatDaily(string symbol = null, string year = null)
+        public List<FinanceStat> GetFinanceStatDaily(string symbol = null, string year = null, string date = null)
         {
             List<FinanceStat> finance_stat_daily = new List<FinanceStat>();
             string connetionString;
@@ -379,14 +427,18 @@ namespace FundamentalService
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             string sql = "";
-            if (symbol == null && year == null)
+            if (symbol == null && year == null && date == null)
                 sql = $"Select * from dbo.finance_stat_daily";
-            else if (symbol != null && year == null)
+            else if (symbol != null && year == null && date == null)
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}'";
-            else if (symbol == null && year != null)
+            else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_daily where Year = '{year}'";
-            else
+            else if (symbol == null && year == null && date != null)
+                sql = $"Select * from dbo.finance_stat_daily where Date = '{date}'";
+            else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Year = '{year}'";
+            else if (symbol != null && year == null && date != null)
+                sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Date = '{date}'";
 
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");

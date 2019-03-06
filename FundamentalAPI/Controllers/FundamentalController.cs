@@ -44,12 +44,28 @@ namespace FundamentalAPI.Controllers
             return Process($"fundamental/year/{year}", value);
         }
 
+        // POST fundamental?date={date}
+        [HttpPost]
+        [Route("fundamental")]
+        public dynamic PostFundamentalDate(string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/date/{date}", value);
+        }
+
         // POST fundamental?symbol={symbol}&year={year}
         [HttpPost]
         [Route("fundamental")]
         public dynamic PostFundamental(string symbol, string year, [FromBody]Key value)
         {
             return Process($"fundamental/{symbol}/{year}", value);
+        }
+
+        // POST fundamental?symbol={symbol}&date={date}
+        [HttpPost]
+        [Route("fundamental")]
+        public dynamic PostFundamentalDate(string symbol, string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/date/{symbol}/{date}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | POST fundamental/finance_info_yearly                             |
@@ -77,12 +93,28 @@ namespace FundamentalAPI.Controllers
             return Process($"fundamental/finance_info_yearly/year/{year}", value);
         }
 
+        // POST fundamental/finance_info_yearly?date={date}
+        [HttpPost]
+        [Route("fundamental/finance_info_yearly")]
+        public dynamic PostFinanceInfoYearlyDate(string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_info_yearly/date/{date}", value);
+        }
+
         // POST fundamental/finance_info_yearly?symbol={symbol}&year={year}
         [HttpPost]
         [Route("fundamental/finance_info_yearly")]
         public dynamic PostFinanceInfoYearly(string symbol, string year, [FromBody]Key value)
         {
             return Process($"fundamental/finance_info_yearly/{symbol}/{year}", value);
+        }
+
+        // POST fundamental/finance_info_yearly?symbol={symbol}&date={date}
+        [HttpPost]
+        [Route("fundamental/finance_info_yearly")]
+        public dynamic PostFinanceInfoYearlyDate(string symbol, string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_info_yearly/date/{symbol}/{date}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | POST fundamental/finance_info_quarter                           |
@@ -110,12 +142,28 @@ namespace FundamentalAPI.Controllers
             return Process($"fundamental/finance_info_quarter/year/{year}", value);
         }
 
+        // POST fundamental/finance_info_quarter?date={date}
+        [HttpPost]
+        [Route("fundamental/finance_info_quarter")]
+        public dynamic PostFinanceInfoQuarterDate(string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_info_quarter/date/{date}", value);
+        }
+
         // POST fundamental/finance_info_quarter?symbol={symbol}&year={year}
         [HttpPost]
         [Route("fundamental/finance_info_quarter")]
         public dynamic PostFinanceInfoQuarter(string symbol, string year, [FromBody]Key value)
         {
             return Process($"fundamental/finance_info_quarter/{symbol}/{year}", value);
+        }
+
+        // POST fundamental/finance_info_quarter?symbol={symbol}&date={date}
+        [HttpPost]
+        [Route("fundamental/finance_info_quarter")]
+        public dynamic PostFinanceInfoQuarterDate(string symbol, string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_info_quarter/date/{symbol}/{date}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | POST fundamental/finance_stat_yearly                            |
@@ -143,12 +191,28 @@ namespace FundamentalAPI.Controllers
             return Process($"fundamental/finance_stat_yearly/year/{year}", value);
         }
 
+        // POST fundamental/finance_stat_yearly?date={date}
+        [HttpPost]
+        [Route("fundamental/finance_stat_yearly")]
+        public dynamic PostFinancerStatYearlyDate(string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_stat_yearly/date/{date}", value);
+        }
+
         // POST fundamental/finance_stat_yearly?symbol={symbol}&year={year}
         [HttpPost]
         [Route("fundamental/finance_stat_yearly")]
         public dynamic PostFinancerStatYearly(string symbol, string year, [FromBody]Key value)
         {
             return Process($"fundamental/finance_stat_yearly/{symbol}/{year}", value);
+        }
+
+        // POST fundamental/finance_stat_yearly?symbol={symbol}&date={date}
+        [HttpPost]
+        [Route("fundamental/finance_stat_yearly")]
+        public dynamic PostFinancerStatYearlyDate(string symbol, string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_stat_yearly/date/{symbol}/{date}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | POST fundamental/finance_stat_dail                              |
@@ -176,12 +240,28 @@ namespace FundamentalAPI.Controllers
             return Process($"fundamental/finance_stat_daily/year/{year}", value);
         }
 
+        // POST fundamental/finance_stat_daily?date={date}
+        [HttpPost]
+        [Route("fundamental/finance_stat_daily")]
+        public dynamic PostFinancerStatDailyDate(string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_stat_daily/date/{date}", value);
+        }
+
         // POST fundamental/finance_stat_daily?symbol={symbol}&year={year}
         [HttpPost]
         [Route("fundamental/finance_stat_daily")]
         public dynamic PostFinancerStatDaily(string symbol, string year, [FromBody]Key value)
         {
             return Process($"fundamental/finance_stat_daily/{symbol}/{year}", value);
+        }
+
+        // POST fundamental/finance_stat_daily?symbol={symbol}&date={date}
+        [HttpPost]
+        [Route("fundamental/finance_stat_daily")]
+        public dynamic PostFinancerStatDailyDate(string symbol, string date, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_stat_daily/date/{symbol}/{date}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Other Function                                                  |

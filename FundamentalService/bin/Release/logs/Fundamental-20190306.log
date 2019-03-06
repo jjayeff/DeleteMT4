@@ -1,0 +1,142 @@
+03/06/2019 10:07 AM [INFO]  [Service::OnStart] Service starting
+03/06/2019 10:07 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/06/2019 10:07 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/06/2019 10:17 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/06/2019 10:17 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/06/2019 10:19 AM [INFO]  [Service::OnStop] Service stop
+03/06/2019 10:20 AM [INFO]  [Service::OnStart] Service starting
+03/06/2019 10:20 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/06/2019 10:20 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/06/2019 10:20 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/06/2019 10:21 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:21 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+03/06/2019 10:21 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:21 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV
+03/06/2019 10:21 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:21 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/year/2015
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/date/2019-03-01
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/date/2019-03-05
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/date/2019-03-06
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/date/2019-03-04
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/date/2019-03-05
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AVV/2015
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AVV/2018
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AVV/2018
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AVV
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/AAV/2019
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:22 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/date/AAV/2019-02-28
+03/06/2019 10:23 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:23 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/06/2019 10:24 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:24 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV
+03/06/2019 10:24 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:24 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV/2018
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/year/2016-31-12
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/AAV/2018
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/year/2018
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/date/2018-12-31
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:25 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly/date/AAV/2018-12-31
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/AAV/2018
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/year/2018
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/year/2018
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:26 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/year/2018
+03/06/2019 10:27 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:27 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/date/2018-9-30
+03/06/2019 10:27 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:27 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter
+03/06/2019 10:27 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:27 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/date/2018-9-30
+03/06/2019 10:28 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:28 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/date/AAV/2018-9-30
+03/06/2019 10:29 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:29 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/date/2018-9-30
+03/06/2019 10:29 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:29 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/year/2018
+03/06/2019 10:30 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/06/2019 10:30 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/AAV/2018
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/year/2018
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/date/2018-12-28
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/date/2018-12-28
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:30 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_yearly/date/AAV/2018-12-28
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/AAV/2019
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:31 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/year/2019
+03/06/2019 10:32 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:32 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/date/2019-3-5
+03/06/2019 10:32 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:32 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/date/AAV/2019-3-5
+03/06/2019 10:33 AM [INFO]  [Service::OnStop] Service stop
+03/06/2019 10:33 AM [INFO]  [Service::OnStart] Service starting
+03/06/2019 10:33 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/06/2019 10:33 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/06/2019 10:33 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QmmpOyWIQUqIOZHeV89CvA=="}
+03/06/2019 10:33 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/06/2019 10:33 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"lcK+pvd7VkKyjsVa0Pcixw=="}
+03/06/2019 10:33 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/year/2018
+03/06/2019 10:33 AM [INFO]  Select * from dbo.finance_info_quarter where Date = '2018'
+03/06/2019 10:36 AM [INFO]  [Service::OnStop] Service stop
+03/06/2019 10:36 AM [INFO]  [Service::OnStart] Service starting
+03/06/2019 10:36 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/06/2019 10:36 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/06/2019 10:36 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/06/2019 10:36 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+/OYOwsqqUCHhYFwiMWtAw=="}
+03/06/2019 10:36 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/year/2018
+03/06/2019 10:36 AM [INFO]  Select * from dbo.finance_info_quarter where Year = '2018'
+03/06/2019 10:36 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+/OYOwsqqUCHhYFwiMWtAw=="}
+03/06/2019 10:36 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/date/2018-9-30
+03/06/2019 10:36 AM [INFO]  Select * from dbo.finance_info_quarter where Date = '2018-9-30'
+03/06/2019 10:37 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+/OYOwsqqUCHhYFwiMWtAw=="}
+03/06/2019 10:37 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/date/2018-9-30
+03/06/2019 10:37 AM [INFO]  Select * from dbo.finance_info_quarter where Date = '2018-9-30'
+03/06/2019 10:37 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+/OYOwsqqUCHhYFwiMWtAw=="}
+03/06/2019 10:37 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/date/2019-3-5
+03/06/2019 10:38 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+/OYOwsqqUCHhYFwiMWtAw=="}
+03/06/2019 10:38 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_stat_daily/date/PTT/2019-3-5
+03/06/2019 10:40 AM [INFO]  [Service::OnStop] Service stop
+03/06/2019 11:55 AM [INFO]  [Service::OnStart] Service starting
+03/06/2019 11:55 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/06/2019 11:55 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/06/2019 11:55 AM [INFO]  [Service::OnStop] Service stop

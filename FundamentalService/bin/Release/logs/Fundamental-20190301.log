@@ -37,3 +37,52 @@
 03/01/2019 11:53 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
 03/01/2019 11:53 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
 03/01/2019 11:53 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/01/2019 11:58 AM [INFO]  [Service::OnStop] Service stop
+03/01/2019 12:38 PM [INFO]  [Service::OnStart] Service starting
+03/01/2019 12:38 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/01/2019 12:38 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/01/2019 12:48 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 12:48 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 12:58 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 12:58 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 01:08 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 01:09 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 01:18 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 01:18 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 01:28 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 01:28 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 01:38 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 01:38 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 01:48 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 01:48 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 01:58 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 01:58 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 02:08 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 02:09 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 02:18 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 02:18 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 02:28 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 02:28 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 02:38 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/01/2019 02:38 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 02:38 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 02:48 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 02:48 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 02:58 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 02:58 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 03:08 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 03:08 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 03:18 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 03:18 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 03:28 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 03:28 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 03:38 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/01/2019 03:48 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 03:48 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 03:58 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 03:58 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 04:08 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 04:08 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 04:18 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/01/2019 04:18 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/01/2019 04:18 PM [INFO]  [Service::OnStop] Service stop
