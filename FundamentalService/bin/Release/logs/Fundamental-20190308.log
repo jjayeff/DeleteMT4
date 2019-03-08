@@ -18,3 +18,393 @@
 03/08/2019 11:47 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
 03/08/2019 11:47 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
 03/08/2019 11:55 AM [INFO]  [Service::OnStop] Service stop
+03/08/2019 12:36 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 12:36 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 12:36 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 12:36 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 12:37 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"kWnmcaXRPUiZruvG5glNuw=="}
+03/08/2019 12:37 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 12:38 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"kWnmcaXRPUiZruvG5glNuw=="}
+03/08/2019 12:38 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 12:39 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 12:41 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 12:41 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 12:41 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"kWnmcaXRPUiZruvG5glNuw=="}
+03/08/2019 12:41 PM [INFO]  [ServerSocket::StartListening] Text received : assets
+03/08/2019 12:46 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 12:46 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 12:51 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 12:51 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 12:56 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 12:56 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:01 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:01 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:06 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:06 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:11 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:11 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:16 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:16 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:21 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:21 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:26 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:26 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:31 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:31 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:36 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 01:36 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:36 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:41 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 01:41 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 01:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 01:45 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"1aU0NcXaL0K7WftcVzIgLg=="}
+03/08/2019 01:45 PM [INFO]  [ServerSocket::StartListening] Text received : assets
+03/08/2019 01:45 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"1aU0NcXaL0K7WftcVzIgLg=="}
+03/08/2019 01:45 PM [INFO]  [ServerSocket::StartListening] Text received : assets/symbol/AAV
+03/08/2019 01:45 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 01:45 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 01:45 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 01:45 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"MhKhqKFkaEC4zw59H03j9g=="}
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : assets/symbol/AAV
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"MhKhqKFkaEC4zw59H03j9g=="}
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : assets/symbol/AAV
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"MhKhqKFkaEC4zw59H03j9g=="}
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : assets/symbol/AAV
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"MhKhqKFkaEC4zw59H03j9g=="}
+03/08/2019 01:46 PM [INFO]  [ServerSocket::StartListening] Text received : assets
+03/08/2019 01:48 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 01:48 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 01:48 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 01:48 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:48 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"AkF/8hxrUU+nfgpkpY15PA=="}
+03/08/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Text received : assets
+03/08/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"AkF/8hxrUU+nfgpkpY15PA=="}
+03/08/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Text received : assets
+03/08/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"AkF/8hxrUU+nfgpkpY15PA=="}
+03/08/2019 01:49 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 01:49 PM [WARN]  1
+03/08/2019 01:52 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 01:52 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 01:52 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 01:52 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:52 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 01:52 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KFeHrmxA60at1N6KBvx3zQ=="}
+03/08/2019 01:52 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 01:52 PM [WARN]  1
+03/08/2019 01:52 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KFeHrmxA60at1N6KBvx3zQ=="}
+03/08/2019 01:52 PM [INFO]  [ServerSocket::StartListening] Text received : statement/assets
+03/08/2019 01:52 PM [WARN]  2
+03/08/2019 01:52 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:55 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 01:55 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 01:55 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 01:55 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:55 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 01:56 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"24mlIoIVKE+ihh5SJ/zaag=="}
+03/08/2019 01:56 PM [INFO]  [ServerSocket::StartListening] Text received : statement/assets
+03/08/2019 01:56 PM [WARN]  2
+03/08/2019 01:56 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:58 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 01:58 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 01:58 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 01:58 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:59 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 01:59 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"QIdalUQ540+lV9htcx8kEA=="}
+03/08/2019 01:59 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset
+03/08/2019 01:59 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 01:59 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:00 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:00 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:00 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zy1lHQdOdEuIsChl+zjUOw=="}
+03/08/2019 02:00 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset
+03/08/2019 02:00 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:04 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:04 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:04 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:04 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:04 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:05 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Y5x7AOCsSkGLWm9PxAP9JQ=="}
+03/08/2019 02:05 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset
+03/08/2019 02:09 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 02:09 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 02:14 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 02:14 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 02:19 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 02:19 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 02:21 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:21 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:21 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:21 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:21 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:21 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"N7D+HxzLgUeUQ5T0A/QztA=="}
+03/08/2019 02:21 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset
+03/08/2019 02:26 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 02:26 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 02:31 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 02:31 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 02:33 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:41 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:41 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:41 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:41 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:41 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"RxMPlGpVukSpyl7agCUz6A=="}
+03/08/2019 02:41 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset
+03/08/2019 02:41 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"RxMPlGpVukSpyl7agCUz6A=="}
+03/08/2019 02:41 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/symbol/AAV
+03/08/2019 02:42 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"RxMPlGpVukSpyl7agCUz6A=="}
+03/08/2019 02:42 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset
+03/08/2019 02:42 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"RxMPlGpVukSpyl7agCUz6A=="}
+03/08/2019 02:42 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/symbol/AAV
+03/08/2019 02:43 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:43 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:43 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:43 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:43 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:43 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"T3TNOoMjuUKKZf8A0Lhwzg=="}
+03/08/2019 02:43 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/symbol/AAV
+03/08/2019 02:43 PM [WARN]  SELECT * from dbo.statement_asset
+03/08/2019 02:45 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:45 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:45 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:45 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:45 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:45 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"wldC1mwev0qwobO+OweoyQ=="}
+03/08/2019 02:45 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/symbol/AAV
+03/08/2019 02:45 PM [WARN]  statement
+03/08/2019 02:45 PM [WARN]  asset
+03/08/2019 02:45 PM [WARN]  symbol
+03/08/2019 02:45 PM [WARN]  AAV
+03/08/2019 02:45 PM [WARN]  SELECT * from dbo.statement_asset
+03/08/2019 02:47 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:47 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:47 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:47 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:47 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:48 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"tdLs2wJfdEyFJY+Txa2ryQ=="}
+03/08/2019 02:48 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/symbol/AAV
+03/08/2019 02:48 PM [WARN]  SELECT * from dbo.statement_asset WHERE Symbol = 'AAV'
+03/08/2019 02:48 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"tdLs2wJfdEyFJY+Txa2ryQ=="}
+03/08/2019 02:48 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/lastupdate
+03/08/2019 02:48 PM [WARN]  SELECT * from dbo.statement_asset WHERE Update_Date >= '2019-03-08'
+03/08/2019 02:48 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"tdLs2wJfdEyFJY+Txa2ryQ=="}
+03/08/2019 02:48 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/lastupdate&symbol/AAV
+03/08/2019 02:48 PM [WARN]  SELECT * from dbo.statement_asset WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 02:52 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 02:52 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 02:53 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:53 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:53 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:53 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:53 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:53 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+enGABkRlEi90s6xfogdrw=="}
+03/08/2019 02:53 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/lastupdate&symbol/AAV
+03/08/2019 02:53 PM [WARN]  SELECT * from dbo.statement_asset WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 02:54 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+enGABkRlEi90s6xfogdrw=="}
+03/08/2019 02:54 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+03/08/2019 02:54 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+enGABkRlEi90s6xfogdrw=="}
+03/08/2019 02:54 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/08/2019 02:55 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+enGABkRlEi90s6xfogdrw=="}
+03/08/2019 02:55 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset
+03/08/2019 02:55 PM [WARN]  SELECT * from dbo.statement_asset
+03/08/2019 02:55 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+enGABkRlEi90s6xfogdrw=="}
+03/08/2019 02:55 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/lastupdate
+03/08/2019 02:55 PM [WARN]  SELECT * from dbo.statement_asset WHERE Update_Date >= '2019-03-08'
+03/08/2019 02:57 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 02:57 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 02:57 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 02:57 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 02:57 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 02:58 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Z8bFlJyBM0C05BxqpArGoQ=="}
+03/08/2019 02:58 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/lastupdate
+03/08/2019 02:58 PM [WARN]  SELECT * from dbo.statement_asset WHERE Update_Date >= '2019-03-06'
+03/08/2019 02:58 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 03:46 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 03:46 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 03:46 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 03:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 03:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"bHsCM3F+10O7UdD2y4deEQ=="}
+03/08/2019 03:46 PM [INFO]  [ServerSocket::StartListening] Text received : statement/asset/lastupdate
+03/08/2019 03:46 PM [WARN]  SELECT * from dbo.statement_asset WHERE Update_Date >= '2019-03-07'
+03/08/2019 03:47 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 03:47 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 03:47 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 03:47 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 03:48 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"bHsCM3F+10O7UdD2y4deEQ=="}
+03/08/2019 03:48 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"bHsCM3F+10O7UdD2y4deEQ=="}
+03/08/2019 03:48 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : statement/share_holder_equity
+03/08/2019 03:49 PM [WARN]  SELECT * from dbo.statement_share_holder_equity
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : statement/debt
+03/08/2019 03:49 PM [WARN]  SELECT * from dbo.statement_debt
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : statement/share_holder_equity
+03/08/2019 03:49 PM [WARN]  SELECT * from dbo.statement_share_holder_equity
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : statement/income
+03/08/2019 03:49 PM [WARN]  SELECT * from dbo.statement_income
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : statement/comprehensive_income
+03/08/2019 03:49 PM [WARN]  SELECT * from dbo.statement_comprehensive_income
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:49 PM [INFO]  [ServerSocket::StartListening] Text received : statement/cash_flow
+03/08/2019 03:49 PM [WARN]  SELECT * from dbo.statement_cash_flow
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : statement/debt/symbol/AAV
+03/08/2019 03:50 PM [WARN]  SELECT * from dbo.statement_debt WHERE Symbol = 'AAV'
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : statement/debt/lastupdate&symbol/AAV
+03/08/2019 03:50 PM [WARN]  SELECT * from dbo.statement_debt WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : statement/debt/lastupdate
+03/08/2019 03:50 PM [WARN]  SELECT * from dbo.statement_debt WHERE Update_Date >= '2019-03-08'
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : statement/share_holder_equity/symbol/AAV
+03/08/2019 03:50 PM [WARN]  SELECT * from dbo.statement_share_holder_equity WHERE Symbol = 'AAV'
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : statement/share_holder_equity/lastupdate
+03/08/2019 03:50 PM [WARN]  SELECT * from dbo.statement_share_holder_equity WHERE Update_Date >= '2019-03-08'
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : statement/share_holder_equity/lastupdate&symbol/AAV
+03/08/2019 03:50 PM [WARN]  SELECT * from dbo.statement_share_holder_equity WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:50 PM [INFO]  [ServerSocket::StartListening] Text received : statement/income/symbol/AAV
+03/08/2019 03:50 PM [WARN]  SELECT * from dbo.statement_income WHERE Symbol = 'AAV'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/income/lastupdate
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_income WHERE Update_Date >= '2019-03-08'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/income/lastupdate&symbol/AAV
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_income WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/comprehensive_income/symbol/AAV
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_comprehensive_income WHERE Symbol = 'AAV'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/comprehensive_income/lastupdate
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_comprehensive_income WHERE Update_Date >= '2019-03-08'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/comprehensive_income/lastupdate&symbol/AAV
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_comprehensive_income WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/cash_flow/symbol/AAV
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_cash_flow WHERE Symbol = 'AAV'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/cash_flow/lastupdate
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_cash_flow WHERE Update_Date >= '2019-03-08'
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:51 PM [INFO]  [ServerSocket::StartListening] Text received : statement/cash_flow/lastupdate&symbol/AAV
+03/08/2019 03:51 PM [WARN]  SELECT * from dbo.statement_cash_flow WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 03:52 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/08/2019 03:52 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/08/2019 03:53 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:53 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_asset
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_debt
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_share_holder_equity
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_income
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_comprehensive_income
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_cash_flow
+03/08/2019 03:53 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:53 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_cash_flow WHERE Symbol = 'AAV'
+03/08/2019 03:53 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:53 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate
+03/08/2019 03:53 PM [WARN]  SELECT * from dbo.statement_cash_flow WHERE Update_Date >= '2019-03-08'
+03/08/2019 03:54 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:54 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 03:54 PM [WARN]  SELECT * from dbo.statement_asset
+03/08/2019 03:54 PM [WARN]  SELECT * from dbo.statement_debt
+03/08/2019 03:54 PM [WARN]  SELECT * from dbo.statement_share_holder_equity
+03/08/2019 03:54 PM [WARN]  SELECT * from dbo.statement_income
+03/08/2019 03:54 PM [WARN]  SELECT * from dbo.statement_comprehensive_income
+03/08/2019 03:54 PM [WARN]  SELECT * from dbo.statement_cash_flow
+03/08/2019 03:54 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FQy1qbOrHEeYoIe8RJ4AwQ=="}
+03/08/2019 03:54 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate&symbol/AAV
+03/08/2019 03:54 PM [WARN]  SELECT * from dbo.statement_cash_flow WHERE Symbol = 'AAV' AND Update_Date >= '2019-03-08'
+03/08/2019 03:54 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 03:57 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 03:57 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 03:57 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 03:58 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 03:58 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"O207RsXLk0KV/guOGAek2A=="}
+03/08/2019 03:58 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate&symbol/AAV
+03/08/2019 03:58 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"O207RsXLk0KV/guOGAek2A=="}
+03/08/2019 03:58 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 04:01 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:01 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:01 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:01 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:01 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:02 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"gcKxQE7CGEm0dBg5VxEBBA=="}
+03/08/2019 04:02 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 04:02 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"gcKxQE7CGEm0dBg5VxEBBA=="}
+03/08/2019 04:02 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate
+03/08/2019 04:02 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:02 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:02 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:02 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:02 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:03 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"jJikj6/G4EaH6e7M6Z213Q=="}
+03/08/2019 04:03 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate
+03/08/2019 04:03 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"jJikj6/G4EaH6e7M6Z213Q=="}
+03/08/2019 04:03 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate&symbol/AAV
+03/08/2019 04:03 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"jJikj6/G4EaH6e7M6Z213Q=="}
+03/08/2019 04:03 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 04:04 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"jJikj6/G4EaH6e7M6Z213Q=="}
+03/08/2019 04:04 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate&symbol/AAV
+03/08/2019 04:05 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"jJikj6/G4EaH6e7M6Z213Q=="}
+03/08/2019 04:05 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 04:06 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:06 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:06 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:06 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:06 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:06 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KzL99JB/b0iS1qVzivdtIg=="}
+03/08/2019 04:06 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 04:07 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:07 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:07 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:07 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:08 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:08 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"yw+AGtOtKkGXlHYjwTMI1A=="}
+03/08/2019 04:08 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 04:08 PM [WARN]  AAV
+03/08/2019 04:09 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:09 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:09 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:09 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:09 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:09 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"WFFOXnwroU2D2CbfJrd0bw=="}
+03/08/2019 04:09 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 04:09 PM [WARN]  AAV
+03/08/2019 04:09 PM [WARN]  case1
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"WFFOXnwroU2D2CbfJrd0bw=="}
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : statement
+03/08/2019 04:10 PM [WARN]  
+03/08/2019 04:10 PM [WARN]  case4
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"WFFOXnwroU2D2CbfJrd0bw=="}
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate
+03/08/2019 04:10 PM [WARN]  
+03/08/2019 04:10 PM [WARN]  case3
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"WFFOXnwroU2D2CbfJrd0bw=="}
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate&symbol/AAV
+03/08/2019 04:10 PM [WARN]  AAV
+03/08/2019 04:10 PM [WARN]  case2
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"WFFOXnwroU2D2CbfJrd0bw=="}
+03/08/2019 04:10 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 04:10 PM [WARN]  AAV
+03/08/2019 04:10 PM [WARN]  case1
+03/08/2019 04:11 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:11 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:11 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:11 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:12 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:12 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"8gnU7XSR1UCKIpRSDWfzTg=="}
+03/08/2019 04:12 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
+03/08/2019 04:12 PM [INFO]  [Service::OnStop] Service stop

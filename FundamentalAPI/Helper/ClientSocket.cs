@@ -23,7 +23,7 @@ namespace FundamentalAPI.Helper
         public string StartClient(string input, bool check = false)
         {
             // Data buffer for incoming data.  
-            byte[] bytes = new byte[1048576]; 
+            byte[] bytes = new byte[2097152]; 
 
             // Connect to a remote device.  
             try

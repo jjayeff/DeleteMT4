@@ -129,6 +129,8 @@ namespace FundamentalService
                 return db.Authorization(data);
             else if (data.IndexOf("fundamental") > -1)
                 return JsonConvert.SerializeObject(db.GetFundamentalDB(data));
+            else if (data.IndexOf("statement") > -1)
+                return JsonConvert.SerializeObject(db.GetStateMentDB(data));
             else
                 return JsonConvert.SerializeObject(db.GetKaohoonDB(data));
         }

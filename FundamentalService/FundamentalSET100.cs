@@ -210,10 +210,10 @@ namespace FundamentalService
             public string Deferred_expenditure_assets { get; set; }
             public string Update_Date { get; set; }
         }
-        public class Dedt
+        public class Debt
         {
 
-            public Dedt() { }
+            public Debt() { }
 
             // Properties.
             public string Year { get; set; }
@@ -692,7 +692,7 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         static string main = "", sub = "", nano = "", last = "";
         static Assets asset;
-        static Dedt debt;
+        static Debt debt;
         static ShareHolderEquity share_holder_equity;
         static Income income;
         static ComprehensiveIncome comprehensive_income;
@@ -982,7 +982,7 @@ namespace FundamentalService
 
             // Set values
             asset = new Assets();
-            debt = new Dedt();
+            debt = new Debt();
             share_holder_equity = new ShareHolderEquity();
 
             string check_case = "";
