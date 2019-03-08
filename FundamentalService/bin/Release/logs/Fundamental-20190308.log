@@ -408,3 +408,76 @@
 03/08/2019 04:12 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"8gnU7XSR1UCKIpRSDWfzTg=="}
 03/08/2019 04:12 PM [INFO]  [ServerSocket::StartListening] Text received : statement/symbol/AAV
 03/08/2019 04:12 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:41 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:41 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:41 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:41 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:41 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"q3IF7sdGMUWAoPcvpqD+yg=="}
+03/08/2019 04:41 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+03/08/2019 04:41 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:42 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:42 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:42 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:42 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"DpCpfA83o0q5eH9VkbkBeA=="}
+03/08/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+03/08/2019 04:43 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:43 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:43 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:43 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:43 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"9FOPBIxegkWvVpENw3xhnA=="}
+03/08/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : statement/lastupdate
+03/08/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"9FOPBIxegkWvVpENw3xhnA=="}
+03/08/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/08/2019 04:44 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:44 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:45 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:45 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:45 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:45 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:45 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"VYky8DZEaEC+NgqPYuhvuw=="}
+03/08/2019 04:45 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/08/2019 04:45 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:45 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:46 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:46 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:46 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:46 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:46 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:46 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:46 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:46 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"VYky8DZEaEC+NgqPYuhvuw=="}
+03/08/2019 04:47 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:47 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"U2ygaZmaC0KmeCOmcjTQoA=="}
+03/08/2019 04:47 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/08/2019 04:47 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:48 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:49 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:49 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:49 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"pc6K3DWFrEu8wO1jmEoJlA=="}
+03/08/2019 04:50 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/08/2019 04:50 PM [WARN]  Select * from dbo.finance_info_yearly
+03/08/2019 04:50 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:51 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:51 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:51 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:51 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:52 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:52 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"EetLp+8420eZtsjCX/ZUzw=="}
+03/08/2019 04:52 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/08/2019 04:52 PM [WARN]  Select * from dbo.finance_info_yearly
+03/08/2019 04:52 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:53 PM [INFO]  [Service::OnStop] Service stop
+03/08/2019 04:53 PM [INFO]  [Service::OnStart] Service starting
+03/08/2019 04:53 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/08/2019 04:53 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/08/2019 04:54 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/08/2019 04:54 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"ckqu0D28SEyXlaiDfSrJiQ=="}
+03/08/2019 04:54 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/08/2019 04:54 PM [WARN]  Select * from dbo.finance_info_yearly
+03/08/2019 04:54 PM [INFO]  [Service::OnStop] Service stop

@@ -37,7 +37,7 @@ namespace FundamentalService
             public string Symbol { get; set; }
             public string Year { get; set; }
             public string Quarter { get; set; }
-            public string Asset { get; set; }
+            public string Assets { get; set; }
             public string Liabilities { get; set; }
             public string Equity { get; set; }
             public string Paid_up_cap { get; set; }
@@ -1020,7 +1020,7 @@ namespace FundamentalService
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Year = '{year}'";
             else if (symbol != null && year == null && date != null)
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Date = '{date}'";
-
+            log.LOGW(sql);
             return SeleteDB<FinanceInfo>(sql);
         }
         public List<FinanceInfo> GetFinanceInfoQuarter(string symbol = null, string year = null, string date = null)
@@ -1038,6 +1038,7 @@ namespace FundamentalService
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Year = '{year}'";
             else if (symbol != null && year == null && date != null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Date = '{date}'";
+            log.LOGW(sql);
 
             return SeleteDB<FinanceInfo>(sql);
         }
@@ -1057,6 +1058,7 @@ namespace FundamentalService
             else if (symbol != null && year == null && date != null)
                 sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}' AND Date = '{date}'";
 
+            log.LOGW(sql);
 
             return SeleteDB<FinanceStat>(sql);
         }
@@ -1075,6 +1077,7 @@ namespace FundamentalService
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Year = '{year}'";
             else if (symbol != null && year == null && date != null)
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Date = '{date}'";
+            log.LOGW(sql);
 
             return SeleteDB<FinanceStat>(sql);
         }
@@ -1085,6 +1088,7 @@ namespace FundamentalService
         {
             var tmp = new Statement();
             var date = DateTime.Now.ToString("yyyy-MM-dd");
+            log.LOGW(symbol);
             if (symbol != null && !last_update)
             {
                 tmp.asset = GetAssets(symbol);
