@@ -33,7 +33,7 @@ namespace FundamentalService
             public string Symbol { get; set; }
             public string Year { get; set; }
             public string Quarter { get; set; }
-            public string Asset { get; set; }
+            public string Assets { get; set; }
             public string Liabilities { get; set; }
             public string Equity { get; set; }
             public string Paid_up_cap { get; set; }
@@ -785,7 +785,6 @@ namespace FundamentalService
                 if (utf8_String == "N/A" || utf8_String == "N.A." || utf8_String == "-")
                     utf8_String = "null";
 
-
                 if (utf8_String == "สินทรัพย์รวม")
                     run = utf8_String;
                 else if (utf8_String == "หนี้สินรวม")
@@ -895,39 +894,39 @@ namespace FundamentalService
                 if (fs_date[i].IndexOf("/") >= 0)
                     fsDate = fs_date[i];
                 else
-                    fsDate = "null";
+                    fsDate = null;
                 var tmp1 = new FinanceStat
                 {
-                    Date = date_stat[i],
+                    Date = ChangeDateFormat(date_stat[i]),
                     Symbol = symbol,
-                    Year = year_stat[i],
-                    Lastprice = lastprice[i],
-                    Market_cap = market_cap[i],
-                    FS_date = fsDate,
-                    PE = pe[i],
-                    PBV = pbv[i],
-                    BookValue_Share = book_value_share[i],
-                    Dvd_Yield = dvd_yield[i],
+                    Year = ChangeYearFormat(year_stat[i]),
+                    Lastprice = CutStrignMoney(lastprice[i]),
+                    Market_cap = CutStrignMoney(market_cap[i]),
+                    FS_date = ChangeDateFormat(fsDate),
+                    PE = CutStrignMoney(pe[i]),
+                    PBV = CutStrignMoney(pbv[i]),
+                    BookValue_Share = CutStrignMoney(book_value_share[i]),
+                    Dvd_Yield = CutStrignMoney(dvd_yield[i]),
                 };
                 if (i < date_stat.Count - 1)
                 {
                     finance_stat_yearly.Add(tmp1);
                     var tmp = new FinanceInfo
                     {
-                        Date = date_info[i],
+                        Date = ChangeDateFormat(date_info[i]),
                         Symbol = symbol,
-                        Year = year_info[i],
+                        Year = ChangeYearFormat(year_info[i]),
                         Quarter = quarter[i],
-                        Asset = asset[i],
-                        Liabilities = liabilities[i],
-                        Equity = equity[i],
-                        Paid_up_cap = paid_up_cap[i],
-                        Revenue = revenue[i],
-                        NetProfit = net_profit[i],
-                        EPS = eps[i],
-                        ROA = roa[i],
-                        ROE = roe[i],
-                        NetProfitMargin = net_profit_margin[i],
+                        Assets = CutStrignMoney(asset[i]),
+                        Liabilities = CutStrignMoney(liabilities[i]),
+                        Equity = CutStrignMoney(equity[i]),
+                        Paid_up_cap = CutStrignMoney(paid_up_cap[i]),
+                        Revenue = CutStrignMoney(revenue[i]),
+                        NetProfit = CutStrignMoney(net_profit[i]),
+                        EPS = CutStrignMoney(eps[i]),
+                        ROA = CutStrignMoney(roa[i]),
+                        ROE = CutStrignMoney(roe[i]),
+                        NetProfitMargin = CutStrignMoney(net_profit_margin[i]),
                     };
                     if (tmp.Quarter.IndexOf("ไตรมาส") >= 0)
                     {
@@ -935,7 +934,10 @@ namespace FundamentalService
                         finance_info_quarter.Add(tmp);
                     }
                     else
+                    {
+                        tmp.Quarter = null;
                         finance_info_yearly.Add(tmp);
+                    }
                 }
                 else
                 {
@@ -944,213 +946,30 @@ namespace FundamentalService
 
             }
 
-            string connetionString;
-            SqlConnection cnn;
-            connetionString = $@"Data Source={DatabaseServer};Initial Catalog={Database};User ID={Username};Password={Password}";
-            cnn = new SqlConnection(connetionString);
-            cnn.Open();
-            //Console.WriteLine($"{symbol}: Connection Open !");
-
-            // Insert database finance_info_yearly
             foreach (var value in finance_info_yearly)
             {
-                string sql = $"Select * from dbo.finance_info_yearly where Date={ChangeDateFormat(value.Date)} AND Symbol='{value.Symbol}'";
-                SqlCommand command = new SqlCommand(sql, cnn);
-                command.Parameters.AddWithValue("@zip", "india");
-                bool event_case = true;
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        sql = $"UPDATE dbo.finance_info_yearly SET " +
-                            $"Year='{ChangeYearFormat(value.Year)}'," +
-                            $"Assets={CutStrignMoney(value.Asset)}," +
-                            $"Liabilities={CutStrignMoney(value.Liabilities)}," +
-                            $"Equity={CutStrignMoney(value.Equity)}," +
-                            $"Paid_up_cap={CutStrignMoney(value.Paid_up_cap)}," +
-                            $"Revenue={CutStrignMoney(value.Revenue)}," +
-                            $"NetProfit={CutStrignMoney(value.NetProfit)}," +
-                            $"EPS={CutStrignMoney(value.EPS)}," +
-                            $"ROA={CutStrignMoney(value.ROA)}," +
-                            $"ROE={CutStrignMoney(value.ROE)}," +
-                            $"NetProfitMargin={CutStrignMoney(value.NetProfitMargin)}" +
-                            $"where Date = { ChangeDateFormat(value.Date) } AND Symbol = '{value.Symbol}'";
-                        event_case = false;
-                    }
-                    else
-                    {
-                        sql = "Insert into dbo.finance_info_yearly " +
-                        "(Date,Symbol,Year,Assets,Liabilities,Equity,Paid_up_cap,Revenue,NetProfit,EPS,ROA,ROE,NetProfitMargin,Type) values (" +
-                        $"{ChangeDateFormat(value.Date)}," +
-                        $"'{value.Symbol}'," +
-                        $"'{ChangeYearFormat(value.Year)}'," +
-                        $"{CutStrignMoney(value.Asset)}," +
-                        $"{CutStrignMoney(value.Liabilities)}," +
-                        $"{CutStrignMoney(value.Equity)}," +
-                        $"{CutStrignMoney(value.Paid_up_cap)}," +
-                        $"{CutStrignMoney(value.Revenue)}," +
-                        $"{CutStrignMoney(value.NetProfit)}," +
-                        $"{CutStrignMoney(value.EPS)}," +
-                        $"{CutStrignMoney(value.ROA)}," +
-                        $"{CutStrignMoney(value.ROE)}," +
-                        $"{CutStrignMoney(value.NetProfitMargin)}," +
-                        $"null)";
-                        //Insert database
-                    }
-                }
-                if (event_case)
-                    InsertDatebase(sql, cnn);
-                else
-                    UpdateDatebase(sql, cnn);
-
+                // Insert or Update datebase finance_info_yearly
+                StatementDatabase(value, "finance_info_yearly", $"Date='{value.Date}' AND Symbol='{value.Symbol}'");
             }
 
-            // Insert database finance_info_quarter
             foreach (var value in finance_info_quarter)
             {
-                string sql = $"Select * from dbo.finance_info_quarter where Date={ChangeDateFormat(value.Date)} AND Symbol='{value.Symbol}'";
-                SqlCommand command = new SqlCommand(sql, cnn);
-                command.Parameters.AddWithValue("@zip", "india");
-                bool event_case = true;
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        sql = $"UPDATE dbo.finance_info_quarter SET " +
-                            $"Year='{ChangeYearFormat(value.Year)}'," +
-                            $"Quarter={value.Quarter}," +
-                            $"Assets={CutStrignMoney(value.Asset)}," +
-                            $"Liabilities={CutStrignMoney(value.Liabilities)}," +
-                            $"Equity={CutStrignMoney(value.Equity)}," +
-                            $"Paid_up_cap={CutStrignMoney(value.Paid_up_cap)}," +
-                            $"Revenue={CutStrignMoney(value.Revenue)}," +
-                            $"NetProfit={CutStrignMoney(value.NetProfit)}," +
-                            $"EPS={CutStrignMoney(value.EPS)}," +
-                            $"ROA={CutStrignMoney(value.ROA)}," +
-                            $"ROE={CutStrignMoney(value.ROE)}," +
-                            $"NetProfitMargin={CutStrignMoney(value.NetProfitMargin)} " +
-                            $"where Date = { ChangeDateFormat(value.Date) } AND Symbol = '{value.Symbol}'";
-                        event_case = false;
-
-                    }
-                    else
-                    {
-                        sql = "Insert into dbo.finance_info_quarter " +
-                        "(Date,Symbol,Year,Quarter,Assets,Liabilities,Equity,Paid_up_cap,Revenue,NetProfit,EPS,ROA,ROE,NetProfitMargin,Type) values (" +
-                        $"{ChangeDateFormat(value.Date)}," +
-                        $"'{value.Symbol}'," +
-                        $"'{ChangeYearFormat(value.Year)}'," +
-                        $"'{value.Quarter}'," +
-                        $"{CutStrignMoney(value.Asset)}," +
-                        $"{CutStrignMoney(value.Liabilities)}," +
-                        $"{CutStrignMoney(value.Equity)}," +
-                        $"{CutStrignMoney(value.Paid_up_cap)}," +
-                        $"{CutStrignMoney(value.Revenue)}," +
-                        $"{CutStrignMoney(value.NetProfit)}," +
-                        $"{CutStrignMoney(value.EPS)}," +
-                        $"{CutStrignMoney(value.ROA)}," +
-                        $"{CutStrignMoney(value.ROE)}," +
-                        $"{CutStrignMoney(value.NetProfitMargin)}," +
-                        $"null)";
-                    }
-                }
-                if (event_case)
-                    InsertDatebase(sql, cnn);
-                else
-                    UpdateDatebase(sql, cnn);
+                // Insert or Update datebase finance_info_quarter
+                StatementDatabase(value, "finance_info_quarter", $"Date='{value.Date}' AND Symbol='{value.Symbol}'");
             }
 
-            // Insert database finance_stat_yearly
             foreach (var value in finance_stat_yearly)
             {
-                string sql = $"Select * from dbo.finance_stat_yearly where Date={ChangeDateFormat(value.Date)} AND Symbol='{value.Symbol}'";
-                SqlCommand command = new SqlCommand(sql, cnn);
-                command.Parameters.AddWithValue("@zip", "india");
-                bool event_case = true;
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        sql = $"UPDATE dbo.finance_stat_yearly SET " +
-                            $"Year='{ChangeYearFormat(value.Year)}'," +
-                            $"Lastprice={CutStrignMoney(value.Lastprice)}," +
-                            $"Market_cap={CutStrignMoney(value.Market_cap)}," +
-                            $"FS_date={ChangeDateFormat(value.FS_date)}," +
-                            $"PE={CutStrignMoney(value.PE)}," +
-                            $"PBV={CutStrignMoney(value.PBV)}," +
-                            $"Bookvalue_share={CutStrignMoney(value.BookValue_Share)}," +
-                            $"dvd_yield={CutStrignMoney(value.Dvd_Yield)}" +
-                            $"where Date = { ChangeDateFormat(value.Date) } AND Symbol = '{value.Symbol}'";
-                        event_case = false;
-                    }
-                    else
-                    {
-                        sql = "Insert into dbo.finance_stat_yearly " +
-                        "(Date,Symbol,Year,Lastprice,Market_cap,FS_date,PE,PBV,Bookvalue_share,dvd_yield) values (" +
-                        $"{ChangeDateFormat(value.Date)}," +
-                        $"'{value.Symbol}'," +
-                        $"'{ChangeYearFormat(value.Year)}'," +
-                        $"{CutStrignMoney(value.Lastprice)}," +
-                        $"{CutStrignMoney(value.Market_cap)}," +
-                        $"{ChangeDateFormat(value.FS_date)}," +
-                        $"{CutStrignMoney(value.PE)}," +
-                        $"{CutStrignMoney(value.PBV)}," +
-                        $"{CutStrignMoney(value.BookValue_Share)}," +
-                        $"{CutStrignMoney(value.Dvd_Yield)})";
-                    }
-                }
-                if (event_case)
-                    InsertDatebase(sql, cnn);
-                else
-                    UpdateDatebase(sql, cnn);
+                // Insert or Update datebase finance_stat_yearly
+                StatementDatabase(value, "finance_stat_yearly", $"Date='{value.Date}' AND Symbol='{value.Symbol}'");
             }
 
-            // Insert database finance_stat_daily
             foreach (var value in finance_stat_daily)
             {
-                string sql = $"Select * from dbo.finance_stat_daily where Date={ChangeDateFormat(value.Date)} AND Symbol='{value.Symbol}'";
-                SqlCommand command = new SqlCommand(sql, cnn);
-                command.Parameters.AddWithValue("@zip", "india");
-                bool event_case = true;
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        sql = $"UPDATE dbo.finance_stat_daily SET " +
-                            $"Year='{ChangeYearFormat(value.Year)}'," +
-                            $"Lastprice={CutStrignMoney(value.Lastprice)}," +
-                            $"Market_cap={CutStrignMoney(value.Market_cap)}," +
-                            $"FS_date={ChangeDateFormat(value.FS_date)}," +
-                            $"PE={CutStrignMoney(value.PE)}," +
-                            $"PBV={CutStrignMoney(value.PBV)}," +
-                            $"Bookvalue_share={CutStrignMoney(value.BookValue_Share)}," +
-                            $"dvd_yield={CutStrignMoney(value.Dvd_Yield)}" +
-                            $"where Date = { ChangeDateFormat(value.Date) } AND Symbol = '{value.Symbol}'";
-                        event_case = false;
-                    }
-                    else
-                    {
-                        sql = "Insert into dbo.finance_stat_daily " +
-                        "(Date,Symbol,Year,Lastprice,Market_cap,FS_date,PE,PBV,Bookvalue_share,dvd_yield) values (" +
-                        $"{ChangeDateFormat(value.Date)}," +
-                        $"'{value.Symbol}'," +
-                        $"'{ChangeYearFormat(value.Year)}'," +
-                        $"{CutStrignMoney(value.Lastprice)}," +
-                        $"{CutStrignMoney(value.Market_cap)}," +
-                        $"{ChangeDateFormat(value.FS_date)}," +
-                        $"{CutStrignMoney(value.PE)}," +
-                        $"{CutStrignMoney(value.PBV)}," +
-                        $"{CutStrignMoney(value.BookValue_Share)}," +
-                        $"{CutStrignMoney(value.Dvd_Yield)})";
-                    }
-                }
-                if (event_case)
-                    InsertDatebase(sql, cnn);
-                else
-                    UpdateDatebase(sql, cnn);
+                // Insert or Update datebase finance_stat_daily
+                StatementDatabase(value, "finance_stat_daily", $"Date='{value.Date}' AND Symbol='{value.Symbol}'");
             }
 
-            cnn.Close();
             GC.Collect();
 
         }
@@ -1390,7 +1209,7 @@ namespace FundamentalService
         }
         public static string ChangeDateFormat(string date)
         {
-            if (date == "null")
+            if (date == null)
                 return date;
 
             string str = date + "/";
@@ -1399,12 +1218,11 @@ namespace FundamentalService
             int mm = Convert.ToInt32(parts[1]);
             int yy = Convert.ToInt32(parts[2]) - 543;
 
-            return $"'{yy}-{mm}-{dd}'";
+            return $"{yy}-{mm}-{dd}";
         }
         public static string ChangeYearFormat(string year)
         {
             int yy = Convert.ToInt32(year) - 543;
-
             return $"{yy}";
         }
         public static string GetInsertSQL(object item, string db)

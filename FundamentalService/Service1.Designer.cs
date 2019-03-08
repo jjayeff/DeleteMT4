@@ -50,7 +50,7 @@
             // timer3
             // 
             this.timer3.Enabled = true;
-            this.timer3.Interval = 600000D;
+            this.timer3.Interval = 300000D;
             this.timer3.Elapsed += new System.Timers.ElapsedEventHandler(this.Kaohoon2Database);
             // 
             // Service1

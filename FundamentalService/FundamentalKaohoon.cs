@@ -28,15 +28,15 @@ namespace FundamentalService
             public KaohoonData() { }
 
             // Properties.
-            public string Kaohoon_data_id { get; set; } = "null";
-            public string Symbol { get; set; } = "null";
-            public string Date { get; set; } = "null";
-            public string Year { get; set; } = "null";
-            public string Quarter { get; set; } = "null";
-            public string TargetPrice { get; set; } = "null";
-            public string Trends { get; set; } = "null";
-            public string Divide { get; set; } = "null";
-            public string Topic { get; set; } = "null";
+            public string Kaohoon_data_id { get; set; }
+            public string Symbol { get; set; }
+            public string Date { get; set; }
+            public string Year { get; set; }
+            public string Quarter { get; set; }
+            public string TargetPrice { get; set; }
+            public string Trends { get; set; }
+            public string Divide { get; set; }
+            public string Topic { get; set; }
 
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -65,17 +65,16 @@ namespace FundamentalService
 
             }
 
-            for (var i = 0; i < symbols.Count; i++)
-                IndividualStock(symbols[i]);
+            IndividualStock(symbols);
             log.LOGI("[FundamentalKaohoon::Run] End update data Kaohoon");
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | ScrapingWeb Function                                            |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        static public void IndividualStock(string symbol)
+        static public void IndividualStock(List<string> symbols)
         {
 
-            var url = $"https://www.kaohoon.com/content/tag/{symbol}";
+            var url = $"https://www.kaohoon.com/content/category/%E0%B8%AA%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%B8%E0%B9%89%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B8%B1%E0%B8%A7";
             List<string> topics = new List<string>();
             List<string> date = new List<string>();
             // Using HtmlAgilityPack
@@ -90,9 +89,10 @@ namespace FundamentalService
                 utf8_String = Encoding.UTF8.GetString(bytes);
                 var result = CutString(utf8_String);
                 KaohoonData kaohoon_tmp = new KaohoonData();
-                kaohoon_tmp.Topic = $"'{utf8_String}'";
+                kaohoon_tmp.Topic = $"{utf8_String}";
                 kaohoon_tmp.Symbol = result[0];
-                if (result[0] == symbol)
+                var matchingvalues = symbols.FirstOrDefault(stringToCheck => stringToCheck.Contains(result[0]));
+                if (matchingvalues != null)
                     for (var i = 0; i < result.Length; i++)
                     {
                         if (result[i].IndexOf("ไตรมาส") > -1 && i + 1 < result.Length)
@@ -118,18 +118,18 @@ namespace FundamentalService
                             {
                                 kaohoon_tmp.TargetPrice = Regex.Match(result[i + 1], @"\d+").Value;
                                 if (kaohoon_tmp.TargetPrice == "")
-                                    kaohoon_tmp.TargetPrice = "null";
+                                    kaohoon_tmp.TargetPrice = null;
                             }
                             else
                                 kaohoon_tmp.TargetPrice = result[i + 1];
                         }
                         else if (result[i].IndexOf("ปันผล") > -1 && i + 1 < result.Length)
                         {
-                            kaohoon_tmp.Divide = $"'{result[i]} {result[i + 1]}'";
+                            kaohoon_tmp.Divide = $"{result[i]} {result[i + 1]}";
                         }
                         else if (result[i].IndexOf("%") > -1)
                         {
-                            kaohoon_tmp.Trends = $"'{result[i - 1]} {result[i]}'";
+                            kaohoon_tmp.Trends = $"{result[i - 1]} {result[i]}";
                         }
                     }
                 else
@@ -150,61 +150,10 @@ namespace FundamentalService
                 kaohoon_data[index++].Date = ChangeDateFormat(utf8_String);
             }
 
-            string connetionString;
-            SqlConnection cnn;
-            connetionString = $@"Data Source={DatabaseServer};Initial Catalog={Database};User ID={Username};Password={Password}";
-            cnn = new SqlConnection(connetionString);
-            cnn.Open();
-
-            // Insert database finance_stat_daily
+            // Insert database kaohoon_data
             foreach (var value in kaohoon_data)
-            {
                 if (value.Symbol != "null")
-                {
-                    string sql = $"Select * from dbo.kaohoon_data where Kaohoon_data_id = {value.Kaohoon_data_id} AND Symbol = '{value.Symbol}'";
-                    SqlCommand command = new SqlCommand(sql, cnn);
-                    command.Parameters.AddWithValue("@zip", "india");
-                    bool event_case = true;
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            sql = $"UPDATE dbo.kaohoon_data SET " +
-                                $"Kaohoon_data_id={value.Kaohoon_data_id}," +
-                                $"Symbol='{value.Symbol}'," +
-                                $"Date={value.Date}," +
-                                $"Year={value.Year}," +
-                                $"Quarter={value.Quarter}," +
-                                $"TargetPrice={value.TargetPrice}," +
-                                $"Trends={value.Trends}," +
-                                $"Divide={value.Divide}," +
-                                $"Topic={value.Topic}" +
-                                $"where Kaohoon_data_id = {value.Kaohoon_data_id} AND Symbol = '{value.Symbol}'";
-                            event_case = false;
-                        }
-                        else
-                        {
-                            sql = "Insert into dbo.kaohoon_data " +
-                            "(Kaohoon_data_id,Symbol,Date,Year,Quarter,TargetPrice,Trends,Divide,Topic) values (" +
-                            $"{value.Kaohoon_data_id}," +
-                            $"'{value.Symbol}'," +
-                            $"{value.Date}," +
-                            $"{value.Year}," +
-                            $"{value.Quarter}," +
-                            $"{value.TargetPrice}," +
-                            $"{value.Trends}," +
-                            $"{value.Divide}," +
-                            $"{value.Topic})";
-                        }
-                    }
-                    if (event_case)
-                        InsertDatebase(sql, cnn);
-                    else
-                        UpdateDatebase(sql, cnn);
-                }
-            }
-
-            cnn.Close();
+                    StatementDatabase(value, "kaohoon_data", $"Kaohoon_data_id = '{value.Kaohoon_data_id}' AND Symbol = '{value.Symbol}'");
             GC.Collect();
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -233,6 +182,32 @@ namespace FundamentalService
             adapter.InsertCommand.ExecuteNonQuery();
 
             command.Dispose();
+        }
+        public static void StatementDatabase(object item, string db, string where)
+        {
+            string sql = "";
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = $@"Data Source={DatabaseServer};Initial Catalog={Database};User ID={Username};Password={Password}";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+
+            sql = $"Select * from dbo.{db} where {where}";
+            SqlCommand command = new SqlCommand(sql, cnn);
+            command.Parameters.AddWithValue("@zip", "india");
+            bool event_case = false;
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                if (!reader.Read())
+                {
+                    sql = GetInsertSQL(item, db);
+                    event_case = true;
+                }
+            }
+            if (event_case)
+                InsertDatebase(sql, cnn);
+
+            cnn.Close();
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Other    Function                                               |
@@ -286,7 +261,7 @@ namespace FundamentalService
             int dd = Convert.ToInt32(parts[1]);
             int yy = Convert.ToInt32(parts[2]);
 
-            return $"'{yy}-{mm}-{dd}'";
+            return $"{yy}-{mm}-{dd}";
         }
         public static string ChangeKaohoonDataIdFormat(string date, string symbol)
         {
@@ -334,7 +309,7 @@ namespace FundamentalService
             int dd = Convert.ToInt32(parts[1]);
             int yy = Convert.ToInt32(parts[2]);
 
-            return $"'{dd}{mm}{yy}{symbol}'";
+            return $"{dd}{mm}{yy}{symbol}";
         }
         public static string[] CutString(string input)
         {
@@ -342,6 +317,62 @@ namespace FundamentalService
             var parts = input.Split(' ');
 
             return parts;
+        }
+        public static string GetInsertSQL(object item, string db)
+        {
+            string sql = $"INSERT INTO dbo.{db} (:columns:) VALUES (:values:);";
+
+            string[] columns = new string[item.GetType().GetProperties().Count()];
+            string[] values = new string[item.GetType().GetProperties().Count()];
+            int i = 0;
+            foreach (var propertyInfo in item.GetType().GetProperties())
+            {
+                columns[i] = propertyInfo.Name;
+                values[i++] = (string)(propertyInfo.GetValue(item, null));
+            }
+
+            //replacing the markers with the desired column names and values
+            sql = FillColumnsAndValuesIntoInsertQuery(sql, columns, values);
+
+            return sql;
+        }
+        public static string GetUpdateSQL(object item, string db, string whare)
+        {
+            string sql = $"UPDATE dbo.{db} SET :update: WHERE {whare} ;";
+
+            string[] columns = new string[item.GetType().GetProperties().Count()];
+            string[] values = new string[item.GetType().GetProperties().Count()];
+            int i = 0;
+            foreach (var propertyInfo in item.GetType().GetProperties())
+            {
+                columns[i] = propertyInfo.Name;
+                values[i++] = (string)(propertyInfo.GetValue(item, null));
+            }
+
+            //replacing the markers with the desired column names and values
+            sql = FillColumnsAndValuesIntoUpdateQuery(sql, columns, values);
+
+            return sql;
+        }
+        public static string FillColumnsAndValuesIntoInsertQuery(string query, string[] columns, string[] values)
+        {
+            //joining the string arrays with a comma character
+            string columnnames = string.Join(",", columns);
+            //adding values with single quotation marks around them to handle errors related to string values
+            string valuenames = ("'" + string.Join("','", values) + "'").Replace("''", "null");
+            //replacing the markers with the desired column names and values
+            return query.Replace(":columns:", columnnames).Replace(":values:", valuenames);
+        }
+        public static string FillColumnsAndValuesIntoUpdateQuery(string query, string[] columns, string[] values)
+        {
+            string result = "";
+            for (int i = 0; i < columns.Length; i++)
+                if (values[i] != null)
+                    result += $"{columns[i]} = '{values[i]}'" + (i + 1 != columns.Length ? ", " : " ");
+                else
+                    result += $"{columns[i]} = null" + (i + 1 != columns.Length ? ", " : " ");
+            //replacing the markers with the desired column names and values
+            return query.Replace(":update:", result);
         }
     }
 }

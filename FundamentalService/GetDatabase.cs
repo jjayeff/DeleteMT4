@@ -23,7 +23,6 @@ namespace FundamentalService
         private static string Password = ConfigurationManager.AppSettings["DatabasePassword"];
         private static string AuthUsername = ConfigurationManager.AppSettings["ServerUsername"];
         private static string AuthPassword = ConfigurationManager.AppSettings["ServerPassword"];
-        private static Plog log = new Plog();
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Model                                                           |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -341,7 +340,6 @@ namespace FundamentalService
             else if (symbol != null && year == null && date != null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Date = '{date}'";
 
-            log.LOGI(sql);
             SqlCommand command = new SqlCommand(sql, cnn);
             command.Parameters.AddWithValue("@zip", "india");
             using (SqlDataReader reader = command.ExecuteReader())
