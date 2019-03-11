@@ -268,7 +268,13 @@ namespace FundamentalAPI.Controllers
             {
                 var process = client.StartClient(input);
                 dynamic json = JsonConvert.DeserializeObject(process);
-                return json;
+                if (process.IndexOf("Wrong parameter input !!") > -1)
+                {
+                    string error = json.message;
+                    return Request.CreateErrorResponse(HttpStatusCode.Forbidden, error);
+                }
+                else
+                    return json;
             }
             else
                 return Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Wrong AccessToken !!");

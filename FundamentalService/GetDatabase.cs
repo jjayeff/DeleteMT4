@@ -736,7 +736,7 @@ namespace FundamentalService
 
             public Message()
             {
-                message = "error !!";
+                message = "Wrong parameter input !!";
             }
 
             // Properties.
@@ -1005,7 +1005,7 @@ namespace FundamentalService
             }
             return tmp;
         }
-        public List<FinanceInfo> GetFinanceInfoYearly(string symbol = null, string year = null, string date = null)
+        public dynamic GetFinanceInfoYearly(string symbol = null, string year = null, string date = null)
         {
             string sql = "";
             if (symbol == null && year == null && date == null)
@@ -1014,16 +1014,23 @@ namespace FundamentalService
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}'";
             else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_yearly where Year = '{year}'";
-            else if (symbol == null && year == null && date != null)
-                sql = $"Select * from dbo.finance_info_yearly where Date = '{date}'";
             else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Year = '{year}'";
-            else if (symbol != null && year == null && date != null)
-                sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Date = '{date}'";
-            log.LOGW(sql);
+            else if (date != null)
+            {
+                date = ChangeDateFormat(date);
+                log.LOGW(date);
+                if (date == null)
+                    return new Message();
+                if (symbol == null && year == null)
+                    sql = $"Select * from dbo.finance_info_yearly where Date = '{date}'";
+                else if (symbol != null && year == null)
+                    sql = $"Select * from dbo.finance_info_yearly where Symbol = '{symbol}' AND Date = '{date}'";
+            }
+
             return SeleteDB<FinanceInfo>(sql);
         }
-        public List<FinanceInfo> GetFinanceInfoQuarter(string symbol = null, string year = null, string date = null)
+        public dynamic GetFinanceInfoQuarter(string symbol = null, string year = null, string date = null)
         {
             string sql = "";
             if (symbol == null && year == null && date == null)
@@ -1032,17 +1039,22 @@ namespace FundamentalService
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}'";
             else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_quarter where Year = '{year}'";
-            else if (symbol == null && year == null && date != null)
-                sql = $"Select * from dbo.finance_info_quarter where Date = '{date}'";
             else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Year = '{year}'";
-            else if (symbol != null && year == null && date != null)
-                sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Date = '{date}'";
-            log.LOGW(sql);
+            else if (date != null)
+            {
+                date = ChangeDateFormat(date);
+                if (date == null)
+                    return new Message();
+                if (symbol == null && year == null)
+                    sql = $"Select * from dbo.finance_info_quarter where Date = '{date}'";
+                else if (symbol != null && year == null)
+                    sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Date = '{date}'";
+            }
 
             return SeleteDB<FinanceInfo>(sql);
         }
-        public List<FinanceStat> GetFinanceStatYearly(string symbol = null, string year = null, string date = null)
+        public dynamic GetFinanceStatYearly(string symbol = null, string year = null, string date = null)
         {
             string sql = "";
             if (symbol == null && year == null && date == null)
@@ -1051,18 +1063,22 @@ namespace FundamentalService
                 sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}'";
             else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_yearly where Year = '{year}'";
-            else if (symbol == null && year == null && date != null)
-                sql = $"Select * from dbo.finance_stat_yearly where Date = '{date}'";
             else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}' AND Year = '{year}'";
-            else if (symbol != null && year == null && date != null)
-                sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}' AND Date = '{date}'";
-
-            log.LOGW(sql);
+            else if (date != null)
+            {
+                date = ChangeDateFormat(date);
+                if (date == null)
+                    return new Message();
+                if (symbol == null && year == null)
+                    sql = $"Select * from dbo.finance_stat_yearly where Date = '{date}'";
+                else if (symbol != null && year == null)
+                    sql = $"Select * from dbo.finance_stat_yearly where Symbol = '{symbol}' AND Date = '{date}'";
+            }
 
             return SeleteDB<FinanceStat>(sql);
         }
-        public List<FinanceStat> GetFinanceStatDaily(string symbol = null, string year = null, string date = null)
+        public dynamic GetFinanceStatDaily(string symbol = null, string year = null, string date = null)
         {
             string sql = "";
             if (symbol == null && year == null && date == null)
@@ -1071,13 +1087,18 @@ namespace FundamentalService
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}'";
             else if (symbol == null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_daily where Year = '{year}'";
-            else if (symbol == null && year == null && date != null)
-                sql = $"Select * from dbo.finance_stat_daily where Date = '{date}'";
             else if (symbol != null && year != null && date == null)
                 sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Year = '{year}'";
-            else if (symbol != null && year == null && date != null)
-                sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Date = '{date}'";
-            log.LOGW(sql);
+            else if (date != null)
+            {
+                date = ChangeDateFormat(date);
+                if (date == null)
+                    return new Message();
+                if (symbol == null && year == null)
+                    sql = $"Select * from dbo.finance_stat_daily where Date = '{date}'";
+                else if (symbol != null && year == null)
+                    sql = $"Select * from dbo.finance_stat_daily where Symbol = '{symbol}' AND Date = '{date}'";
+            }
 
             return SeleteDB<FinanceStat>(sql);
         }
@@ -1302,6 +1323,53 @@ namespace FundamentalService
         public string GetAccessToken()
         {
             return accessToken;
+        }
+        public static string ChangeDateFormat(string date)
+        {
+            int dd, mm, yy;
+            if (date == null)
+                return date;
+
+            var parts = date.Split('-');
+            if (parts.Length != 3)
+                return null;
+
+            var dd_isNumeric = int.TryParse(parts[0], out int x);
+            if (dd_isNumeric)
+            {
+                dd = Convert.ToInt32(parts[0]);
+                if (dd > 31 || dd < 1 || !dd_isNumeric)
+                    return null;
+            }
+            else
+                return null;
+
+            var mm_isNumeric = int.TryParse(parts[1], out int y);
+            if (mm_isNumeric)
+            {
+                mm = Convert.ToInt32(parts[1]);
+                if (mm > 12 || mm < 1)
+                    return null;
+            }
+            else
+                return null;
+
+            var yy_isNumeric = int.TryParse(parts[2], out int z);
+            if (yy_isNumeric)
+            {
+                yy = Convert.ToInt32(parts[2]);
+                var date_time = DateTime.Now.ToString("yyyy");
+                string year = date_time.ToString();
+                var year_now = Convert.ToInt32(year);
+                if (yy > year_now)
+                    yy -= 543;
+                if (yy > year_now || yy < 1990)
+                    return null;
+            }
+            else
+                return null;
+
+            return $"{yy}-{mm}-{dd}";
         }
     }
 }
