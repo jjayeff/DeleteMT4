@@ -150,6 +150,14 @@ namespace FundamentalAPI.Controllers
             return Process($"fundamental/finance_info_quarter/date/{date}", value);
         }
 
+        // POST fundamental/finance_info_quarter?quarter={quarter}
+        [HttpPost]
+        [Route("fundamental/finance_info_quarter")]
+        public dynamic PostFinanceInfoQuarterQuarter(string quarter, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_info_quarter/quarter/{quarter}", value);
+        }
+
         // POST fundamental/finance_info_quarter?symbol={symbol}&year={year}
         [HttpPost]
         [Route("fundamental/finance_info_quarter")]
@@ -164,6 +172,22 @@ namespace FundamentalAPI.Controllers
         public dynamic PostFinanceInfoQuarterDate(string symbol, string date, [FromBody]Key value)
         {
             return Process($"fundamental/finance_info_quarter/date/{symbol}/{date}", value);
+        }
+
+        // POST fundamental/finance_info_quarter?symbol={symbol}&quarter={quarter}
+        [HttpPost]
+        [Route("fundamental/finance_info_quarter")]
+        public dynamic PostFinanceInfoQuarterQuarter(string symbol, string quarter, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_info_quarter/quarter/{symbol}/{quarter}", value);
+        }
+
+        // POST fundamental/finance_info_quarter?symbol={symbol}&quarter={quarter}&year={year}
+        [HttpPost]
+        [Route("fundamental/finance_info_quarter")]
+        public dynamic PostFinanceInfoQuarterQuarter(string symbol, string quarter, string year, [FromBody]Key value)
+        {
+            return Process($"fundamental/finance_info_quarter/quarter/{symbol}/{quarter}/{year}", value);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | POST fundamental/finance_stat_yearly                            |

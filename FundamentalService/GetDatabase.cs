@@ -23,7 +23,6 @@ namespace FundamentalService
         private static string Password = ConfigurationManager.AppSettings["DatabasePassword"];
         private static string AuthUsername = ConfigurationManager.AppSettings["ServerUsername"];
         private static string AuthPassword = ConfigurationManager.AppSettings["ServerPassword"];
-        private static Plog log = new Plog();
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Model                                                           |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -731,6 +730,70 @@ namespace FundamentalService
             public string Topic { get; set; } = "null";
 
         }
+        public class IAAConsensus
+        {
+
+            public IAAConsensus() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string Broker { get; set; }
+            public string EPS_Year { get; set; }
+            public string EPS_Year_Change { get; set; }
+            public string EPS_2Year { get; set; }
+            public string EPS_2Year_Change { get; set; }
+            public string PE { get; set; }
+            public string PBV { get; set; }
+            public string DIV { get; set; }
+            public string TargetPrice { get; set; }
+            public string Rec { get; set; }
+            public string LastUpdate { get; set; }
+        }
+        public class IAAConsensusSummary
+        {
+
+            public IAAConsensusSummary() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string LastPrice { get; set; }
+            public string Buy { get; set; }
+            public string Hold { get; set; }
+            public string Sell { get; set; }
+            public string Average_EPS_Year { get; set; }
+            public string Average_EPS_Year_Change { get; set; }
+            public string Average_EPS_2Year { get; set; }
+            public string Average_EPS_2Year_Change { get; set; }
+            public string Average_PE { get; set; }
+            public string Average_PBV { get; set; }
+            public string Average_DIV { get; set; }
+            public string Average_TargetPrice { get; set; }
+            public string High_EPS_Year { get; set; }
+            public string High_EPS_Year_Change { get; set; }
+            public string High_EPS_2Year { get; set; }
+            public string High_EPS_2Year_Change { get; set; }
+            public string High_PE { get; set; }
+            public string High_PBV { get; set; }
+            public string High_DIV { get; set; }
+            public string High_TargetPrice { get; set; }
+            public string Low_EPS_Year { get; set; }
+            public string Low_EPS_Year_Change { get; set; }
+            public string Low_EPS_2Year { get; set; }
+            public string Low_EPS_2Year_Change { get; set; }
+            public string Low_PE { get; set; }
+            public string Low_PBV { get; set; }
+            public string Low_DIV { get; set; }
+            public string Low_TargetPrice { get; set; }
+            public string Median_EPS_Year { get; set; }
+            public string Median_EPS_Year_Change { get; set; }
+            public string Median_EPS_2Year { get; set; }
+            public string Median_EPS_2Year_Change { get; set; }
+            public string Median_PE { get; set; }
+            public string Median_PBV { get; set; }
+            public string Median_DIV { get; set; }
+            public string Median_TargetPrice { get; set; }
+            public string LastUpdate { get; set; }
+        }
         public class Message
         {
 
@@ -778,8 +841,14 @@ namespace FundamentalService
                             return GetFinanceInfoQuarter(null, param[3]);
                         else if (param[1] == "finance_info_quarter" && param[2] == "date" && param.Length == 4)
                             return GetFinanceInfoQuarter(null, null, param[3]);
+                        else if (param[1] == "finance_info_quarter" && param[2] == "quarter" && param.Length == 4)
+                            return GetFinanceInfoQuarter(null, null, null, param[3]);
                         else if (param[1] == "finance_info_quarter" && param[2] == "date" && param.Length == 5)
                             return GetFinanceInfoQuarter(param[3], null, param[4]);
+                        else if (param[1] == "finance_info_quarter" && param[2] == "quarter" && param.Length == 5)
+                            return GetFinanceInfoQuarter(param[3], null, null, param[4]);
+                        else if (param[1] == "finance_info_quarter" && param[2] == "quarter" && param.Length == 6)
+                            return GetFinanceInfoQuarter(param[3], param[5], null, param[4]);
                         else if (param[1] == "finance_info_quarter" && param.Length == 4)
                             return GetFinanceInfoQuarter(param[2], param[3]);
                         else if (param[1] == "finance_stat_yearly" && param.Length == 3)
@@ -935,6 +1004,38 @@ namespace FundamentalService
                     }
             }
         }
+        public dynamic GetIAAConsensusDB(string input)
+        {
+            var param = input.Split('/');
+            switch (input)
+            {
+                case "iaa_consensus":
+                    return GetIAAConsenses();
+                case "iaa_consensus_summary":
+                    return GetIAAConsensusSummary();
+                default:
+                    {
+                        if (param[0] == "iaa_consensus")
+                        {
+                            if (param[1] == "symbol" && param.Length == 3)
+                                return GetIAAConsenses(param[2]);
+                            else if (param[1] == "broker" && param.Length == 3)
+                                return GetIAAConsenses(null, param[2]);
+                            else
+                                return new Message();
+                        }
+                        if (param[0] == "iaa_consensus_summary")
+                        {
+                            if (param.Length == 2)
+                                return GetIAAConsensusSummary(param[1]);
+                            else
+                                return new Message();
+                        }
+                        else
+                            return new Message();
+                    }
+            }
+        }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Access Token Function                                           |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -956,7 +1057,7 @@ namespace FundamentalService
                 return "false";
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | Database fundamental Function                                   |
+        // | Database Fundamental Function                                   |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public Fundamental GetFundamental(string symbol = null, string year = null, string date = null)
         {
@@ -1019,7 +1120,6 @@ namespace FundamentalService
             else if (date != null)
             {
                 date = ChangeDateFormat(date);
-                log.LOGW(date);
                 if (date == null)
                     return new Message();
                 if (symbol == null && year == null)
@@ -1030,26 +1130,41 @@ namespace FundamentalService
 
             return SeleteDB<FinanceInfo>(sql);
         }
-        public dynamic GetFinanceInfoQuarter(string symbol = null, string year = null, string date = null)
+        public dynamic GetFinanceInfoQuarter(string symbol = null, string year = null, string date = null, string quarter = null)
         {
             string sql = "";
-            if (symbol == null && year == null && date == null)
+            if (symbol == null && year == null && date == null && quarter == null)
                 sql = $"Select * from dbo.finance_info_quarter";
-            else if (symbol != null && year == null && date == null)
+            else if (symbol != null && year == null && date == null && quarter == null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}'";
-            else if (symbol == null && year != null && date == null)
+            else if (symbol == null && year != null && date == null && quarter == null)
                 sql = $"Select * from dbo.finance_info_quarter where Year = '{year}'";
-            else if (symbol != null && year != null && date == null)
+            else if (symbol != null && year != null && date == null && quarter == null)
                 sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Year = '{year}'";
             else if (date != null)
             {
                 date = ChangeDateFormat(date);
                 if (date == null)
                     return new Message();
-                if (symbol == null && year == null)
+                if (symbol == null && year == null && quarter == null)
                     sql = $"Select * from dbo.finance_info_quarter where Date = '{date}'";
-                else if (symbol != null && year == null)
+                else if (symbol != null && year == null && quarter == null)
                     sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Date = '{date}'";
+            }
+            else if (quarter != null)
+            {
+                int number;
+                var isNumeric = int.TryParse(quarter, out number);
+                if (!isNumeric)
+                    return new Message();
+                if (number > 4 || number < 1)
+                    return new Message();
+                if (symbol == null && year == null && date == null)
+                    sql = $"Select * from dbo.finance_info_quarter where Quarter = '{quarter}'";
+                else if (symbol != null && year == null && date == null)
+                    sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Quarter = '{quarter}'";
+                else if (symbol != null && year != null && date == null)
+                    sql = $"Select * from dbo.finance_info_quarter where Symbol = '{symbol}' AND Quarter = '{quarter}' AND Year = '{year}'";
             }
 
             return SeleteDB<FinanceInfo>(sql);
@@ -1103,13 +1218,12 @@ namespace FundamentalService
             return SeleteDB<FinanceStat>(sql);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | Database kaohoon Function                                       |
+        // | Database Statament Function                                     |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public Statement GetStatement(string symbol = null, bool last_update = false)
         {
             var tmp = new Statement();
             var date = DateTime.Now.ToString("yyyy-MM-dd");
-            log.LOGW(symbol);
             if (symbol != null && !last_update)
             {
                 tmp.asset = GetAssets(symbol);
@@ -1239,7 +1353,33 @@ namespace FundamentalService
             return SeleteDB<CashFlow>(sql);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        // | Database kaohoon Function                                       |
+        // | Database IAA Consenses Function                                 |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        public List<IAAConsensus> GetIAAConsenses(string symbol = null, string broker = null)
+        {
+            string sql = "";
+            var date = DateTime.Now.ToString("yyyy-MM-dd");
+            if (symbol != null && broker == null)
+                sql = $"SELECT * from dbo.iaa_consensus WHERE Symbol = '{symbol}'";
+            else if (symbol == null && broker != null)
+                sql = $"SELECT * from dbo.iaa_consensus WHERE Broker = '{broker}'";
+            else
+                sql = $"SELECT * from dbo.iaa_consensus";
+
+            return SeleteDB<IAAConsensus>(sql);
+        }
+        public List<IAAConsensusSummary> GetIAAConsensusSummary(string symbol = null)
+        {
+            string sql = "";
+            if (symbol != null)
+                sql = $"SELECT * from dbo.iaa_consensus_summary WHERE Symbol = '{symbol}'";
+            else
+                sql = $"SELECT * from dbo.iaa_consensus_summary";
+
+            return SeleteDB<IAAConsensusSummary>(sql);
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Database Kaohoon Function                                       |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public List<KaohoonData> GetKaohoonData(string symbol = null, string date = null)
         {

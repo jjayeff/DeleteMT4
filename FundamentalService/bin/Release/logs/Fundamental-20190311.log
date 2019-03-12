@@ -1,0 +1,200 @@
+03/11/2019 10:14 AM [INFO]  [Service::OnStart] Service starting
+03/11/2019 10:14 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 10:14 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 10:19 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 10:19 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 10:24 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 10:24 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 10:29 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 10:29 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 10:34 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 10:34 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 10:39 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 10:39 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 10:43 AM [INFO]  [Service::OnStop] Service stop
+03/11/2019 11:01 AM [INFO]  [Service::OnStart] Service starting
+03/11/2019 11:01 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 11:01 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 11:06 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:06 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:09 AM [INFO]  [Service::OnStop] Service stop
+03/11/2019 11:09 AM [INFO]  [Service::OnStart] Service starting
+03/11/2019 11:09 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 11:09 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 11:12 AM [INFO]  [Service::OnStop] Service stop
+03/11/2019 11:13 AM [INFO]  [Service::OnStart] Service starting
+03/11/2019 11:13 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 11:13 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 11:13 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 11:13 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+g+CPWhNTEqVDuJSlXHX+w=="}
+03/11/2019 11:13 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/11/2019 11:15 AM [INFO]  [Service::OnStop] Service stop
+03/11/2019 11:15 AM [INFO]  [Service::OnStart] Service starting
+03/11/2019 11:15 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 11:15 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 11:15 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 11:15 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:15 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_yearly
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/3
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/1
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/2
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/4
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/6
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/g
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/2
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/3
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Zkst+zTnN0S3IUFTW9mZLA=="}
+03/11/2019 11:16 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/AAV/3
+03/11/2019 11:19 AM [INFO]  [Service::OnStop] Service stop
+03/11/2019 11:19 AM [INFO]  [Service::OnStart] Service starting
+03/11/2019 11:19 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 11:19 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+cDezAf9gU+0Lc4UviQwng=="}
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/AAV/3
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+cDezAf9gU+0Lc4UviQwng=="}
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/AAV/3/2018
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+cDezAf9gU+0Lc4UviQwng=="}
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/AAV/3/2017
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"+cDezAf9gU+0Lc4UviQwng=="}
+03/11/2019 11:20 AM [INFO]  [ServerSocket::StartListening] Text received : fundamental/finance_info_quarter/quarter/AAV/3/2018
+03/11/2019 11:24 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:24 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:29 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:29 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:34 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:34 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:39 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:39 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:44 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:44 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:49 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:49 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:54 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:54 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 11:59 AM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 11:59 AM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:04 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:04 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:09 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:09 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:14 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:14 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:19 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 12:19 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:19 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:24 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:24 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:29 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:29 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:34 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:34 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:39 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:39 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:44 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:44 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:49 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:49 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:54 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:54 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 12:59 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 12:59 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 01:04 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 01:04 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 01:08 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 03:41 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 03:41 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 03:41 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 03:43 PM [INFO]  [FundamentalSET100::Run] Start update data SET100
+03/11/2019 03:43 PM [INFO]  [FundamentalSET100::Run] End update data SET100
+03/11/2019 03:46 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:34 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:34 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:34 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:35 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:36 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"hwZQx5qOBU2V3rgdk/SQbg=="}
+03/11/2019 04:36 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+03/11/2019 04:37 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:37 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:37 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:37 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:37 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:37 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"0ZLiEnPTGUaPMKJgedBLYA=="}
+03/11/2019 04:37 PM [INFO]  [ServerSocket::StartListening] Text received : fundamental
+03/11/2019 04:37 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"0ZLiEnPTGUaPMKJgedBLYA=="}
+03/11/2019 04:37 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus
+03/11/2019 04:37 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"0ZLiEnPTGUaPMKJgedBLYA=="}
+03/11/2019 04:37 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus
+03/11/2019 04:38 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:39 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:39 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:39 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:39 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:39 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"fHHAjk2Jvk6oOoo5AC/cuA=="}
+03/11/2019 04:39 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus
+03/11/2019 04:39 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"fHHAjk2Jvk6oOoo5AC/cuA=="}
+03/11/2019 04:39 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus_summary/AAV
+03/11/2019 04:40 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:40 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:40 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:40 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:40 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:40 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:40 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:40 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:40 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:41 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"MRn4AD1lx0Sc38g+IHlIQg=="}
+03/11/2019 04:41 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus_summary/AAV
+03/11/2019 04:42 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:42 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:42 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:42 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:42 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:42 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:42 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate/AAV
+03/11/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:43 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate/AAV
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/symbol/AAV
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/broker/KS
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:44 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate/AAV
+03/11/2019 04:45 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"KOVJJ82c8EyfcjbVJ5pwxQ=="}
+03/11/2019 04:45 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate/PTT
+03/11/2019 04:47 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 04:47 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 04:50 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:50 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:50 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:50 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:50 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"WYuXPAV6OEqRqdCfK/0QSA=="}
+03/11/2019 04:50 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate/PTT
+03/11/2019 04:51 PM [INFO]  [Service::OnStop] Service stop
+03/11/2019 04:51 PM [INFO]  [Service::OnStart] Service starting
+03/11/2019 04:51 PM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/11/2019 04:51 PM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/11/2019 04:51 PM [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/11/2019 04:52 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"viz9cvZm40KXiSP1E3texg=="}
+03/11/2019 04:52 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate/PTT
+03/11/2019 04:52 PM [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"viz9cvZm40KXiSP1E3texg=="}
+03/11/2019 04:52 PM [INFO]  [ServerSocket::StartListening] Text received : iaa_consensus/lastupdate/AAV
+03/11/2019 04:56 PM [INFO]  [FundamentalKaohoon::Run] Start update data Kaohoon
+03/11/2019 04:56 PM [INFO]  [FundamentalKaohoon::Run] End update data Kaohoon
+03/11/2019 04:57 PM [INFO]  [Service::OnStop] Service stop

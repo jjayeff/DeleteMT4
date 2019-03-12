@@ -21,7 +21,7 @@ namespace FundamentalService
         public void LOGI(string input)
         {
             SetTimeFile();
-            string result = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
+            string result = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
             result += " [INFO]  ";
             result += input;
             File.AppendAllLines(fullPath, new[] { result });
@@ -29,7 +29,7 @@ namespace FundamentalService
         public void LOGE(string input)
         {
             SetTimeFile();
-            string result = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
+            string result = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
             result += " [ERROR] ";
             result += input;
             File.AppendAllLines(fullPath, new[] { result });
@@ -37,7 +37,7 @@ namespace FundamentalService
         public void LOGW(string input)
         {
             SetTimeFile();
-            string result = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt");
+            string result = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
             result += " [WARN]  ";
             result += input;
             File.AppendAllLines(fullPath, new[] { result });

@@ -37,3 +37,4 @@ D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\HtmlAgilityPack.xml
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\Newtonsoft.Json.dll
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\Newtonsoft.Json.pdb
 D:\ekkawitl\Project\fundamental\FundamentalService\bin\Debug\Newtonsoft.Json.xml
+D:\ekkawitl\Project\fundamental\FundamentalService\obj\Debug\FundamentalService.csprojAssemblyReference.cache

@@ -687,6 +687,103 @@ namespace FundamentalService
             public string Liabilities_under_trust { get; set; }
             public string Update_Date { get; set; }
         }
+        public class IAAConsensus
+        {
+
+            public IAAConsensus() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string Broker { get; set; }
+            public string EPS_Year { get; set; }
+            public string EPS_Year_Change { get; set; }
+            public string EPS_2Year { get; set; }
+            public string EPS_2Year_Change { get; set; }
+            public string PE { get; set; }
+            public string PBV { get; set; }
+            public string DIV { get; set; }
+            public string TargetPrice { get; set; }
+            public string Rec { get; set; }
+            public string LastUpdate { get; set; }
+        }
+        public class IAAConsensusSummary
+        {
+
+            public IAAConsensusSummary() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string LastPrice { get; set; }
+            public string Buy { get; set; }
+            public string Hold { get; set; }
+            public string Sell { get; set; }
+            public string Average_EPS_Year { get; set; }
+            public string Average_EPS_Year_Change { get; set; }
+            public string Average_EPS_2Year { get; set; }
+            public string Average_EPS_2Year_Change { get; set; }
+            public string Average_PE { get; set; }
+            public string Average_PBV { get; set; }
+            public string Average_DIV { get; set; }
+            public string Average_TargetPrice { get; set; }
+            public string High_EPS_Year { get; set; }
+            public string High_EPS_Year_Change { get; set; }
+            public string High_EPS_2Year { get; set; }
+            public string High_EPS_2Year_Change { get; set; }
+            public string High_PE { get; set; }
+            public string High_PBV { get; set; }
+            public string High_DIV { get; set; }
+            public string High_TargetPrice { get; set; }
+            public string Low_EPS_Year { get; set; }
+            public string Low_EPS_Year_Change { get; set; }
+            public string Low_EPS_2Year { get; set; }
+            public string Low_EPS_2Year_Change { get; set; }
+            public string Low_PE { get; set; }
+            public string Low_PBV { get; set; }
+            public string Low_DIV { get; set; }
+            public string Low_TargetPrice { get; set; }
+            public string Median_EPS_Year { get; set; }
+            public string Median_EPS_Year_Change { get; set; }
+            public string Median_EPS_2Year { get; set; }
+            public string Median_EPS_2Year_Change { get; set; }
+            public string Median_PE { get; set; }
+            public string Median_PBV { get; set; }
+            public string Median_DIV { get; set; }
+            public string Median_TargetPrice { get; set; }
+            public string LastUpdate { get; set; }
+        }
+        public class RightsBenefits
+        {
+
+            public RightsBenefits() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string X_Date { get; set; }
+            public string Sign { get; set; }
+            public string Book_Close_Date { get; set; }
+            public string Record_Date { get; set; }
+            public string Meeting_Date { get; set; }
+            public string Agenda { get; set; }
+            public string Type_of_Meeting { get; set; }
+            public string Venue { get; set; }
+            public string Payment_Date { get; set; }
+            public string Dividend_per_Share { get; set; }
+            public string Operation_Period { get; set; }
+            public string Source_of_Dividend { get; set; }
+            public string Remark { get; set; }
+        }
+        public class News
+        {
+
+            public News() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string DateTime { get; set; }
+            public string Source { get; set; }
+            public string Headline { get; set; }
+            public string Link { get; set; }
+        }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Variable                                                        |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -702,7 +799,6 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public void Run()
         {
-            log.LOGI("[FundamentalSET100::Run] Start update data SET100");
             var url1 = $"https://marketdata.set.or.th/mkt/sectorquotation.do?sector=SET100&language=th&country=TH";
             List<string> symbols = new List<string>();
             // Using HtmlAgilityPack
@@ -729,8 +825,36 @@ namespace FundamentalService
                 StatementOfFinancialPosition(symbols[i]);
                 StatementOfComprehensiveIncome(symbols[i]);
                 StatementOfCashFlow(symbols[i]);
+                IAAConsensusScraping(symbols[i]);
             }
-            log.LOGI("[FundamentalSET100::Run] End update data SET100");
+            log.LOGI("[FundamentalSET100::Run] Success update data SET100");
+        }
+        public void RunNews()
+        {
+            var url1 = $"https://marketdata.set.or.th/mkt/sectorquotation.do?sector=SET100&language=th&country=TH";
+            List<string> symbols = new List<string>();
+            // Using HtmlAgilityPack
+            var Webget1 = new HtmlWeb();
+            var doc1 = Webget1.Load(url1);
+
+            foreach (HtmlNode node in doc1.DocumentNode.SelectNodes("//td//a"))
+            {
+                string utf8_String = node.InnerText;
+                byte[] bytes = Encoding.UTF8.GetBytes(utf8_String);
+                utf8_String = Encoding.UTF8.GetString(bytes);
+                utf8_String = utf8_String.Replace(" ", String.Empty);
+                if (utf8_String.IndexOf("\n") >= 0)
+                {
+                    utf8_String = utf8_String.Substring(2, utf8_String.Length - 4);
+                    symbols.Add(utf8_String);
+                }
+            }
+
+            for (var i = 0; i < symbols.Count; i++)
+            {
+                NewsScraping(symbols[i]);
+            }
+            log.LOGI("[FundamentalSET100::RunNews] Success update data SET100 News");
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | ScrapingWeb Function                                            |
@@ -1135,6 +1259,232 @@ namespace FundamentalService
 
             GC.Collect();
         }
+        static public void IAAConsensusScraping(string symbol)
+        {
+
+            var url = $"https://www.settrade.com/AnalystConsensus/C04_10_stock_saa_p1.jsp?txtSymbol={symbol}&ssoPageId=11&selectPage=10";
+
+            // Using HtmlAgilityPack
+            var Webget1 = new HtmlWeb();
+            var doc1 = Webget1.Load(url);
+
+            IAAConsensusSummary iaa_consensus_summary = new IAAConsensusSummary();
+            foreach (HtmlNode node in doc1.DocumentNode.SelectNodes("//div[@class='round-border']"))
+            {
+                iaa_consensus_summary.Symbol = symbol;
+                iaa_consensus_summary.LastPrice = node.SelectSingleNode(".//div[@class='col-xs-8']//div[@class='text-right']//h1").InnerText;
+                string result = "";
+                foreach (HtmlNode row in node.SelectNodes(".//div[@class='row separate-content']//div[@class='row']"))
+                {
+                    foreach (HtmlNode cell in row.SelectNodes("div"))
+                        result += $"{cell.InnerText.Replace("\r\n", "").Replace("\n", "").Replace("\r", "")} ";
+                }
+                var parts = result.Split(' ');
+                iaa_consensus_summary.Buy = parts[1];
+                iaa_consensus_summary.Hold = parts[4];
+                iaa_consensus_summary.Sell = parts[7];
+                iaa_consensus_summary.LastUpdate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            }
+            List<IAAConsensus> iaa_consensus = new List<IAAConsensus>();
+            var index = 1;
+            foreach (HtmlNode row in doc1.DocumentNode.SelectNodes("//tr"))
+            {
+                string result = "";
+                foreach (HtmlNode cell in row.SelectNodes("th|td"))
+                {
+                    result += $"{cell.InnerText.Replace("\r\n", "").Replace("\n", "").Replace("\r", "").Replace(" ", "")} ";
+                }
+                var parts = result.Split(' ');
+                if (index.ToString() == parts[0])
+                {
+                    var tmp = new IAAConsensus();
+                    tmp.Symbol = symbol;
+                    tmp.Broker = parts[1];
+                    tmp.EPS_Year = parts[2] == "-" ? null : CutStrignMoney(parts[2]);
+                    tmp.EPS_Year_Change = parts[3] == "-" ? null : CutStrignMoney(parts[3]);
+                    tmp.EPS_2Year = parts[4] == "-" ? null : CutStrignMoney(parts[4]);
+                    tmp.EPS_2Year_Change = parts[5] == "-" ? null : CutStrignMoney(parts[5]);
+                    tmp.PE = parts[6] == "-" ? null : CutStrignMoney(parts[6]);
+                    tmp.PBV = parts[7] == "-" ? null : CutStrignMoney(parts[7]);
+                    tmp.DIV = parts[8] == "-" ? null : CutStrignMoney(parts[8]);
+                    tmp.TargetPrice = parts[9] == "-" ? null : CutStrignMoney(parts[9]);
+                    tmp.Rec = parts[10];
+                    tmp.LastUpdate = ChangeDateFormat2(parts[11]);
+                    index++;
+                    iaa_consensus.Add(tmp);
+                }
+                else if (parts[0] == "Average")
+                {
+                    iaa_consensus_summary.Average_EPS_Year = parts[1] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Average_EPS_Year_Change = parts[2] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Average_EPS_2Year = parts[3] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Average_EPS_2Year_Change = parts[4] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Average_PE = parts[5] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Average_PBV = parts[6] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Average_DIV = parts[7] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Average_TargetPrice = parts[8] == "-" ? null : CutStrignMoney(parts[1]);
+                }
+                else if (parts[0] == "High")
+                {
+                    iaa_consensus_summary.High_EPS_Year = parts[1] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.High_EPS_Year_Change = parts[2] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.High_EPS_2Year = parts[3] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.High_EPS_2Year_Change = parts[4] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.High_PE = parts[5] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.High_PBV = parts[6] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.High_DIV = parts[7] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.High_TargetPrice = parts[8] == "-" ? null : CutStrignMoney(parts[1]);
+                }
+                else if (parts[0] == "Low")
+                {
+                    iaa_consensus_summary.Low_EPS_Year = parts[1] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Low_EPS_Year_Change = parts[2] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Low_EPS_2Year = parts[3] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Low_EPS_2Year_Change = parts[4] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Low_PE = parts[5] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Low_PBV = parts[6] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Low_DIV = parts[7] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Low_TargetPrice = parts[8] == "-" ? null : CutStrignMoney(parts[1]);
+                }
+                else if (parts[0] == "Median")
+                {
+                    iaa_consensus_summary.Median_EPS_Year = parts[1] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Median_EPS_Year_Change = parts[2] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Median_EPS_2Year = parts[3] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Median_EPS_2Year_Change = parts[4] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Median_PE = parts[5] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Median_PBV = parts[6] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Median_DIV = parts[7] == "-" ? null : CutStrignMoney(parts[1]);
+                    iaa_consensus_summary.Median_TargetPrice = parts[8] == "-" ? null : CutStrignMoney(parts[1]);
+                }
+
+            }
+
+            foreach (var value in iaa_consensus)
+            {
+                // Insert or Update datebase iaa_consensus
+                StatementDatabase(value, "iaa_consensus", $"LastUpdate='{value.LastUpdate}' AND Symbol='{value.Symbol}' AND Broker='{value.Broker}'");
+            }
+
+            // Insert or Update datebase iaa_consensus_summary
+            StatementDatabase(iaa_consensus_summary, "iaa_consensus_summary", $"Symbol='{iaa_consensus_summary.Symbol}'");
+
+
+            GC.Collect();
+        }
+        static public void RightsBenefitsScraping(string symbol)
+        {
+
+            var url = $"https://www.set.or.th/set/companyrights.do?symbol={symbol}&ssoPageId=7&language=th&country=TH";
+
+            // Using HtmlAgilityPack
+            var Webget1 = new HtmlWeb();
+            var doc1 = Webget1.Load(url);
+
+            RightsBenefits result = new RightsBenefits();
+            List<RightsBenefits> rights_benefits = new List<RightsBenefits>();
+            foreach (HtmlNode row in doc1.DocumentNode.SelectNodes("//table[@class='table table-hover table-info-wrap']//tbody//tr"))
+            {
+                string tmp = "";
+                if (row.ChildNodes.Count > 6)
+                {
+                    if (result.X_Date != null)
+                        rights_benefits.Add(result);
+                    result = new RightsBenefits();
+                    foreach (HtmlNode cell in row.SelectNodes("td"))
+                        tmp += $"{cell.InnerText.Replace("\r\n", "").Replace("\n", "").Replace("\r", "")},";
+                    var parts = tmp.Split(',');
+                    result.Symbol = symbol;
+                    result.X_Date = ChangeDateFormat3(parts[0]);
+                    result.Sign = parts[1].Replace(" ", "");
+                }
+                else if (row.ChildNodes.Count < 6)
+                {
+                    foreach (HtmlNode cell in row.SelectNodes("td"))
+                        tmp += $"{cell.InnerText.Replace("\r\n", "").Replace("\n", "").Replace("\r", "")},";
+                    var parts = tmp.Split(',');
+                    if (parts[0] == "วันกำหนดรายชื่อผู้ถือหุ้น")
+                        result.Record_Date = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : ChangeDateFormat3(parts[1]);
+                    else if (parts[0] == "วันที่ประชุม")
+                        result.Meeting_Date = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : ChangeDateFormat3(parts[1]);
+                    else if (parts[0] == "วาระการประชุม")
+                        result.Agenda = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : parts[1];
+                    else if (parts[0] == "ประเภทของการประชุม")
+                        result.Type_of_Meeting = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : parts[1];
+                    else if (parts[0] == "สถานที่จัดการประชุม")
+                        result.Venue = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : parts[1];
+                    else if (parts[0] == "วันปิดสมุดทะเบียน")
+                        result.Book_Close_Date = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : ChangeDateFormat3(parts[1]);
+                    else if (parts[0] == "วันจ่ายปันผล")
+                        result.Payment_Date = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : ChangeDateFormat3(parts[1]);
+                    else if (parts[0] == "เงินปันผล(บาท/หุ้น)")
+                        result.Dividend_per_Share = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : CutStrignMoney(parts[1]);
+                    else if (parts[0] == "รอบผลประกอบการ")
+                        result.Operation_Period = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : parts[1];
+                    else if (parts[0] == "เงินปันผลจาก")
+                        result.Source_of_Dividend = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : parts[1];
+                    else if (parts[0] == "หมายเหตุ")
+                        result.Remark = (parts[1] == "-" || parts[1] == "" || parts[1] == " - ") ? null : parts[1];
+
+                }
+
+            }
+
+            foreach (var value in rights_benefits)
+            {
+                // Insert or Update datebase rights_benefits
+                StatementDatabase(value, "rights_benefits", $"X_Date='{value.X_Date}' AND Symbol='{value.Symbol}'");
+            }
+
+
+            GC.Collect();
+        }
+        static public void NewsScraping(string symbol)
+        {
+
+            var url = $"https://www.set.or.th/set/companynews.do?symbol={symbol}&language=th&currentpage=0&ssoPageId=8&country=TH";
+
+            // Using HtmlAgilityPack
+            var Webget1 = new HtmlWeb();
+            var doc1 = Webget1.Load(url);
+
+            News result = new News();
+            List<News> news = new List<News>();
+            int index = 0;
+            foreach (HtmlNode node in doc1.DocumentNode.SelectNodes("//table[@class='table table-hover table-info-wrap']"))
+            {
+                if (index++ == 1)
+                    foreach (HtmlNode row in node.SelectNodes(".//tbody//tr"))
+                    {
+                        result = new News();
+                        result.Symbol = symbol;
+                        index = 0;
+                        foreach (HtmlNode cell in row.SelectNodes(".//td"))
+                        {
+                            if (index == 0)
+                                result.DateTime = ChangeDateFormat3(cell.InnerText.Replace("\r\n", "").Replace("\n", "").Replace("\r", "").Replace("  ", ""));
+                            else if (index == 2)
+                                result.Source = cell.InnerText.Replace("\r\n", "").Replace("\n", "").Replace("\r", "");
+                            else if (index == 3)
+                                result.Headline = cell.InnerText.Replace("\r\n", "").Replace("\n", "").Replace("\r", "");
+                            else if (index == 4)
+                                result.Link = "https://www.set.or.th" + cell.SelectSingleNode(".//a[@href]").GetAttributeValue("href", string.Empty);
+                            index++;
+                        }
+                        news.Add(result);
+                    }
+
+            }
+
+            foreach (var value in news)
+            {
+                // Insert or Update datebase news
+                StatementDatabase(value, "news", $"DateTime='{value.DateTime}' AND Symbol='{value.Symbol}' AND Headline='{value.Headline}'", true);
+            }
+
+
+            GC.Collect();
+        }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Database Function                                               |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -1164,7 +1514,7 @@ namespace FundamentalService
 
             command.Dispose();
         }
-        public static void StatementDatabase(object item, string db, string where)
+        public static void StatementDatabase(object item, string db, string where, bool none_update = false)
         {
             string sql = "";
             string connetionString;
@@ -1192,7 +1542,7 @@ namespace FundamentalService
             }
             if (event_case)
                 InsertDatebase(sql, cnn);
-            else
+            else if (!none_update && !event_case)
                 UpdateDatebase(sql, cnn);
 
             cnn.Close();
@@ -1219,6 +1569,75 @@ namespace FundamentalService
             int yy = Convert.ToInt32(parts[2]) - 543;
 
             return $"{yy}-{mm}-{dd}";
+        }
+        public static string ChangeDateFormat2(string date)
+        {
+            if (date == null)
+                return date;
+
+            string str = date + "/";
+            var parts = str.Split('/');
+            int dd = Convert.ToInt32(parts[0]);
+            int mm = Convert.ToInt32(parts[1]);
+            int yy = Convert.ToInt32(parts[2]) + 2000;
+
+            return $"{yy}-{mm}-{dd}";
+        }
+        public static string ChangeDateFormat3(string date)
+        {
+            if (date == "null")
+                return date;
+
+            var parts = date.Split(' ');
+            int mm;
+            switch (parts[1])
+            {
+                case "ม.ค.":
+                    mm = 1;
+                    break;
+                case "ก.พ.":
+                    mm = 2;
+                    break;
+                case "มี.ค.":
+                    mm = 3;
+                    break;
+                case "เม.ย.":
+                    mm = 4;
+                    break;
+                case "พ.ค.":
+                    mm = 5;
+                    break;
+                case "มิ.ย.":
+                    mm = 6;
+                    break;
+                case "ก.ค.":
+                    mm = 7;
+                    break;
+                case "ส.ค.":
+                    mm = 8;
+                    break;
+                case "ก.ย.":
+                    mm = 9;
+                    break;
+                case "ต.ค.":
+                    mm = 10;
+                    break;
+                case "พ.ย.":
+                    mm = 11;
+                    break;
+                default:
+                    mm = 12;
+                    break;
+            }
+            int dd = Convert.ToInt32(parts[0]);
+            int yy = Convert.ToInt32(parts[2]) - 543;
+
+            if (parts.Length > 3)
+                return $"{yy}-{mm}-{dd} {parts[3]}:00.000";
+
+            else
+
+                return $"{yy}-{mm}-{dd}";
         }
         public static string ChangeYearFormat(string year)
         {

@@ -1,0 +1,5 @@
+03/12/2019 10:14 AM [INFO]  [Service::OnStart] Service starting
+03/12/2019 10:14 AM [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 10:14 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 10:15 AM [INFO]  [FundamentalSET100::Run] Start update data SET100
+03/12/2019 10:15 AM [INFO]  [FundamentalSET100::Run] End update data SET100

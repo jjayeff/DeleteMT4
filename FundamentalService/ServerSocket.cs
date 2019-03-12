@@ -131,6 +131,8 @@ namespace FundamentalService
                 return JsonConvert.SerializeObject(db.GetFundamentalDB(data));
             else if (data.IndexOf("statement") > -1)
                 return JsonConvert.SerializeObject(db.GetStateMentDB(data));
+            else if (data.IndexOf("iaa_consensus") > -1)
+                return JsonConvert.SerializeObject(db.GetIAAConsensusDB(data));
             else
                 return JsonConvert.SerializeObject(db.GetKaohoonDB(data));
         }

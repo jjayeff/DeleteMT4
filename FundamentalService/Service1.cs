@@ -20,6 +20,8 @@ namespace FundamentalService
         // | Config                                                          |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         string dateStart = ConfigurationManager.AppSettings["StartProgramGetData"];
+        int TimerResetKey = int.Parse(ConfigurationManager.AppSettings["TimerResetKey"]) * 60000;
+        int TimerNews = int.Parse(ConfigurationManager.AppSettings["TimerNews"]) * 60000;
         private static string strPath = AppDomain.CurrentDomain.BaseDirectory + @"\logs";
         private static Plog log = new Plog();
         public static bool run = true;
@@ -72,7 +74,8 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            //System.IO.File.AppendAllLines(fullPath, new[] { "..calling time : " + DateTime.Now.ToString() });
+            this.timer2.Interval = TimerResetKey;
+            this.timer3.Interval = TimerNews;
             if (run)
             {
                 var server = new ServerSocket();
@@ -90,7 +93,9 @@ namespace FundamentalService
         private void Kaohoon2Database(object sender, System.Timers.ElapsedEventArgs e)
         {
             var getData = new FundamentalKaohoon();
+            var getData1 = new FundamentalSET100();
             getData.Run();
+            getData1.RunNews();
         }
         private void ResetAccessToken(object sender, System.Timers.ElapsedEventArgs e)
         {

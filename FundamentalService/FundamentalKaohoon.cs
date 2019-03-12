@@ -44,7 +44,6 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public void Run()
         {
-            log.LOGI("[FundamentalKaohoon::Run] Start update data Kaohoon");
             var url1 = $"https://marketdata.set.or.th/mkt/sectorquotation.do?sector=SET100&language=th&country=TH";
             List<string> symbols = new List<string>();
             // Using HtmlAgilityPack
@@ -66,7 +65,7 @@ namespace FundamentalService
             }
 
             IndividualStock(symbols);
-            log.LOGI("[FundamentalKaohoon::Run] End update data Kaohoon");
+            log.LOGI("[FundamentalKaohoon::Run] Success update data Kaohoon");
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | ScrapingWeb Function                                            |
