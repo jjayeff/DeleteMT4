@@ -825,6 +825,7 @@ namespace FundamentalService
                 StatementOfFinancialPosition(symbols[i]);
                 StatementOfComprehensiveIncome(symbols[i]);
                 StatementOfCashFlow(symbols[i]);
+                RightsBenefitsScraping(symbols[i]);
                 IAAConsensusScraping(symbols[i]);
             }
             log.LOGI("[FundamentalSET100::Run] Success update data SET100");
@@ -1433,7 +1434,7 @@ namespace FundamentalService
             foreach (var value in rights_benefits)
             {
                 // Insert or Update datebase rights_benefits
-                StatementDatabase(value, "rights_benefits", $"X_Date='{value.X_Date}' AND Symbol='{value.Symbol}'");
+                StatementDatabase(value, "rights_benefits", $"X_Date='{value.X_Date}' AND Symbol='{value.Symbol}' AND Sign='{value.Sign}'");
             }
 
 

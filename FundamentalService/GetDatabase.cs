@@ -794,6 +794,39 @@ namespace FundamentalService
             public string Median_TargetPrice { get; set; }
             public string LastUpdate { get; set; }
         }
+        public class RightsBenefits
+        {
+
+            public RightsBenefits() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string X_Date { get; set; }
+            public string Sign { get; set; }
+            public string Book_Close_Date { get; set; }
+            public string Record_Date { get; set; }
+            public string Meeting_Date { get; set; }
+            public string Agenda { get; set; }
+            public string Type_of_Meeting { get; set; }
+            public string Venue { get; set; }
+            public string Payment_Date { get; set; }
+            public string Dividend_per_Share { get; set; }
+            public string Operation_Period { get; set; }
+            public string Source_of_Dividend { get; set; }
+            public string Remark { get; set; }
+        }
+        public class News
+        {
+
+            public News() { }
+
+            // Properties.
+            public string Symbol { get; set; }
+            public string DateTime { get; set; }
+            public string Source { get; set; }
+            public string Headline { get; set; }
+            public string Link { get; set; }
+        }
         public class Message
         {
 
@@ -999,6 +1032,50 @@ namespace FundamentalService
                             return GetKaohoonData(param[1]);
                         else if (param[0] == "kaohoon" && param.Length == 3)
                             return GetKaohoonData(param[1], param[2]);
+                        else
+                            return new Message();
+                    }
+            }
+        }
+        public dynamic GetNewsDB(string input)
+        {
+            var param = input.Split('/');
+            switch (input)
+            {
+                case "news":
+                    return GetNews();
+
+                default:
+                    {
+                        if (param[1] == "symbol" && param.Length == 3)
+                            return GetNews(param[2]);
+                        else if (param[1] == "symbol&date" && param.Length == 4)
+                            return GetNews(param[2], param[3]);
+                        else if (param[1] == "latest" && param.Length == 3)
+                            return GetNews(param[2], null, true);
+                        else
+                            return new Message();
+                    }
+            }
+        }
+        public dynamic GetRightsBenefitsDB(string input)
+        {
+            var param = input.Split('/');
+            switch (input)
+            {
+                case "rights_benefits":
+                    return GetRightsBenefits();
+
+                default:
+                    {
+                        if (param[1] == "symbol" && param.Length == 3)
+                            return GetRightsBenefits(param[2]);
+                        else if (param[1] == "symbol&date" && param.Length == 4)
+                            return GetRightsBenefits(param[2], param[3]);
+                        else if (param[1] == "symbol&sign" && param.Length == 4)
+                            return GetRightsBenefits(param[2], null, param[3]);
+                        else if (param[1] == "latest" && param.Length == 3)
+                            return GetRightsBenefits(param[2], null, null, true);
                         else
                             return new Message();
                     }
@@ -1353,6 +1430,60 @@ namespace FundamentalService
             return SeleteDB<CashFlow>(sql);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Database News Function                                          |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        public dynamic GetNews(string symbol = null, string date = null, bool lated = false)
+        {
+            string sql = "";
+            if (symbol != null && date == null && !lated)
+                sql = $"SELECT * from dbo.news WHERE Symbol = '{symbol}'";
+            else if (date != null && !lated)
+            {
+                date = ChangeDateFormat(date);
+                if (date == null)
+                    return new Message();
+                if (symbol != null && !lated)
+                    sql = $"SELECT * from dbo.news WHERE Symbol = '{symbol}' AND DateTime >= '{date}' AND DateTime < '{ChangeDateTMRFormat(date)}'";
+            }
+            else if (symbol != null && date == null && lated)
+            {
+                sql = $"SELECT * from dbo.news WHERE Symbol = '{symbol}' AND DateTime = (SELECT MAX(DateTime) FROM dbo.news WHERE Symbol = '{symbol}')";
+            }
+            else
+                sql = $"SELECT * from dbo.news";
+
+            return SeleteDB<News>(sql);
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        // | Database Rights Benefits Function                               |
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        public dynamic GetRightsBenefits(string symbol = null, string date = null, string sign = null, bool lated = false)
+        {
+            string sql = "";
+            if (symbol != null && date == null && sign == null && !lated)
+            {
+                sql = $"SELECT * from dbo.rights_benefits WHERE Symbol = '{symbol}'";
+            }
+            else if (symbol != null && date == null && sign != null && !lated)
+                sql = $"SELECT * from dbo.rights_benefits WHERE Symbol = '{symbol}' AND Sign = '{sign}'";
+            else if (date != null && !lated)
+            {
+                date = ChangeDateFormat(date);
+                if (date == null)
+                    return new Message();
+                if (symbol != null && sign == null && !lated)
+                    sql = $"SELECT * from dbo.rights_benefits WHERE Symbol = '{symbol}' AND X_Date = '{date}'";
+            }
+            else if (symbol != null && date == null && sign == null && lated)
+            {
+                sql = $"SELECT * from dbo.rights_benefits WHERE Symbol = '{symbol}' AND X_Date = (SELECT MAX(X_Date) FROM dbo.rights_benefits WHERE Symbol = '{symbol}')";
+            }
+            else
+                sql = $"SELECT * from dbo.rights_benefits";
+
+            return SeleteDB<RightsBenefits>(sql);
+        }
+        // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Database IAA Consenses Function                                 |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public List<IAAConsensus> GetIAAConsenses(string symbol = null, string broker = null)
@@ -1500,7 +1631,7 @@ namespace FundamentalService
                 yy = Convert.ToInt32(parts[2]);
                 var date_time = DateTime.Now.ToString("yyyy");
                 string year = date_time.ToString();
-                var year_now = Convert.ToInt32(year);
+                var year_now = Convert.ToInt32(year) - 543;
                 if (yy > year_now)
                     yy -= 543;
                 if (yy > year_now || yy < 1990)
@@ -1508,6 +1639,19 @@ namespace FundamentalService
             }
             else
                 return null;
+
+            return $"{yy}-{mm}-{dd}";
+        }
+        public static string ChangeDateTMRFormat(string date)
+        {
+            int dd, mm, yy;
+            if (date == null)
+                return date;
+
+            var parts = date.Split('-');
+            yy = Convert.ToInt32(parts[0]);
+            mm = Convert.ToInt32(parts[1]);
+            dd = Convert.ToInt32(parts[2]) + 1;
 
             return $"{yy}-{mm}-{dd}";
         }

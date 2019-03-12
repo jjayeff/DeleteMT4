@@ -256,4 +256,3 @@ D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Release\FundamentalAPI.csproj
 D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Release\FundamentalAPI.dll
 D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Release\FundamentalAPI.pdb
 D:\ekkawitl\Project\fundamental\FundamentalAPI\bin\Newtonsoft.Json.pdb
-D:\ekkawitl\Project\fundamental\FundamentalAPI\obj\Release\FundamentalAPI.csprojAssemblyReference.cache

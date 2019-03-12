@@ -3,3 +3,7 @@
 03/12/2019 10:14 AM [INFO]  [Service::timer1_Elapsed] Socket server Run
 03/12/2019 10:15 AM [INFO]  [FundamentalSET100::Run] Start update data SET100
 03/12/2019 10:15 AM [INFO]  [FundamentalSET100::Run] End update data SET100
+03/12/2019 15:10:04 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:10:04 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:10:06 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:10:13 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}

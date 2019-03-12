@@ -50,6 +50,8 @@ namespace FundamentalService
 
             log.LOGI("[Service::OnStart] Service starting");
             // Set Timer
+            this.timer2.Interval = TimerResetKey;
+            this.timer3.Interval = TimerNews;
             this.timer1.Start();
             this.timer2.Start();
             this.timer3.Start();
@@ -74,8 +76,6 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            this.timer2.Interval = TimerResetKey;
-            this.timer3.Interval = TimerNews;
             if (run)
             {
                 var server = new ServerSocket();

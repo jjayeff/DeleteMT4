@@ -166,6 +166,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IAAConsensusController.cs" />
     <Compile Include="Controllers\KaohoonController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\RightsBenefitsController.cs" />
     <Compile Include="Controllers\StatementController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

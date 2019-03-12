@@ -133,6 +133,10 @@ namespace FundamentalService
                 return JsonConvert.SerializeObject(db.GetStateMentDB(data));
             else if (data.IndexOf("iaa_consensus") > -1)
                 return JsonConvert.SerializeObject(db.GetIAAConsensusDB(data));
+            else if (data.IndexOf("news") > -1)
+                return JsonConvert.SerializeObject(db.GetNewsDB(data));
+            else if (data.IndexOf("rights_benefits") > -1)
+                return JsonConvert.SerializeObject(db.GetRightsBenefitsDB(data));
             else
                 return JsonConvert.SerializeObject(db.GetKaohoonDB(data));
         }

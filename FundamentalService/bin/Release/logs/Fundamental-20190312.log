@@ -1,0 +1,164 @@
+03/12/2019 14:51:34 [INFO]  [Service::OnStart] Service starting
+03/12/2019 14:51:34 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 14:51:36 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 14:52:34 [INFO]  [FundamentalSET100::Run] Success update data SET100
+03/12/2019 14:55:14 [INFO]  [Service::OnStop] Service stop
+03/12/2019 14:55:45 [INFO]  [Service::OnStart] Service starting
+03/12/2019 14:55:45 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 14:55:47 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 14:56:41 [INFO]  [FundamentalSET100::Run] Success update data SET100
+03/12/2019 14:57:37 [INFO]  [Service::OnStop] Service stop
+03/12/2019 14:58:01 [INFO]  [Service::OnStart] Service starting
+03/12/2019 14:58:01 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 14:58:03 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 14:59:40 [INFO]  [FundamentalSET100::Run] Success update data SET100
+03/12/2019 15:03:01 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/12/2019 15:03:21 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/12/2019 15:08:01 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/12/2019 15:08:21 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/12/2019 15:09:43 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:09:49 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:09:49 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:09:51 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:09:53 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:10:18 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:10:18 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:10:20 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:10:24 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:10:49 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:13:47 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:13:48 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:13:49 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:14:15 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:15:02 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"m7s0UKPZpEeu2x/k7b+lwQ=="}
+03/12/2019 15:15:03 [INFO]  [ServerSocket::StartListening] Text received : news
+03/12/2019 15:15:22 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"m7s0UKPZpEeu2x/k7b+lwQ=="}
+03/12/2019 15:15:22 [INFO]  [ServerSocket::StartListening] Text received : news/symbol/PTT
+03/12/2019 15:17:02 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"m7s0UKPZpEeu2x/k7b+lwQ=="}
+03/12/2019 15:17:03 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/3-11-2562
+03/12/2019 15:17:03 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:17:20 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:17:22 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:17:22 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:17:24 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:18:03 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:18:14 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"htwYGFZmk0Kwd+5iLh4UPw=="}
+03/12/2019 15:18:15 [INFO]  [ServerSocket::StartListening] Text received : news/symbol/PTT
+03/12/2019 15:18:27 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:18:56 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:18:56 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:18:58 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:19:04 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:19:09 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FsB3tGXDxUqRrcHAWumPzQ=="}
+03/12/2019 15:19:10 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/3-11-2562
+03/12/2019 15:19:16 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FsB3tGXDxUqRrcHAWumPzQ=="}
+03/12/2019 15:19:17 [INFO]  [ServerSocket::StartListening] Text received : news/symbol/PTT
+03/12/2019 15:19:35 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FsB3tGXDxUqRrcHAWumPzQ=="}
+03/12/2019 15:19:35 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/11-3-2562
+03/12/2019 15:19:42 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FsB3tGXDxUqRrcHAWumPzQ=="}
+03/12/2019 15:19:42 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/11-3-2019
+03/12/2019 15:19:50 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FsB3tGXDxUqRrcHAWumPzQ=="}
+03/12/2019 15:19:51 [INFO]  [ServerSocket::StartListening] Text received : news/symbol/PTT
+03/12/2019 15:20:17 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"FsB3tGXDxUqRrcHAWumPzQ=="}
+03/12/2019 15:20:18 [INFO]  [ServerSocket::StartListening] Text received : news/latest/PTT
+03/12/2019 15:21:14 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:21:20 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:21:20 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:21:22 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:21:24 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:21:29 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"W2wILmr3pkiKbC7yCC5vAw=="}
+03/12/2019 15:21:30 [INFO]  [ServerSocket::StartListening] Text received : news/latest/PTT
+03/12/2019 15:21:30 [WARN]  SELECT * from dbo.news WHERE Symbol = 'PTT' AND DateTime = (SELECT MAX(DateTime) FROM dbo.news WHERE Symbol = 'PTT')
+03/12/2019 15:21:42 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"W2wILmr3pkiKbC7yCC5vAw=="}
+03/12/2019 15:21:43 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/3-11-2562
+03/12/2019 15:21:43 [WARN]  SELECT * from dbo.news WHERE Symbol = 'PTT' AND DateTime = '2019-11-3'
+03/12/2019 15:22:52 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:22:57 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:22:57 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:22:59 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:23:02 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:23:09 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"xpus+E/DAU2IvJ7MAl08tA=="}
+03/12/2019 15:23:10 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/3-11-2562
+03/12/2019 15:23:10 [WARN]  SELECT * from dbo.news WHERE Symbol = 'PTT' AND DateTime >= '2019-11-3'
+03/12/2019 15:23:46 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"xpus+E/DAU2IvJ7MAl08tA=="}
+03/12/2019 15:23:47 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/11-3-2562
+03/12/2019 15:23:47 [WARN]  SELECT * from dbo.news WHERE Symbol = 'PTT' AND DateTime >= '2019-3-11'
+03/12/2019 15:27:57 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/12/2019 15:28:15 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/12/2019 15:29:44 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:29:50 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:29:50 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:29:52 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:30:12 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:30:17 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Lp2UcbfZ9kiW7Cp+M5js8g=="}
+03/12/2019 15:30:18 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/11-3-2562
+03/12/2019 15:30:18 [WARN]  SELECT * from dbo.news WHERE Symbol = 'PTT' AND DateTime >= '2019-3-11' AND DateTime < '2019-3-12'
+03/12/2019 15:30:30 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Lp2UcbfZ9kiW7Cp+M5js8g=="}
+03/12/2019 15:30:31 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/21-2-2562
+03/12/2019 15:30:31 [WARN]  SELECT * from dbo.news WHERE Symbol = 'PTT' AND DateTime >= '2019-2-21' AND DateTime < '2019-2-22'
+03/12/2019 15:34:51 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/12/2019 15:35:10 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/12/2019 15:39:51 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/12/2019 15:40:09 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/12/2019 15:40:57 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:42:16 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:42:16 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:42:18 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:42:25 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:42:39 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:42:40 [INFO]  [ServerSocket::StartListening] Text received : news/symbol&date/PTT/21-2-2562
+03/12/2019 15:42:49 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:42:50 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits
+03/12/2019 15:42:50 [WARN]  SELECT * from dbo.rights_benefits
+03/12/2019 15:43:03 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:43:04 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol/PTT
+03/12/2019 15:43:04 [WARN]  SELECT * from dbo.rights_benefits
+03/12/2019 15:44:38 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:44:39 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol&date/PTT/11-3-2019
+03/12/2019 15:44:39 [WARN]  SELECT * from dbo.rights_benefits WHERE Symbol = 'PTT' AND X_Date = '2019-3-11'
+03/12/2019 15:44:48 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:44:49 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol/AAV
+03/12/2019 15:44:49 [WARN]  SELECT * from dbo.rights_benefits
+03/12/2019 15:45:08 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:45:09 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol&date/AAV/3-18-2019
+03/12/2019 15:45:15 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:45:16 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol&date/AAV/18-3-2019
+03/12/2019 15:45:16 [WARN]  SELECT * from dbo.rights_benefits WHERE Symbol = 'AAV' AND X_Date = '2019-3-18'
+03/12/2019 15:45:25 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:45:26 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol&date/AAV/18-3-2562
+03/12/2019 15:45:26 [WARN]  SELECT * from dbo.rights_benefits WHERE Symbol = 'AAV' AND X_Date = '2019-3-18'
+03/12/2019 15:46:28 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:46:29 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol&sign/AAV/XD
+03/12/2019 15:46:29 [WARN]  SELECT * from dbo.rights_benefits WHERE Symbol = 'AAV' AND Sign = 'XD'
+03/12/2019 15:46:35 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:46:36 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol&sign/AAV/XM
+03/12/2019 15:46:36 [WARN]  SELECT * from dbo.rights_benefits WHERE Symbol = 'AAV' AND Sign = 'XM'
+03/12/2019 15:46:50 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:46:51 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/latest/PTT
+03/12/2019 15:46:51 [WARN]  SELECT * from dbo.rights_benefits WHERE Symbol = 'PTT' AND X_Date = (SELECT MAX(X_Date) FROM dbo.news WHERE Symbol = 'PTT')
+03/12/2019 15:46:51 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:47:15 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:49:14 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:49:14 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:49:16 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:49:20 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:49:25 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:49:29 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"Mrgbce23kUC/flKrPbwNsg=="}
+03/12/2019 15:49:34 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"8iawh1AmmUCrwtI7Lv5DPA=="}
+03/12/2019 15:49:34 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/latest/PTT
+03/12/2019 15:49:34 [ERROR] PTT, , , True
+03/12/2019 15:49:34 [WARN]  SELECT * from dbo.rights_benefits WHERE Symbol = 'PTT' AND X_Date = (SELECT MAX(X_Date) FROM dbo.rights_benefits WHERE Symbol = 'PTT')
+03/12/2019 15:49:58 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"8iawh1AmmUCrwtI7Lv5DPA=="}
+03/12/2019 15:49:59 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol/PTT
+03/12/2019 15:49:59 [ERROR] PTT, , , False
+03/12/2019 15:49:59 [WARN]  PTT
+03/12/2019 15:49:59 [WARN]  SELECT * from dbo.rights_benefits
+03/12/2019 15:50:52 [INFO]  [Service::OnStop] Service stop
+03/12/2019 15:51:00 [INFO]  [Service::OnStart] Service starting
+03/12/2019 15:51:00 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/12/2019 15:51:02 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/12/2019 15:51:04 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/12/2019 15:51:08 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"xFBN2qCMbkGAZ/jPvN4Cdg=="}
+03/12/2019 15:51:09 [INFO]  [ServerSocket::StartListening] Text received : rights_benefits/symbol/PTT
+03/12/2019 15:51:09 [WARN]  PTT
+03/12/2019 15:51:25 [INFO]  [Service::OnStop] Service stop
