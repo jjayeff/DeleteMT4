@@ -1799,10 +1799,6 @@ namespace FundamentalService
                         asset.To_maturity_investments = value;
                     else if (name == "เงินลงทุนซึ่งบันทึกโดยวิธีราคาทุน" && main == "เงินลงทุน - สุทธิ")
                         asset.Investment_account_net = value;
-                    else if (name == "บริษัทร่วม กิจการร่วมค้า และ/หรือ กิจการที่ควบคุมร่วมกัน" && main == "เงินลงทุน - สุทธิ")
-                        asset.Associates_net = value;
-                    else if (name == "กิจการที่เกี่ยวข้องกัน" && main == "เงินลงทุน - สุทธิ")
-                        asset.Affiliates = value;
                     else if (name == "หัก ค่าเผื่อการด้อยค่าของเงินลงทุน" && main == "เงินลงทุน - สุทธิ")
                         asset.Allowance_impairment_investments = value;
                     else if (name == "เงินลงทุนเผื่อขาย" && main == "เงินลงทุน - สุทธิ")
