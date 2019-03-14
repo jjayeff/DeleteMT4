@@ -1512,46 +1512,27 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Database Kaohoon Function                                       |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-        public List<KaohoonData> GetKaohoonData(string symbol = null, string date = null)
+        public dynamic GetKaohoonData(string symbol = null, string date = null)
         {
-            List<KaohoonData> kaohoon_data = new List<KaohoonData>();
-            string connetionString;
-            SqlConnection cnn;
-            connetionString = $@"Data Source={DatabaseServer};Initial Catalog={Database};User ID={Username};Password={Password}";
-            cnn = new SqlConnection(connetionString);
-            cnn.Open();
             string sql = "";
             if (symbol == null && date == null)
                 sql = $"Select * from dbo.kaohoon_data";
             else if (symbol != null && date == null)
                 sql = $"Select * from dbo.kaohoon_data where Symbol = '{symbol}'";
-            else if (symbol == null && date != null)
-                sql = $"Select * from dbo.kaohoon_data where Date = '{date}'";
-            else
-                sql = $"Select * from dbo.kaohoon_data where Symbol = '{symbol}' AND Date = '{date}'";
-
-            SqlCommand command = new SqlCommand(sql, cnn);
-            command.Parameters.AddWithValue("@zip", "india");
-            using (SqlDataReader reader = command.ExecuteReader())
+            else if(date != null)
             {
-                while (reader.Read())
-                {
-                    var tmp = new KaohoonData
-                    {
-                        Kaohoon_data_id = String.Format("{0}", reader["Kaohoon_data_id"]),
-                        Symbol = String.Format("{0}", reader["Symbol"]),
-                        Date = String.Format("{0}", reader["Date"]),
-                        Year = String.Format("{0}", reader["Year"]),
-                        Quarter = String.Format("{0}", reader["Quarter"]),
-                        TargetPrice = String.Format("{0}", reader["TargetPrice"]),
-                        Trends = String.Format("{0}", reader["Trends"]),
-                        Divide = String.Format("{0}", reader["Divide"]),
-                        Topic = String.Format("{0}", reader["Topic"]),
-                    };
-                    kaohoon_data.Add(tmp);
-                }
+                date = ChangeDateFormat(date);
+                if (date == null)
+                    return new Message();
+                if (symbol == null && date != null)
+                    sql = $"Select * from dbo.kaohoon_data where Date = '{date}'";
+                else
+                    sql = $"Select * from dbo.kaohoon_data where Symbol = '{symbol}' AND Date = '{date}'";
             }
-            return kaohoon_data;
+            
+   
+
+            return SeleteDB<KaohoonData>(sql);
         }
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Database                                                        |
@@ -1631,7 +1612,7 @@ namespace FundamentalService
                 yy = Convert.ToInt32(parts[2]);
                 var date_time = DateTime.Now.ToString("yyyy");
                 string year = date_time.ToString();
-                var year_now = Convert.ToInt32(year) - 543;
+                var year_now = Convert.ToInt32(year) -543;
                 if (yy > year_now)
                     yy -= 543;
                 if (yy > year_now || yy < 1990)
