@@ -220,37 +220,37 @@ namespace FundamentalService
             int mm;
             switch (parts[0])
             {
-                case "มกราคม":
+                case "January":
                     mm = 1;
                     break;
-                case "กุมภาพันธ์":
+                case "February":
                     mm = 2;
                     break;
-                case "มีนาคม":
+                case "March":
                     mm = 3;
                     break;
-                case "เมษายน":
+                case "April":
                     mm = 4;
                     break;
-                case "พฤษภาคม":
+                case "May":
                     mm = 5;
                     break;
-                case "มิถุนายน":
+                case "June":
                     mm = 6;
                     break;
-                case "กรกฎาคม":
+                case "July":
                     mm = 7;
                     break;
-                case "สิงหาคม":
+                case "August":
                     mm = 8;
                     break;
-                case "กันยายน":
+                case "September":
                     mm = 9;
                     break;
-                case "ตุลาคม":
+                case "October":
                     mm = 10;
                     break;
-                case "พฤศจิกายน":
+                case "November":
                     mm = 11;
                     break;
                 default:
@@ -268,37 +268,37 @@ namespace FundamentalService
             int mm;
             switch (parts[0])
             {
-                case "มกราคม":
+                case "January":
                     mm = 1;
                     break;
-                case "กุมภาพันธ์":
+                case "February":
                     mm = 2;
                     break;
-                case "มีนาคม":
+                case "March":
                     mm = 3;
                     break;
-                case "เมษายน":
+                case "April":
                     mm = 4;
                     break;
-                case "พฤษภาคม":
+                case "May":
                     mm = 5;
                     break;
-                case "มิถุนายน":
+                case "June":
                     mm = 6;
                     break;
-                case "กรกฎาคม":
+                case "July":
                     mm = 7;
                     break;
-                case "สิงหาคม":
+                case "August":
                     mm = 8;
                     break;
-                case "กันยายน":
+                case "September":
                     mm = 9;
                     break;
-                case "ตุลาคม":
+                case "October":
                     mm = 10;
                     break;
-                case "พฤศจิกายน":
+                case "November":
                     mm = 11;
                     break;
                 default:
