@@ -163,24 +163,34 @@ namespace FundamentalService
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
 
-            command = new SqlCommand(sql, cnn);
-
-            adapter.UpdateCommand = new SqlCommand(sql, cnn);
-            adapter.UpdateCommand.ExecuteNonQuery();
-
-            command.Dispose();
+            try
+            {
+                command = new SqlCommand(sql, cnn);
+                adapter.UpdateCommand = new SqlCommand(sql, cnn);
+                adapter.UpdateCommand.ExecuteNonQuery();
+                command.Dispose();
+            }
+            catch (Exception ex)
+            {
+                log.LOGE($"[FundamentalSET100::UpdateDatebase]  {sql}");
+            }
         }
         public static void InsertDatebase(string sql, SqlConnection cnn)
         {
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
 
-            command = new SqlCommand(sql, cnn);
-
-            adapter.InsertCommand = new SqlCommand(sql, cnn);
-            adapter.InsertCommand.ExecuteNonQuery();
-
-            command.Dispose();
+            try
+            {
+                command = new SqlCommand(sql, cnn);
+                adapter.InsertCommand = new SqlCommand(sql, cnn);
+                adapter.InsertCommand.ExecuteNonQuery();
+                command.Dispose();
+            }
+            catch (Exception ex)
+            {
+                log.LOGE($"[FundamentalSET100::InsertDatebase]  {sql}");
+            }
         }
         public static void StatementDatabase(object item, string db, string where)
         {
