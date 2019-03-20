@@ -30,8 +30,7 @@ namespace FundamentalAPI.Helper
             {
                 // Establish the remote endpoint for the socket.  
                 // This example uses port 11000 on the local computer.  
-                IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostEntry(SocketAddress).AddressList[0]);
-                IPAddress ipAddress = ipHostInfo.AddressList[0];
+                IPAddress ipAddress = IPAddress.Parse(SocketAddress);
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, PORT_NO);
 
                 // Create a TCP/IP  socket.  

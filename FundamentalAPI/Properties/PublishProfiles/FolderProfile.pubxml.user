@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 07:41:07</publishTime>
     </File>
     <File Include="bin/FundamentalAPI.dll">
-      <publishTime>03/12/2019 15:51:45</publishTime>
+      <publishTime>03/20/2019 13:51:14</publishTime>
     </File>
     <File Include="bin/FundamentalAPI.pdb">
-      <publishTime>03/12/2019 15:51:45</publishTime>
+      <publishTime>03/20/2019 13:51:14</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
       <publishTime>02/26/2019 07:41:07</publishTime>
@@ -367,7 +367,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 07:41:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/12/2019 15:52:28</publishTime>
+      <publishTime>03/20/2019 13:55:30</publishTime>
     </File>
   </ItemGroup>
 </Project>

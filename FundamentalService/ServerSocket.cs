@@ -16,7 +16,9 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         // | Config                                                          |
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+        private static string SocketAddress = ConfigurationManager.AppSettings["SocketAddress"];
         private static string SocketPort = ConfigurationManager.AppSettings["SocketPort"];
+        private static int PORT_NO = Int32.Parse(SocketPort);
         private static Plog log = new Plog();
         public static string data = null;
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -65,16 +67,23 @@ namespace FundamentalService
         // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
         public void StartListening()
         {
-            int port = Int32.Parse(SocketPort);
             // Data buffer for incoming data.  
             byte[] bytes = new Byte[1024];
 
             // Establish the local endpoint for the socket.  
             // Dns.GetHostName returns the name of the   
             // host running the application.  
-            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(SocketAddress);
+            log.LOGI("[ServerSocket::StartListening] Host name : " + ipHostInfo.HostName);
             IPAddress ipAddress = ipHostInfo.AddressList[0];
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, port);
+            for (int index = 0; index < ipHostInfo.AddressList.Length; index++)
+            {
+                string tmp = ipHostInfo.AddressList[index].ToString();
+                if (tmp == SocketAddress)
+                    ipAddress = ipHostInfo.AddressList[index];
+            }
+            log.LOGI($"[ServerSocket::StartListening] Socket Server IP: {ipAddress}");
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, PORT_NO);
 
             // Create a TCP/IP socket.  
             Socket listener = new Socket(ipAddress.AddressFamily,

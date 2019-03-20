@@ -1,0 +1,132 @@
+03/20/2019 10:32:37 [INFO]  [Service::OnStart] Service starting
+03/20/2019 10:32:37 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 10:32:40 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 10:32:51 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/20/2019 10:32:58 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"UjJrOlDnXkez8E83iPYazg=="}
+03/20/2019 10:32:59 [INFO]  [ServerSocket::StartListening] Text received : kaohoon/PTT/28-2-2019
+03/20/2019 10:33:05 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/20/2019 10:33:13 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"UjJrOlDnXkez8E83iPYazg=="}
+03/20/2019 10:33:14 [INFO]  [ServerSocket::StartListening] Text received : kaohoon/PTT
+03/20/2019 10:34:21 [INFO]  [Service::OnStop] Service stop
+03/20/2019 10:35:18 [INFO]  [Service::OnStart] Service starting
+03/20/2019 10:35:18 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 10:35:21 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 10:40:18 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 10:40:42 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 10:45:18 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 10:45:39 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 10:50:18 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 10:50:39 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 10:51:19 [INFO]  [Service::OnStop] Service stop
+03/20/2019 10:52:55 [INFO]  [Service::OnStart] Service starting
+03/20/2019 10:52:55 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 10:52:57 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 10:53:03 [INFO]  [Service::OnStop] Service stop
+03/20/2019 10:53:17 [INFO]  [Service::OnStart] Service starting
+03/20/2019 10:53:17 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 10:53:19 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 10:53:35 [INFO]  [Service::OnStop] Service stop
+03/20/2019 10:53:48 [INFO]  [Service::OnStart] Service starting
+03/20/2019 10:53:48 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 10:53:50 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 10:54:20 [INFO]  [Service::OnStop] Service stop
+03/20/2019 10:54:31 [INFO]  [Service::OnStart] Service starting
+03/20/2019 10:54:31 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 10:54:33 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 10:55:42 [INFO]  [Service::OnStop] Service stop
+03/20/2019 10:55:48 [INFO]  [Service::OnStart] Service starting
+03/20/2019 10:55:48 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 10:55:49 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 11:00:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:01:08 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:05:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:06:08 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:10:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:11:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:15:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:16:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:20:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:21:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:25:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:26:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:30:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:31:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:35:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:36:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:40:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:41:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:45:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:46:08 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:50:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:51:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 11:55:48 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 11:55:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 11:56:05 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:00:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:01:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:05:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:06:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:10:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:11:05 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:15:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:16:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:20:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:21:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:25:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:26:08 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:30:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:31:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:35:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:36:12 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:40:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:41:05 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:45:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:46:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:50:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:51:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 12:55:48 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 12:55:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 12:56:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:00:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:01:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:05:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:06:07 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:10:49 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:11:06 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:24:14 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:24:31 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:29:13 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:29:34 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:34:14 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:34:34 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:39:14 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:39:32 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:44:14 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:44:32 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 13:45:15 [INFO]  [Service::OnStop] Service stop
+03/20/2019 13:49:46 [INFO]  [Service::OnStart] Service starting
+03/20/2019 13:49:46 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 13:49:47 [INFO]  [ServerSocket::StartListening] Host name : Ekkawit-PC.hq.toptrader.co.th
+03/20/2019 13:49:47 [INFO]  [ServerSocket::StartListening] Socket Server IP: fe80::dd74:55c4:3d73:894c%18
+03/20/2019 13:49:48 [INFO]  [ServerSocket::StartListening] Host name : Ekkawit-PC.hq.toptrader.co.th
+03/20/2019 13:49:48 [INFO]  [ServerSocket::StartListening] Socket Server IP: fe80::dd74:55c4:3d73:894c%18
+03/20/2019 13:49:48 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 13:51:11 [INFO]  [Service::OnStop] Service stop
+03/20/2019 13:51:17 [INFO]  [Service::OnStart] Service starting
+03/20/2019 13:51:17 [INFO]  [Service::ResetAccessToken] Reset Access Token
+03/20/2019 13:51:18 [INFO]  [ServerSocket::StartListening] Host name : Ekkawit-PC.hq.toptrader.co.th
+03/20/2019 13:51:18 [INFO]  [ServerSocket::StartListening] Socket Server IP: 192.168.1.176
+03/20/2019 13:51:19 [INFO]  [ServerSocket::StartListening] Host name : Ekkawit-PC.hq.toptrader.co.th
+03/20/2019 13:51:19 [INFO]  [ServerSocket::StartListening] Socket Server IP: 192.168.1.176
+03/20/2019 13:51:19 [INFO]  [Service::timer1_Elapsed] Socket server Run
+03/20/2019 13:51:51 [INFO]  [ServerSocket::StartListening] Text received : {"Username":"MGTC3fHVCYkmPPh2Sv/svw==","Password":"aoibG1+M4oHx2V2z35ynsA=="}
+03/20/2019 13:52:01 [INFO]  [ServerSocket::StartListening] Text received : {"AccessToken":"EBPD9AutlU21dPZmq0xJeQ=="}
+03/20/2019 13:52:01 [INFO]  [ServerSocket::StartListening] Text received : kaohoon/PTT
+03/20/2019 13:56:17 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 13:56:34 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 14:01:17 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 14:01:34 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 14:06:17 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 14:06:33 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
+03/20/2019 14:11:17 [INFO]  [FundamentalKaohoon::Run] Success update data Kaohoon
+03/20/2019 14:11:34 [INFO]  [FundamentalSET100::RunNews] Success update data SET100 News
